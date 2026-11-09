@@ -59,13 +59,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.media3.common.C
 import androidx.media3.ui.AspectRatioFrameLayout
 import com.nuvio.tv.livetv.model.LiveChannel
 import com.nuvio.tv.livetv.model.PanelRowLists
 import com.nuvio.tv.livetv.model.matchFrameRate
 import com.nuvio.tv.livetv.player.LiveTrackOption
 import com.nuvio.tv.livetv.player.LiveFrameRateStabilizer
+import com.nuvio.tv.livetv.player.LiveDisplayModeResult
 import com.nuvio.tv.ui.theme.NuvioTheme
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -278,24 +278,13 @@ fun LiveTvPlayerScreen(
             } else {
                 videoFps = frameRateStabilizer.update(-1f, android.os.SystemClock.elapsedRealtime())
             }
-            // Match Frame Rate switches the display itself: the player's own frame rate hint to
-            // the screen is turned off then, so the two don't pull against each other.
-            runCatching {
-                p?.setVideoChangeFrameRateStrategy(
-                    if (settings.matchFrameRate) androidx.media3.common.C.VIDEO_CHANGE_FRAME_RATE_STRATEGY_OFF
-                    else androidx.media3.common.C.VIDEO_CHANGE_FRAME_RATE_STRATEGY_ONLY_IF_SEAMLESS
-                )
-            }
             delay(3_000)
         }
     }
     MatchFrameRate(
         enabled = settings.matchFrameRate, fps = videoFps, restore = settings.frameRateMode == "START_STOP",
-        channelKey = playback.channelKey,
-        // The switch is made with the picture paused, as Nuvio's own player and TiviMate do: some
-        // TVs ignored a switch asked for while a channel was playing.
-        pause = { viewModel.playback.player?.let { pl -> pl.playWhenReady.also { pl.playWhenReady = false } } ?: false },
-        resume = { wasPlaying -> if (wasPlaying) viewModel.playback.player?.playWhenReady = true }
+        channelKey = playback.channelKey, catchupKey = playback.catchupTitle,
+        manualStrategy = { viewModel.playback.setManualFrameRateMatching(it) }
     )
 
     // Sleep timer: the controller stops playback (on any screen); full screen then closes.
@@ -1670,8 +1659,8 @@ private fun MatchFrameRate(
     fps: Float,
     restore: Boolean,
     channelKey: String? = null,
-    pause: () -> Boolean = { false },
-    resume: (Boolean) -> Unit = {}
+    catchupKey: String? = null,
+    manualStrategy: (Boolean) -> Unit = {}
 ) {
     val context = androidx.compose.ui.platform.LocalContext.current
     val activity = remember(context) {
@@ -1679,19 +1668,27 @@ private fun MatchFrameRate(
         while (c is android.content.ContextWrapper && c !is android.app.Activity) c = c.baseContext
         c as? android.app.Activity
     } ?: return
-    val originalMode = remember { activity.window.attributes.preferredDisplayModeId }
+    val manualNow = androidx.compose.runtime.rememberUpdatedState(manualStrategy)
+    val enabledNow = androidx.compose.runtime.rememberUpdatedState(enabled)
     val restoreNow = androidx.compose.runtime.rememberUpdatedState(restore)
-    DisposableEffect(Unit) {
+    val matcher = (activity as? com.nuvio.tv.MainActivity)?.liveTvDisplayModeSwitch ?: return
+    DisposableEffect(enabled, matcher) {
+        if (enabled) {
+            matcher.activate()
+            // Keep activation in sync with the Activity's settings observer too.
+            manualNow.value(true)
+        } else {
+            matcher.disable()
+            manualNow.value(false)
+        }
         onDispose {
-            if (!restoreNow.value) return@onDispose
-            val attrs = activity.window.attributes
-            if (attrs.preferredDisplayModeId != originalMode) {
-                attrs.preferredDisplayModeId = originalMode
-                activity.window.attributes = attrs
+            if (enabled) {
+                // Explicitly disabling always releases our override before Media3 hints resume.
+                // Leaving fullscreen still follows the chosen On start / On start-stop policy.
+                matcher.release(restore = !enabledNow.value || restoreNow.value)
             }
         }
     }
-    // Say why nothing happened, so the Start-Up Report shows which part is missing.
     val fpsNow = androidx.compose.runtime.rememberUpdatedState(fps)
     LaunchedEffect(enabled) {
         if (!enabled) return@LaunchedEffect
@@ -1700,82 +1697,31 @@ private fun MatchFrameRate(
             "Match frame rate: this stream doesn't say its frame rate and it couldn't be measured yet, so the display wasn't switched"
         )
     }
-    // The per-channel stabilizer has already normalized and confirmed the rate.
-    val target = fps
-    LaunchedEffect(enabled, target, channelKey) {
-        if (!enabled || target <= 0f) return@LaunchedEffect
-        val fps = target
-        // The window's own display (what the switch applies to).
-        @Suppress("DEPRECATION")
-        val display = activity.window?.decorView?.display ?: activity.windowManager.defaultDisplay ?: return@LaunchedEffect
-        val current = display.mode
-        val candidates = display.supportedModes.filter {
-            it.physicalWidth == current.physicalWidth && it.physicalHeight == current.physicalHeight
-        }
-        // The refresh rates that show every frame for the same time: a whole multiple of the
-        // frame rate (25 fps: 25, 50, 75 Hz; 29.97 fps: 59.94 Hz). Close enough counts, but an
-        // exact match wins (59.94 over 60 Hz for 29.97 fps, which otherwise skips a frame every
-        // 16 seconds). Of those, the highest up to 60 Hz: sports at 25 fps are usually
-        // interlaced and move 50 times a second, so 25 Hz stuttered where 50 Hz is smooth.
-        fun error(refresh: Float): Float = (1..4).minOf { k -> kotlin.math.abs(refresh - fps * k) }
-        val fitting = candidates.filter { error(it.refreshRate) <= 0.6f }
-        val best = fitting.sortedWith(
-            compareBy<android.view.Display.Mode>(
-                { if (error(it.refreshRate) < 0.02f) 0 else 1 },
-                { if (it.refreshRate <= 61f) 0 else 1 },
-                { -it.refreshRate }
-            )
-        ).firstOrNull()
-        if (best == null) {
-            com.nuvio.tv.livetv.model.LiveTvLoadReport.add(
-                "Match frame rate: video %.3f fps, but at %dx%d this box only offers ".format(fps, current.physicalWidth, current.physicalHeight) +
-                    candidates.map { it.refreshRate }.distinct().sorted().joinToString(", ") { "%.2f Hz".format(it) } +
-                    " (other resolutions: " + display.supportedModes.size + " modes in all)"
-            )
-            return@LaunchedEffect
-        }
-        if (best.modeId == current.modeId) {
-            com.nuvio.tv.livetv.model.LiveTvLoadReport.add("Match frame rate: video %.3f fps, display already at %.3f Hz".format(fps, current.refreshRate))
-            return@LaunchedEffect
-        }
-        com.nuvio.tv.livetv.model.LiveTvLoadReport.add(
-            "Match frame rate: video %.3f fps, display %.3f Hz → %.3f Hz".format(fps, current.refreshRate, best.refreshRate)
-        )
-        // Paused while the TV switches, then on again once it has (or after a few seconds).
-        val wasPlaying = pause()
-        fun ask() {
-            val attrs = activity.window.attributes
-            attrs.preferredDisplayModeId = best.modeId
-            activity.window.attributes = attrs
-        }
-        fun now(): android.view.Display.Mode? = activity.window?.decorView?.display?.mode
-        try {
-            ask()
-            var switched = false
-            var stable = 0
-            for (i in 0 until 40) {
-                delay(100)
-                if (now()?.let { it.modeId == best.modeId || kotlin.math.abs(it.refreshRate - best.refreshRate) < 0.05f } == true) {
-                    if (++stable >= 3) { switched = true; break }
-                } else stable = 0
-            }
-            if (!switched) {
-                // Asked once more: some boxes miss a request made while the picture is busy.
-                ask()
-                for (i in 0 until 30) {
-                    delay(100)
-                    if (now()?.modeId == best.modeId) { switched = true; break }
-                }
-            }
-            if (!switched) {
-                val after = now()
+    val sessionKey = remember(channelKey, catchupKey) { channelKey to catchupKey }
+    LaunchedEffect(enabled, fps, sessionKey) {
+        if (!enabled || fps <= 0f || !fps.isFinite()) return@LaunchedEffect
+        val outcome = matcher.match(fps, sessionKey)
+        when (outcome.result) {
+            LiveDisplayModeResult.ALREADY_MATCHED -> {
                 com.nuvio.tv.livetv.model.LiveTvLoadReport.add(
-                    "Match frame rate: asked for %.3f Hz but the display stayed at %.3f Hz (the box didn't switch: check its own display settings, e.g. Match content frame rate)".format(best.refreshRate, after?.refreshRate ?: 0f)
+                    "Match frame rate: video %.3f fps, display already at %.3f Hz".format(fps, outcome.current?.refreshHz ?: 0f)
                 )
             }
-        } finally {
-            resume(wasPlaying)
+            LiveDisplayModeResult.UNAVAILABLE -> {
+                val current = outcome.current ?: return@LaunchedEffect
+                val candidates = outcome.available.filter { it.width == current.width && it.height == current.height }
+                com.nuvio.tv.livetv.model.LiveTvLoadReport.add(
+                    "Match frame rate: video %.3f fps, but at %dx%d this box only offers ".format(fps, current.width, current.height) +
+                        candidates.map { it.refreshHz }.distinct().sorted().joinToString(", ") { "%.2f Hz".format(it) } +
+                        " (other resolutions: " + outcome.available.size + " modes in all)"
+                )
+            }
+            LiveDisplayModeResult.NOT_APPLIED -> {
+                com.nuvio.tv.livetv.model.LiveTvLoadReport.add(
+                    "Match frame rate: could not confirm a stable switch to %.3f Hz; display reports %.3f Hz (check the box's own display settings, e.g. Match content frame rate)".format(outcome.target?.refreshHz ?: 0f, outcome.current?.refreshHz ?: 0f)
+                )
+            }
+            LiveDisplayModeResult.APPLIED, LiveDisplayModeResult.INACTIVE -> Unit
         }
     }
 }
-

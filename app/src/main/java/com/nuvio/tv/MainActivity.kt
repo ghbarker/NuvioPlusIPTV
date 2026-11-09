@@ -226,6 +226,7 @@ import javax.inject.Inject
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
@@ -327,6 +328,13 @@ open class MainActivity : ComponentActivity() {
     lateinit var liveTvPlayerHooks: com.nuvio.tv.livetv.player.LiveTvPlayerHooks
 
     @Inject
+    lateinit var liveTvPlaybackController: com.nuvio.tv.livetv.player.LiveTvPlaybackController
+
+    internal val liveTvDisplayModeSwitch by lazy {
+        com.nuvio.tv.livetv.player.liveDisplayModeSwitch(this, liveTvPlaybackController)
+    }
+
+    @Inject
     lateinit var layoutPreferenceDataStore: LayoutPreferenceDataStore
 
     @Inject
@@ -424,6 +432,14 @@ open class MainActivity : ComponentActivity() {
         // Live TV fork: a fresh open of the app (not a rebuild of the same screen), so "Start in
         // Full Screen" runs again even if Android kept the app running in the background.
         if (savedInstanceState == null) com.nuvio.tv.livetv.ui.LiveTvAppOpens.count++
+        // OFF must release a retained On-start override even outside fullscreen,
+        // before Media3 is allowed to send its own surface refresh-rate hints again.
+        lifecycleScope.launch {
+            liveTvPreferences.settings.map { it.frameRateMode != "OFF" }.distinctUntilChanged().collect { enabled ->
+                if (!enabled) liveTvDisplayModeSwitch.disable()
+                liveTvPlaybackController.setManualFrameRateMatching(enabled)
+            }
+        }
         // Live TV fork: start reading the saved channel list and guide as the app opens (before
         // any screen, even the profile picker), so Live TV is ready when you get to it.
         lifecycleScope.launch { runCatching { com.nuvio.tv.livetv.startup.LiveTvPreload.start(this@MainActivity) } }

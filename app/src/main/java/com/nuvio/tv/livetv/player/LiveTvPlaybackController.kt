@@ -78,6 +78,44 @@ class LiveTvPlaybackController @Inject constructor(
 
     private var _player: ExoPlayer? = null
     val player: ExoPlayer? get() = _player
+    private val displaySwitchPause = LiveDisplaySwitchPause()
+    private var manualDisplayRateEnabled = false
+
+    /** The manual display matcher and Media3 must never request rates together.
+     * Keep the policy across player rebuilds, before a replacement has a surface. */
+    fun setManualFrameRateMatching(enabled: Boolean) {
+        if (manualDisplayRateEnabled == enabled) return
+        manualDisplayRateEnabled = enabled
+        _player?.setVideoChangeFrameRateStrategy(frameRateStrategy())
+    }
+
+    @C.VideoChangeFrameRateStrategy
+    private fun frameRateStrategy(): Int =
+        if (manualDisplayRateEnabled) C.VIDEO_CHANGE_FRAME_RATE_STRATEGY_OFF
+        else C.VIDEO_CHANGE_FRAME_RATE_STRATEGY_ONLY_IF_SEAMLESS
+
+    /** A switch can finish after a channel change or rebuild. Its close action
+     * belongs to exactly this player and stream, never whichever player is new. */
+    fun pauseForDisplaySwitch(): AutoCloseable {
+        val active = _player ?: return AutoCloseable { }
+        val key = currentChannel?.key ?: return AutoCloseable { }
+        val url = currentUrl
+        val title = _state.value.catchupTitle
+        return displaySwitchPause.acquire(
+            owner = active,
+            playWhenReady = active.playWhenReady,
+            stillCurrent = {
+                _player === active && currentChannel?.key == key && currentUrl == url &&
+                    _state.value.catchupTitle == title && _state.value.error == null &&
+                    active.playbackState != Player.STATE_IDLE && active.playbackState != Player.STATE_ENDED
+            },
+            pause = { active.playWhenReady = false },
+            resume = { if (!active.playWhenReady) active.playWhenReady = true }
+        )
+    }
+
+    private fun intendedPlaying(active: ExoPlayer): Boolean =
+        active.playWhenReady || displaySwitchPause.intendedPlaying(active)
 
     private val _state = MutableStateFlow(LivePlaybackState())
     val state: StateFlow<LivePlaybackState> = _state.asStateFlow()
@@ -341,6 +379,7 @@ class LiveTvPlaybackController @Inject constructor(
 
     /** Lets go of the provider connection, so a recording of this channel can use it. */
     fun handOverForRecording() {
+        displaySwitchPause.invalidate()
         val p = _player ?: return
         if (_shiftStartedAt.value != null) stopShift()
         reconnectJob?.cancel()
@@ -383,6 +422,7 @@ class LiveTvPlaybackController @Inject constructor(
 
     /** Plays [playlist] (a recording that's still being made), a few seconds behind live. */
     fun playFromRecording(playlist: java.io.File, fromStart: Boolean = false) {
+        displaySwitchPause.invalidate()
         val p = _player ?: return
         _recordingPlayback.value = playlist
         _recordingStarting.value = true
@@ -432,6 +472,9 @@ class LiveTvPlaybackController @Inject constructor(
      */
     fun pauseLive() {
         val p = _player ?: return
+        val internallyPaused = displaySwitchPause.intendedPlaying(p)
+        displaySwitchPause.invalidate()
+        if (internallyPaused) _state.value = _state.value.copy(userPaused = true)
         if (_recordingPlayback.value != null) { com.nuvio.tv.livetv.model.LiveTvLoadReport.add("Pause buffer: paused a saved recording"); p.pause(); return }
         val ch = currentChannel
         if (_shiftStartedAt.value != null) { com.nuvio.tv.livetv.model.LiveTvLoadReport.add("Pause buffer: paused again inside the buffer"); p.pause(); return }
@@ -550,6 +593,7 @@ class LiveTvPlaybackController @Inject constructor(
 
     /** Go live: drop the recording and play the channel live again. */
     fun goLive() {
+        displaySwitchPause.invalidate()
         // A sports addon game's own rewind window: back to its newest part.
         if (_ownTimeline.value) { _player?.seekToDefaultPosition(); _player?.play(); return }
         // Rewind anytime: back to the newest part of the buffer (it keeps your rewind history).
@@ -617,7 +661,7 @@ class LiveTvPlaybackController @Inject constructor(
             val ch = currentChannel
             val url = currentUrl
             val title = _state.value.catchupTitle
-            val wasPlaying = p.playWhenReady
+            val wasPlaying = intendedPlaying(p)
             release()
             if (ch != null && wasPlaying) play(ch, overrideUrl = url.takeIf { it != ch.url }, catchupTitle = title)
         }
@@ -630,7 +674,7 @@ class LiveTvPlaybackController @Inject constructor(
             val ch = currentChannel
             val url = currentUrl
             val title = _state.value.catchupTitle
-            val wasPlaying = p.playWhenReady
+            val wasPlaying = intendedPlaying(p)
             release()
             if (ch != null && wasPlaying) play(ch, overrideUrl = url.takeIf { it != ch.url }, catchupTitle = title)
         }
@@ -676,6 +720,7 @@ class LiveTvPlaybackController @Inject constructor(
         /** Catch-up: the real time the link asks for, to check against the stream's own clock (null: don't check). */
         catchupExpectWallMs: Long? = null
     ) {
+        displaySwitchPause.invalidate()
         // Something chosen to play (back from the background through a launcher row, say):
         // that wins over picking up what was on before.
         resumeAfterBackground = null
@@ -945,6 +990,7 @@ class LiveTvPlaybackController @Inject constructor(
     }
 
     fun stop() {
+        displaySwitchPause.invalidate()
         savedRecordingId = null
         clearStarting()
         reconnectJob?.cancel()
@@ -1107,7 +1153,9 @@ class LiveTvPlaybackController @Inject constructor(
      */
     fun onAppBackground() {
         val p = _player ?: return
-        if (p.playWhenReady) {
+        val wasPlaying = intendedPlaying(p)
+        displaySwitchPause.invalidate()
+        if (wasPlaying) {
             pausedForBackground = true
             p.pause()
         }
@@ -1171,13 +1219,16 @@ class LiveTvPlaybackController @Inject constructor(
 
     fun togglePause() {
         val p = _player ?: return
+        val internallyPaused = displaySwitchPause.intendedPlaying(p)
+        displaySwitchPause.invalidate()
+        if (internallyPaused) _state.value = _state.value.copy(userPaused = true)
         when {
-            _shiftStartedAt.value != null -> if (p.isPlaying) p.pause() else resumeShift()
-            _recordingPlayback.value != null -> if (p.isPlaying) p.pause() else p.play()
+            _shiftStartedAt.value != null -> if (p.isPlaying || internallyPaused) p.pause() else resumeShift()
+            _recordingPlayback.value != null -> if (p.isPlaying || internallyPaused) p.pause() else p.play()
             // A sports addon game: the stream itself pauses (no pause buffer needed).
-            _ownTimeline.value -> p.playWhenReady = !p.playWhenReady
-            p.isPlaying && _state.value.catchupTitle == null -> pauseLive()
-            p.isPlaying -> p.pause()
+            _ownTimeline.value -> p.playWhenReady = !(p.playWhenReady || internallyPaused)
+            (p.isPlaying || internallyPaused) && _state.value.catchupTitle == null -> pauseLive()
+            p.isPlaying || internallyPaused -> p.pause()
             else -> p.play()
         }
     }
@@ -1552,6 +1603,7 @@ class LiveTvPlaybackController @Inject constructor(
             )
             .build()
             .apply {
+                setVideoChangeFrameRateStrategy(frameRateStrategy())
                 playWhenReady = true
                 addListener(listener)
                 // Choppy video ("slide show"): how many frames the box couldn't show in time,
@@ -1621,7 +1673,18 @@ class LiveTvPlaybackController @Inject constructor(
     }
 
     private val listener = object : Player.Listener {
+        override fun onMediaItemTransition(mediaItem: MediaItem?, reason: Int) {
+            // A reconnect can replace the source without changing its channel or URL.
+            displaySwitchPause.invalidate()
+        }
+
         override fun onPlayWhenReadyChanged(playWhenReady: Boolean, reason: Int) {
+            // The brief display-switch pause is not a new user pause intent.
+            if (!playWhenReady && displaySwitchPause.intendedPlaying(_player)) {
+                if (reason == Player.PLAY_WHEN_READY_CHANGE_REASON_USER_REQUEST) return
+                // Focus loss or another player decision also retires our resume.
+                displaySwitchPause.invalidate()
+            }
             _state.value = _state.value.copy(userPaused = !playWhenReady)
         }
 
@@ -2256,6 +2319,7 @@ class LiveTvPlaybackController @Inject constructor(
     }
 
     private fun release() {
+        displaySwitchPause.invalidate()
         backgroundJob?.cancel()
         backgroundJob = null
         resumeAfterBackground = null
@@ -2282,7 +2346,8 @@ class LiveTvPlaybackController @Inject constructor(
                 val channel = currentChannel ?: return@launch
                 val url = currentUrl ?: return@launch
                 val active = _player ?: return@launch
-                val resume = active.playWhenReady
+                val resume = intendedPlaying(active)
+                displaySwitchPause.invalidate()
                 val position = active.currentPosition
                 val live = _state.value.catchupTitle == null
                 stopReplayCache()
