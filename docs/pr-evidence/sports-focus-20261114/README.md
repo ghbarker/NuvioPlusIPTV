@@ -37,4 +37,6 @@ The fix preserves reachability and scroll position. It does not promise that the
 
 The additional queued fast-return attempt was inconclusive because the navigation transition had not settled when queued Back inputs ran. No fast-return result is claimed.
 
+The baseline captured three failed-focus warning events (six matching log lines). The fixed process logged zero matching `FocusRelatedWarning` / `FocusRequester is not initialized` lines through the exercised checks; see `fixed-focus-warning-summary.json`. `proof-summary.json` records the focused labels and bounds extracted from the UI hierarchy captures.
+
 The baseline and fixed full-debug APKs both built successfully. This branch contains only review evidence; the product fix is on the separate `fix/sports-stream-focus-return-20261114` branch.

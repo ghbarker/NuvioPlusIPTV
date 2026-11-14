@@ -1,0 +1,80 @@
+{
+  "baseline-later-row-before-watch": [
+    {
+      "bounds": "[223,459][1157,573]",
+      "label": "CA: ESPN Wake Forest at SMU Lima | Focus Game Local | CA | Focus Lima | SHOWING IT"
+    }
+  ],
+  "baseline-after-long-fullscreen": [
+    {
+      "bounds": "[220,84][860,208]",
+      "label": "Wake Forest | 8-1 · Away | 2nd  ·  59% win"
+    }
+  ],
+  "baseline-after-watch-down-one": [
+    {
+      "bounds": "[220,208][860,332]",
+      "label": "SMU | 7-2 · Home | 3rd  ·  41% win"
+    }
+  ],
+  "baseline-trapped-after-down": [
+    {
+      "bounds": "[943,329][1148,353]",
+      "label": "🌐  All regions  ▾"
+    }
+  ],
+  "fixed-game-initial": [
+    {
+      "bounds": "[223,408][1157,522]",
+      "label": "US: ESPN Wake Forest at SMU Golf | Focus Game Local | US | Focus Golf | SHOWING IT"
+    }
+  ],
+  "fixed-confirmed-fullscreen": [
+    {
+      "bounds": "[0,0][1920,1080]",
+      "label": "14 | UK: ESPN Wake Forest at SMU Bravo | ● LIVE | 360P · 24 FPS | NFL Football: Focus Away at Focus Home | Sports  ·  Local navigation fixture, not a sports broadcast. | 3:00 AM | 4:00 AM | 58m left | 3:01 AM | UP NEXT · 4:00 AM | NFL Football: Focus Away at Focus Home"
+    }
+  ],
+  "fixed-returned-game-settled": [
+    {
+      "bounds": "[223,451][1157,565]",
+      "label": "UK: ESPN Wake Forest at SMU Kilo | Focus Game Local | UK | Focus Kilo | SHOWING IT"
+    }
+  ],
+  "fixed-header-before-down": [
+    {
+      "bounds": "[220,84][860,208]",
+      "label": "Wake Forest | 8-1 · Away | 2nd  ·  59% win"
+    }
+  ],
+  "fixed-header-down-enters-stream": [
+    {
+      "bounds": "[223,451][1157,565]",
+      "label": "UK: ESPN Wake Forest at SMU Kilo | Focus Game Local | UK | Focus Kilo | SHOWING IT"
+    }
+  ],
+  "fixed-last-stream-row": [
+    {
+      "bounds": "[223,532][1157,646]",
+      "label": "CA: ESPN Wake Forest at SMU Lima | Focus Game Local | CA | Focus Lima | SHOWING IT | SD"
+    }
+  ],
+  "fixed-after-last-row": [
+    {
+      "bounds": "[573,664][796,760]",
+      "label": "☆  Wake Forest"
+    }
+  ],
+  "fixed-first-stream-row": [
+    {
+      "bounds": "[223,408][1157,522]",
+      "label": "US: ESPN Wake Forest at SMU Golf | Focus Game Local | US | Focus Golf | SHOWING IT"
+    }
+  ],
+  "fixed-first-up-to-region": [
+    {
+      "bounds": "[943,329][1148,401]",
+      "label": "🌐  All regions  ▾"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "pid": 24727,
+  "from": "fixed app startup through initial entry, later-row player return, header Down re-entry, last row, first row Up",
+  "scope": "owned fixed app process only",
+  "warningLineCount": 0,
+  "filter": "FocusRelatedWarning|FocusRequester is not initialized"
+}
