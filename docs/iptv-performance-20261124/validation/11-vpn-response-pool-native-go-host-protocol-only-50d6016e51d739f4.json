@@ -1,0 +1,33 @@
+{
+  "scope": "One completed extracted-source validation stage, identified by its immutable input receipt.",
+  "base": "b02e88770c3092782e4fb43b668552d6cad756ab",
+  "record": {
+    "stage": "native-go-host-protocol-only",
+    "source": {
+      "kind": "direct-extracted-slice",
+      "ordinal": 11,
+      "slug": "vpn-response-pool",
+      "publishedHead": "5bde5052e3301d58f4739c7a12d211460cdc28b4",
+      "testedCommit": "5bde5052e3301d58f4739c7a12d211460cdc28b4",
+      "extraSourcePaths": []
+    },
+    "sourceTree": "27370eb9b1014f0beb04566d965bfe09b53c61fe",
+    "receiptSha256": "50d6016e51d739f4e78d1366f7e521ca1821585987e831f2d50b12d072046541",
+    "topLevelTestsPassed": 39,
+    "packages": [
+      "nuvio-vpn-http/internal/netstack",
+      "nuvio-vpn-http"
+    ],
+    "flags": {
+      "testCount": 1,
+      "platform": "Windows",
+      "goVersion": "1.27.3"
+    },
+    "unitGatePassed": true,
+    "unitKind": "native-Go protocol/ownership",
+    "apkGatePlanned": true,
+    "apkVerified": false,
+    "limits": "Native unit gate passed. Planned Android ABI/APK gate remains separate; no encrypted-tunnel/provider throughput or account claim."
+  },
+  "limits": "The unit and APK gates are stated separately. This is local validation, not hosted CI or physical-device/provider acceptance. Earlier combined586/96 results are separate."
+}
