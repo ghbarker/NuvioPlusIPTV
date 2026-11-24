@@ -1,0 +1,130 @@
+{
+  "scope": "One completed extracted-source validation stage, identified by its immutable input receipt.",
+  "base": "b02e88770c3092782e4fb43b668552d6cad756ab",
+  "record": {
+    "stage": "complete-extracted-verification",
+    "source": {
+      "kind": "isolated-slice-merged-with-current-dev",
+      "ordinal": 5,
+      "slug": "guide-working-set",
+      "publishedHead": "97b7e141abee747680f59a1b33ff34475a63bdf4",
+      "testedCommit": "31b9ebcf37e1821c179a1c46c0891a049143fdbe",
+      "prerequisiteHead": "ac628718cd03a609c7a751824b14f1fbebf8c6ee",
+      "currentDev": "ac628718cd03a609c7a751824b14f1fbebf8c6ee",
+      "exactMergeTree": "bff9561b64832a989f2b69bf61754138f8eb4a5d",
+      "extraSourcePaths": [
+        "app/src/main/java/com/nuvio/tv/livetv/model/LiveTvModels.kt",
+        "app/src/main/java/com/nuvio/tv/livetv/record/RecordingLaunch.kt",
+        "app/src/main/java/com/nuvio/tv/livetv/ui/LiveTvGuideScreen.kt",
+        "app/src/main/java/com/nuvio/tv/livetv/ui/LiveTvPlayerScreen.kt",
+        "app/src/main/java/com/nuvio/tv/livetv/ui/LiveTvViewModel.kt",
+        "app/src/main/java/com/nuvio/tv/ui/navigation/NuvioNavHost.kt",
+        "app/src/main/java/com/nuvio/tv/ui/screens/settings/BackupOrderSettings.kt"
+      ],
+      "extraDiff": "Upstream build import and recording poster routing; the Guide slice remains the only PR change",
+      "codePrDiffIncludesPrerequisite": false
+    },
+    "sourceTree": "bff9561b64832a989f2b69bf61754138f8eb4a5d",
+    "receiptSha256": "db1c2b34ab9a7fd8123712a68f3f44e5b122ad1d127c9d0287bfd7aa45b130fa",
+    "sourceStableDuringBuild": true,
+    "testClasses": 9,
+    "totals": {
+      "tests": 72,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "suites": [
+      {
+        "name": "com.nuvio.tv.livetv.calendar.CalendarGuideWorkTest",
+        "tests": 12,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "7d2ded61c15eca3ebccd5a75861b9e7bf1e9cf3778519b2258593702eadf3556"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.data.EpgBrowsingPlaybackTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "095d91e42a21b5bd07a30a41445178cac75940b66625b9b1a7682f18602dfcea"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.data.EpgSourceWriterTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "43069a4ad1a8516f7b8db540becf910a594536d321b539272d746d787b523b9d"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.data.EpgWorkingSetTest",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "04c0fcff569c9f046c1304ae4fbd95d214cc8ebd90d561abb3ec98ecfd212d2a"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.data.GuideContentChangesTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "d88619acc4f05e0719dc783f60ba080c9a39319690c98988c694d77532c3ab2e"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.data.GuideNowNextTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "25531ab17f6709ca20dde35799e4fdf4f4adaea08ab661e22ba8248521d7bab1"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.data.GuideRangeCacheTest",
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "ea7d1faa783c45fb634f8b5253081fe2f490736312179c9eadaded3d6893d44b"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.data.GuideWindowLeaseTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "139794655370c6d5db127cb5abfa1b9797a26206277355b681b8d4cddc08b354"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.ui.GuideProgramsTest",
+        "tests": 13,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "0192d005f89002958b8b1500b30b2dfe323e7129ac5d39e606a928536495f35e"
+      }
+    ],
+    "unitGatePassed": true,
+    "unitKind": "JVM/native-SQLite",
+    "fullGradleInvocationComplete": true,
+    "apkGatePlanned": false,
+    "apkVerified": false,
+    "flags": {
+      "defaultStableVersioning": true,
+      "livetvTestBuildPropertyOmitted": true,
+      "generatorEnabled": true,
+      "nativeTasksEnabled": true,
+      "gradleTaskExclusions": [],
+      "heapMiB": 6144,
+      "workers": 1,
+      "kotlinCompiler": "in-process",
+      "deviceActions": false
+    },
+    "limits": "Unit gate complete. No fresh APK is required or claimed for this slice's validation plan."
+  },
+  "limits": "The unit and APK gates are stated separately. This is local validation, not hosted CI or physical-device/provider acceptance. Earlier combined586/96 results are separate."
+}
