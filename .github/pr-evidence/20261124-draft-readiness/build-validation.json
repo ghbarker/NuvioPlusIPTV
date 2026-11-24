@@ -1,0 +1,146 @@
+{
+  "purpose": "Shared verification APK for three independently proposed fixes; not a combined implementation PR",
+  "sourceBase": "6c8ce7e7a2d098a856c98a56c105a9043ba537b1",
+  "featureHeads": {
+    "framePrHead": "14440ee5c1f6f21b8122d0c76c55708f0751f174",
+    "sportsPrHead": "bd194c637c6f68b596edecc59f28f770792babcc",
+    "homeProductHead": "e088906649b030f97b5fa0d06dc2f365c7c81da7",
+    "homePrHead": "1e4ed23a1d622e9e00d43edfc34232238fb9b9c7"
+  },
+  "homeActualViewModelTest": {
+    "rawSourceSha256": "fd4ed2eed600fa50557aebcec79caebe75904028320390598b58bfd0e4a578b6",
+    "normalizedGitBlob": "eba15ba9e545c39d1935ca4effd9c06c83ddf608",
+    "productionUnchangedFromProductHead": true
+  },
+  "sourceFiles": 22,
+  "sourceFilesUnchanged": true,
+  "sourceManifestSha256": "3b982914b52f07f732ac09d71a0db995104ffbee01aff6490464fcecd6c73185",
+  "apk": {
+    "bytes": 297284238,
+    "sha256": "032dbd6d1567f93db433f026193524296edce723d6d69932795f6743f99a1545"
+  },
+  "debuggable": true,
+  "version": {
+    "code": "200471624",
+    "name": "1.2.0-test.471624+beta.3",
+    "generatedBuildConfigSha256": "d6aeb3e4e058a4d269f42fb4a507a171dd6fe6e7e649424292be7b81bafc009f"
+  },
+  "abis": [
+    "arm64-v8a",
+    "armeabi-v7a",
+    "x86",
+    "x86_64"
+  ],
+  "packagingChecks": {
+    "badging": {
+      "exitCode": 0,
+      "logSha256": "89893a8c6f05f0cae3e2331ec3d2c5de97eb1306bca563ce2c72570a4e66647f"
+    },
+    "signature": {
+      "exitCode": 0,
+      "logSha256": "163f1edff92c40a0ff6417337f39234eeba29ead21ed5557ae634e08b6a7fa44"
+    },
+    "zipalign": {
+      "exitCode": 0,
+      "logSha256": "2c02baa439d50c6484a3a21c91342b0448438a0b79e08eaaa37c55694c391de6"
+    }
+  },
+  "frozenGoIdentityVerified": true,
+  "staleAdaptiveAndSportsCExcluded": true,
+  "hostTests": {
+    "total": 38,
+    "classes": 7,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": [
+      {
+        "name": "com.nuvio.tv.livetv.ondemand.OnDemandHomeViewModelTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "9283ddcca26442b20b20c5aff70383b59b6acc68f0be7472ccf14df217c39ae9"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.ondemand.VodHomeWorkPolicyTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "865753bc435b8044dcd5d4678d60e14b2b984f2487c5b098a46b10da78043607"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.sports.SportsChannelIndexCacheTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "e4d2f42e392ddb65d86d23f343d61e5fc69f4664be6d355573a6cd4942200768"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.sports.SportsChannelIndexTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "93da201eef39ee7883daf28e70f7329eaa72cec6ea9e7cfe7990e6f05add9470"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.sports.SportsIndexGroupedAliasTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "2928d19724e7bb7c0b03367c0b5f46fa9bde0983619534b7815f63f0a3f5017d"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.sports.SportsIndexWordPredicateTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "662b2f282c788d417c5703da940ef5ce0109109568ba13dca5549a077953bff0"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.sports.SportsRowsTest",
+        "tests": 21,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "b00212da9717617fb0572f7dd1a7033f448eca22285b26c086948748b5c273fa"
+      }
+    ]
+  },
+  "testExecution": {
+    "buildConfigFrozenForTestOnly": true,
+    "mainFeatureSourcesUnchanged": true,
+    "apkAssembledSeparatelyWithNormalVersionGeneration": true,
+    "receiptSha256": "fb757624798f7e8d153a3f5855db162eb3837f73ba1dc03f41ea45d46c0266a7"
+  },
+  "foundationValidationOnly": true,
+  "foundationPr": 170,
+  "privateDebugSigning": true,
+  "environment": "API36 x86_64 TV emulator; guest and local synthetic fixtures only",
+  "scopeLimits": [
+    "Host/build proof only; Frame lifecycle/same-process300-second run and Home UI observations belong to their separate final receipts.",
+    "The APK contains all three source scopes solely for local verification; the PRs remain independent.",
+    "No provider, account, physical-TV, cold-start speed or native-C performance claim."
+  ],
+  "privateBuildReceiptSha256": "d07d25af26501df02a0d85e0fe77c744d86b5ec93854a93a23ab0c5082221e6e",
+  "homeAddedActualViewModelTests": {
+    "cases": 2,
+    "rawSourceSha256": "fd4ed2eed600fa50557aebcec79caebe75904028320390598b58bfd0e4a578b6",
+    "normalizedGitBlob": "eba15ba9e545c39d1935ca4effd9c06c83ddf608",
+    "sourceMatchesPublishedPrHead": true,
+    "productionUnchangedFromProductHead": true
+  },
+  "buildSucceeded": true,
+  "buildProcess": {
+    "exitCode": 0,
+    "coherentApk": true,
+    "normalVersionGeneratorEnabled": true,
+    "heapMiB": 6144,
+    "receiptSha256": "da0d1b759e509eda315fcaf32f247b23c15eed310b0c82d61edfd8517d310a6d"
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "pr": 182,
+  "head": "14440ee5c1f6f21b8122d0c76c55708f0751f174",
+  "apkSha256": "032dbd6d1567f93db433f026193524296edce723d6d69932795f6743f99a1545",
+  "environment": "Private API36 x86_64 TV emulator; guest with local synthetic channels",
+  "lifecyclePassed": true,
+  "syntheticOnly": true,
+  "checks": {
+    "finalRowVisibleAndControlsFit": true,
+    "reportScrollUpDown": true,
+    "captureToCloseRightAndLeft": true,
+    "upReturnsToReport": true,
+    "startStopAndClose": true,
+    "backDismissesReport": true,
+    "offByDefaultOnGuide": true,
+    "guideWatcherAfterOptIn": true,
+    "backgroundStopsWatcher": true,
+    "sameProcessResumeRestartsWatcher": true,
+    "manualStopBeforeDeadline": true,
+    "fiveMinuteElapsedDeadline": true
+  },
+  "manualStop": {
+    "secondsAfterClick": 175.5414834,
+    "guideObservedOffBeforeOriginalDeadline": true
+  },
+  "deadline": {
+    "startPid": 19012,
+    "endPid": 19012,
+    "configuredWindowMs": 300000,
+    "observedElapsedMs": 304336.1841,
+    "lastObservedActiveMs": 299242.3567,
+    "firstObservedAbsentMs": 304336.1841,
+    "sameProcessThroughout": true,
+    "clockNotChanged": true,
+    "timerNotRestarted": true,
+    "continuousGuideForFiveMinutes": false,
+    "scope": "Elapsed capture window overlapped Home navigation. Guide was observed active at200s and stayed mounted through expiry; its existing idle-fullscreen mode appeared during this final interval.",
+    "watcherSamples": [
+      {
+        "pid": 19012,
+        "elapsedSeconds": 7.3637399,
+        "frameWatchCount": 0
+      },
+      {
+        "pid": 19012,
+        "elapsedSeconds": 27.4665942,
+        "frameWatchCount": 0
+      },
+      {
+        "pid": 19012,
+        "elapsedSeconds": 47.6005885,
+        "frameWatchCount": 0
+      },
+      {
+        "pid": 19012,
+        "elapsedSeconds": 67.7976904,
+        "frameWatchCount": 0
+      },
+      {
+        "pid": 19012,
+        "elapsedSeconds": 87.9691002,
+        "frameWatchCount": 0
+      },
+      {
+        "pid": 19012,
+        "elapsedSeconds": 108.1020908,
+        "frameWatchCount": 0
+      },
+      {
+        "pid": 19012,
+        "elapsedSeconds": 128.2353001,
+        "frameWatchCount": 0
+      },
+      {
+        "pid": 19012,
+        "elapsedSeconds": 148.3560005,
+        "frameWatchCount": 0
+      },
+      {
+        "pid": 19012,
+        "elapsedSeconds": 168.4580239,
+        "frameWatchCount": 1
+      },
+      {
+        "pid": 19012,
+        "elapsedSeconds": 188.5522949,
+        "frameWatchCount": 1
+      },
+      {
+        "pid": 19012,
+        "elapsedSeconds": 208.6539258,
+        "frameWatchCount": 1
+      },
+      {
+        "pid": 19012,
+        "elapsedSeconds": 228.7503003,
+        "frameWatchCount": 1
+      },
+      {
+        "pid": 19012,
+        "elapsedSeconds": 248.8572457,
+        "frameWatchCount": 1
+      },
+      {
+        "pid": 19012,
+        "elapsedSeconds": 268.9535252,
+        "frameWatchCount": 1
+      },
+      {
+        "pid": 19012,
+        "elapsedSeconds": 289.0498662,
+        "frameWatchCount": 1
+      },
+      {
+        "pid": 19012,
+        "elapsedSeconds": 294.1452941,
+        "frameWatchCount": 1
+      },
+      {
+        "pid": 19012,
+        "elapsedSeconds": 299.2423567,
+        "frameWatchCount": 1
+      },
+      {
+        "pid": 19012,
+        "elapsedSeconds": 304.3361841,
+        "frameWatchCount": 0
+      },
+      {
+        "pid": 19012,
+        "elapsedSeconds": 309.4317906,
+        "frameWatchCount": 0
+      }
+    ]
+  },
+  "baseline": {
+    "sourceScope": "Frame/report files identical to6c8 baseline in prior v4 APK",
+    "watcherWithoutOptInAndInBackground": true,
+    "screenshot": "frame-before.png"
+  },
+  "screenshots": [
+    {
+      "file": "frame-controls-off.png",
+      "caption": "Candidate report with capture off and new controls/help fitting the final row."
+    },
+    {
+      "file": "frame-capture-active.png",
+      "caption": "Candidate report after opt-in, showing the Stop performance capture action."
+    }
+  ],
+  "reportQr": {
+    "expiredLocalFixtureIdentifiersOnly": true,
+    "dialogClosedAndReportServerThreadAbsent": true,
+    "note": "Raw screenshots are preserved. The emulator-local report server runs only while its dialog is open; the photographed dialogs were subsequently closed. These are not authentication QR codes."
+  },
+  "sourceReceiptSha256": "25ce888d6363872b5779d2eb4089088be5de84e2dc699e197b7b6ff96af142ad",
+  "watcherReceiptSha256": "84300d2ee8eeb9848824517995eab2543c95fa988a6d7cc7d5c37fa974d53019",
+  "reportClosureReceiptSha256": [
+    "9d6eeb7047f5195ac2d8214cb77d0643fd42786db8783d752e0a4d5452a4efa4",
+    "cd3d7f6b453d9c00b3d041711a6e41124bb988fcc3c9f4d848f3a90517fe2f60",
+    "6b8b1b51288e9ee30ee50aa24068c24be994d60b953aea591b8941ccb1d59ed8"
+  ],
+  "limits": [
+    "Five-minute elapsed capture deadline in the same process; the window overlapped Home navigation, not five minutes of continuous Guide sampling.",
+    "Post-deadline invalid close/handoff sequence excluded from public visual proof.",
+    "No additional Frame unit tests were added; these are actual-app functional and lifecycle observations.",
+    "No physical-device performance, provider playback or timing speedup claim."
+  ],
+  "allDocumentedChecksPassed": true
+}

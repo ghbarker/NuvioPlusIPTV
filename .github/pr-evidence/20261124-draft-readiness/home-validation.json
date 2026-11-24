@@ -1,0 +1,97 @@
+{
+  "pr": 163,
+  "productHead": "e088906649b030f97b5fa0d06dc2f365c7c81da7",
+  "prHead": "1e4ed23a1d622e9e00d43edfc34232238fb9b9c7",
+  "apkSha256": "032dbd6d1567f93db433f026193524296edce723d6d69932795f6743f99a1545",
+  "environment": "Private API36 x86_64 TV emulator, guest and loopback synthetic fixtures",
+  "pid": 19012,
+  "noRestartDuringChecks": true,
+  "syntheticOnly": true,
+  "functionalOnly": true,
+  "allDocumentedUiChecksPassed": true,
+  "fixture": "Nine groups per kind, 35 cards per group; local metadata addon. No private provider configuration.",
+  "observations": [
+    "Movie entry",
+    "Later movie rows06 and09 reachable byDpad",
+    "Movies andSeries both show correctkind",
+    "Back openssidebar; Home andOnDemand reentry remainusable",
+    "Provider refreshed with0movies/315series: Series displays with no Movies tab; no blank wrong-kind page",
+    "Both315+315 restored through actualSettingsrefresh and both tabs return",
+    "3500ms metadata9011 then9012 both began; focusedCard12 retained its own full description after both responses"
+  ],
+  "metadataEvents": [
+    {
+      "elapsedMsFromFirstRequest": 0.0,
+      "kind": "metadata_started",
+      "id": "9011"
+    },
+    {
+      "elapsedMsFromFirstRequest": 1292.296,
+      "kind": "metadata_started",
+      "id": "9012"
+    },
+    {
+      "elapsedMsFromFirstRequest": 3500.4495,
+      "kind": "metadata_finished",
+      "id": "9011"
+    },
+    {
+      "elapsedMsFromFirstRequest": 4792.7789,
+      "kind": "metadata_finished",
+      "id": "9012"
+    }
+  ],
+  "hostTests": {
+    "homeCases": 5,
+    "actualViewModelCases": 2,
+    "policyCases": 3,
+    "combinedCases": 38,
+    "scope": "Pending/empty publication and exact cancellation/retry use actual ViewModel tests; UI establishes latest visible title after both delayed replies."
+  },
+  "baseline": {
+    "scope": "installed v4, Home algorithm baseline6c8",
+    "functionalOnly": true,
+    "observed": [
+      "Both kinds imported9x35 each",
+      "Movie entry",
+      "Later movie row06 D-pad",
+      "Horizontal30-card window+See-all tail",
+      "Series tab displays series rows",
+      "Back opens sidebar",
+      "Restart/reentry with local metadata addon",
+      "Delayed6012 then6013 requests both started; selected6013 retained latest description after both responses"
+    ],
+    "screenshots": [
+      "home-before-later-row.png",
+      "home-before-series.png"
+    ]
+  },
+  "screenshots": [
+    {
+      "file": "home-later-row.png",
+      "caption": "Candidate Movie Row06 reached by D-pad, with matching local metadata."
+    },
+    {
+      "file": "home-series.png",
+      "caption": "Candidate Series tab with stable Series rows and matching metadata."
+    },
+    {
+      "file": "home-delayed-focus.png",
+      "caption": "After both delayed replies, focused Row09 Card12 retains its own description."
+    }
+  ],
+  "additionalObservedCase": {
+    "movies": 0,
+    "series": 315,
+    "result": "Series displayed without a Movies tab; both315+315 were then restored through the actual settings refresh."
+  },
+  "limits": [
+    "No new emulator/device speedup or memory measurement",
+    "MetadataUI proves latestvisible title only; no network cancellation inference",
+    "Emptykind UI is0Movie/315Series, notallcatalogempty",
+    "ActualVM test controls pending read; emulator database reads were not artificially delayed",
+    "First slowmetadata attempt interfered with byone late Back; excluded"
+  ],
+  "sourceReceiptSha256": "668ab0cb08e477a130f81d2f834ac5a6887e6d3c47bc624fdbcf566aac578c7e",
+  "baselineReceiptSha256": "36c118f732a5399240ab816c2f66c7759429a166864dee17b1fb026f369f1547"
+}

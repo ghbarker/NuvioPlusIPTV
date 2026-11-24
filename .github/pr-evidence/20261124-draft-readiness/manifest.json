@@ -1,0 +1,154 @@
+{
+  "purpose": "Review evidence only; three draft-readiness scopes, separate from implementation PRs",
+  "generatedUtc": "2026-11-24T13:04:20.257052+00:00",
+  "sourceBase": "6c8ce7e7a2d098a856c98a56c105a9043ba537b1",
+  "testedHeads": {
+    "framePrHead": "14440ee5c1f6f21b8122d0c76c55708f0751f174",
+    "sportsPrHead": "bd194c637c6f68b596edecc59f28f770792babcc",
+    "homeProductHead": "e088906649b030f97b5fa0d06dc2f365c7c81da7",
+    "homePrHead": "1e4ed23a1d622e9e00d43edfc34232238fb9b9c7"
+  },
+  "environment": "Shared actual API36 x86_64 TV verification APK; guest and synthetic local fixtures only",
+  "limits": [
+    "Evidence for exact focused PR163/177/182 source heads, independently reviewed; the shared APK combines them solely for verification.",
+    "The five-minute Frame proof is an elapsed capture deadline, not300seconds of continuous Guide sampling.",
+    "Home UI observation does not establish network cancellation or a performance speedup; the actual ViewModel tests cover controlled cancellation/retry.",
+    "No physical-TV, private provider or native-C performance claim. No APK or unreviewed raw logs included."
+  ],
+  "readinessChecks": {
+    "build_success": {
+      "passed": true,
+      "observed": 0
+    },
+    "tests_38": {
+      "passed": true,
+      "observed": 38
+    },
+    "tests_no_failures": {
+      "passed": true,
+      "observed": 0
+    },
+    "tests_no_errors": {
+      "passed": true,
+      "observed": 0
+    },
+    "tests_no_skips": {
+      "passed": true,
+      "observed": 0
+    },
+    "frame_lifecycle_pass": {
+      "passed": true,
+      "observed": true
+    },
+    "frame_same_pid": {
+      "passed": true,
+      "observed": 19012
+    },
+    "frame_300_seconds": {
+      "passed": true,
+      "observed": 304336.1841
+    },
+    "home_ui_pass": {
+      "passed": true,
+      "observed": true
+    },
+    "synthetic_only": {
+      "passed": true,
+      "observed": true
+    }
+  },
+  "privateReceiptIdentities": {
+    "build": {
+      "sha256": "ebb99134c7081b164d79992eb7831ae370c3230499a534f2b1ad19e727ac06ba",
+      "bytes": 5294
+    },
+    "frame": {
+      "sha256": "c67f394cae341e9dd7963cea6c857b4acd20aa6b4f4684ec57a74b4581e5cb59",
+      "bytes": 5418
+    },
+    "home": {
+      "sha256": "2efdc71cc010a6c29c0c887b85a3d50bbf5b50abe78b9c00ce7f634b2c2e8708",
+      "bytes": 3737
+    },
+    "owner_frame_final": {
+      "sha256": "25ce888d6363872b5779d2eb4089088be5de84e2dc699e197b7b6ff96af142ad",
+      "bytes": 7619
+    },
+    "owner_home_final": {
+      "sha256": "668ab0cb08e477a130f81d2f834ac5a6887e6d3c47bc624fdbcf566aac578c7e",
+      "bytes": 7768
+    },
+    "owner_build_final": {
+      "sha256": "d07d25af26501df02a0d85e0fe77c744d86b5ec93854a93a23ab0c5082221e6e",
+      "bytes": 28323
+    }
+  },
+  "files": [
+    {
+      "file": "build-validation.json",
+      "publicPath": ".github/pr-evidence/20261124-draft-readiness/build-validation.json",
+      "bytes": 5148,
+      "sha256": "e749f3e41a394f763109417f7b669fb93a749ad91c5d3acd102c20ad33525b71"
+    },
+    {
+      "file": "frame-validation.json",
+      "publicPath": ".github/pr-evidence/20261124-draft-readiness/frame-validation.json",
+      "bytes": 5248,
+      "sha256": "99beec362f3c6ee931839a2ced5d6338262bc7c79dfa41d1265c169d75433656"
+    },
+    {
+      "file": "home-validation.json",
+      "publicPath": ".github/pr-evidence/20261124-draft-readiness/home-validation.json",
+      "bytes": 3640,
+      "sha256": "141a5b7e381b33eff4bfbc314356cf200f4a38eb29737385309e9abbbeaa1b21"
+    },
+    {
+      "file": "frame-before.png",
+      "publicPath": ".github/pr-evidence/20261124-draft-readiness/frame-before.png",
+      "bytes": 348253,
+      "sha256": "3a330e6fd2c996cf897793481715e04e05a47aa7c00e2d39dcf3a659d8ccfe48"
+    },
+    {
+      "file": "frame-controls-off.png",
+      "publicPath": ".github/pr-evidence/20261124-draft-readiness/frame-controls-off.png",
+      "bytes": 333248,
+      "sha256": "98dbe4a295c36ccf09f4f5bfb6c2f21f11f499afc31629c5148bb9b23130c4b1"
+    },
+    {
+      "file": "frame-capture-active.png",
+      "publicPath": ".github/pr-evidence/20261124-draft-readiness/frame-capture-active.png",
+      "bytes": 315728,
+      "sha256": "80cd91d0f7d5521ff210cf0e17b6b6683221c00a8a10b12c86b68379b5aef46e"
+    },
+    {
+      "file": "home-before-later-row.png",
+      "publicPath": ".github/pr-evidence/20261124-draft-readiness/home-before-later-row.png",
+      "bytes": 105194,
+      "sha256": "86b1d9278fbab106a1cbece61e0e74360f0ea39753eb731f0617fa24119d31da"
+    },
+    {
+      "file": "home-before-series.png",
+      "publicPath": ".github/pr-evidence/20261124-draft-readiness/home-before-series.png",
+      "bytes": 121609,
+      "sha256": "9ef3bce686dd25beeffbc7723460283e116b73f3739a580b3268b09ca51e1344"
+    },
+    {
+      "file": "home-later-row.png",
+      "publicPath": ".github/pr-evidence/20261124-draft-readiness/home-later-row.png",
+      "bytes": 115904,
+      "sha256": "3f0ca322054e3981a5a6a1d4082f542b6f3cae491ca25d1b3edfc26af11b8a02"
+    },
+    {
+      "file": "home-series.png",
+      "publicPath": ".github/pr-evidence/20261124-draft-readiness/home-series.png",
+      "bytes": 134997,
+      "sha256": "13373f0d9d5ce5b288d7df544f3e2823636183ea6df52aa7585b59adaa1555f8"
+    },
+    {
+      "file": "home-delayed-focus.png",
+      "publicPath": ".github/pr-evidence/20261124-draft-readiness/home-delayed-focus.png",
+      "bytes": 167414,
+      "sha256": "bef10130394411493439b67b2da74001792fafa268268916e5003c71bb3ba875"
+    }
+  ]
+}
