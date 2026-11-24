@@ -1,8 +1,8 @@
 # IPTV performance review evidence — 2026-11-24
 
-This bundle supports the focused IPTV performance PRs. It contains eight reviewed screenshots, sanitized measurement summaries and source identities. It contains no application/user-data backup, account or provider configuration, raw HTTP/logcat, UI hierarchy XML, APK, or private workstation/device path.
+This bundle supports the focused IPTV performance PRs. It contains reviewed screenshots, sanitized measurement summaries and source identities. It contains no application/user-data backup, account or provider configuration, raw HTTP/logcat, UI hierarchy XML, APK, or private workstation/device path.
 
-The recorded combined source was based on `1823b9c`, with the existing separate Sports C187 work included. The twelve extracted PRs are independently based on `b02e887` (Nuvio 1.2.0-beta.4). Their separate serialized validation is pending; the base needs an independent missing-import prerequisite repair. The earlier combined build's results must not be relabeled as isolated Beta4 branch results.
+The recorded combined source was based on `1823b9c`, with the existing separate Sports C187 work included. The twelve extracted PRs are independently based on `b02e887` (Nuvio 1.2.0-beta.4). Their fresh isolated receipts are appended under `validation/` as serialized checks complete. Current dev `b14285b` independently repaired the base's missing import; extracted checks use exact merges with that current dev. The earlier combined build's results must not be relabeled as isolated Beta4 branch results.
 
 ## Recorded validation
 
@@ -26,7 +26,7 @@ The [evidence index](evidence-index.json) contains only public filenames, SHA256
 
 The resolver pair shows the same synthetic title: [provider fallback before the correction](screenshots/resolver-before-provider1001.png), then [full addon details after a pressure/revisit flow](screenshots/resolver-after-full1001-revisit.png), followed by [Back to the selected card](screenshots/resolver-after-revisit-back.png). “Before” means before the resolver fix in a combined build that already had Home changes. It is not a before-Home baseline. Private circuit state was not logged; separate public-entry red/green regressions establish the resolver defect.
 
-Home evidence shows [Classic returning to row 09/card 35](screenshots/home-classic-after-card35-back.png) and [Grid returning to card 17](screenshots/home-grid-after-card17-back.png). These are **after-only** captures. A literal Beta4 baseline-before route is now recorded below; the matched Home-only candidate route remains pending. Direct row → details → Back and SeeAll → details → Back are different routes; the latter is not claimed here. Existing Grid label clipping is outside the fix.
+Home evidence shows [Classic returning to row 09/card 35](screenshots/home-classic-after-card35-back.png) and [Grid returning to card 17](screenshots/home-grid-after-card17-back.png). These are **after-only** captures. A literal Beta4/Home-only matched comparison is now recorded below, with stable query revision during the accepted route. Direct row → details → Back and SeeAll → details → Back are different routes; the latter is not claimed here. Existing Grid label clipping is outside the fix.
 
 Guide evidence shows [the future Sentinel in global Search](screenshots/guide-search-five-hour-sentinel.png), [the populated near-now preview](screenshots/guide-near-now-preview.png), and [the same Sentinel in the full schedule](screenshots/guide-full-schedule-five-hour-sentinel.png). The limited preview's absence of the Sentinel is expected. Its14-row cap comes from source/operational evidence; the screenshot does not show every row fitting on screen. Search remains a next-six-hours search; no nine-hour Search claim is made. Public Cinemeta posters in the search screenshot are incidental.
 
@@ -36,4 +36,14 @@ The baseline APK was built from `58104b7ad1026` (b02 plus the build-only NuvioDi
 
 The literal route selected [Row09/Card35](screenshots/home-before-card35-selected.png), opened [full addon9035 details](screenshots/home-before-card35-full-details.png), then one Back [focused Movies and rewound the row](screenshots/home-before-back-loses-focus.png). The immediate and settled return frames were identical. See [the sanitized baseline result](home-baseline-before.json).
 
-This supplies actual baseline-before evidence. It does not relabel the earlier combined after frames as a matched Home-only build; that candidate comparison is still pending. These are functional navigation observations, not memory/performance measurements.
+This supplies actual baseline-before evidence. The new matched comparison below uses the Home-only build; the earlier combined after frames retain their original labels. These are functional navigation observations, not memory/performance measurements.
+
+## Matched Home-only before/after comparison
+
+The repeated baseline kept repository revision1 throughout the direct Card35 → full addon9035 → Back route, but reduced the published row prefix from35 to30 and [returned to Movies/Card01](screenshots/home-before-back-loses-focus.png). Its settled return PNG is byte-identical to the original before capture above.
+
+The Home-only current-dev merge `c0307222c433` kept repository/spec revision1 and focus epoch1 throughout the same route. It opened [the same full9035 details](screenshots/home-only-card35-full-details.png), then [restored Row09/Card35](screenshots/home-only-back-keeps-card35.png). The prefix remained35; disposal saved zero-based card index34 and Back restored it. The selected starting frame and settled return frame have identical PNG bytes. The sidebar remained reachable.
+
+See [the sanitized paired receipt](home-matched-before-after.json) for exact source/APK identities and the recorded field observations. The unchanged Home-only APK's separate [27-test/6-class and APK/four-ABI receipt](validation/06-home-working-set-complete-extracted-verification-b482f84d63d29a0a.json) is build evidence, not a timing result.
+
+An earlier candidate return went to Row01 and was held. Its first transition was not field-sampled, so its exact cause is not established; later state plus source supports startup query invalidation as an explanation. It is excluded from this unchanged-query comparison, and no source patch was made between the observations. Read-only debugger sampling briefly suspended execution; no memory, timing, FPS, physical-device, or provider-account improvement is claimed.

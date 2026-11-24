@@ -1,0 +1,100 @@
+{
+  "kind": "literal-paired-unchanged-query-home-functional-comparison",
+  "status": "passed-for-the-recorded-unchanged-query-direct-details-route",
+  "capturedUtc": "2026-11-24T18:49:19.880377+00:00",
+  "platform": "Android TV API36 emulator",
+  "layout": "CLASSIC",
+  "route": "Prepare the 35-card prefix through SeeAll, return to the row, then direct Row09/Card35 -> full addon9035 details -> one Back.",
+  "sharedConfiguration": {
+    "selectedPreferencesIdenticalAcrossApkUpdate": true,
+    "dataClearedOrAppUninstalled": false,
+    "versionName": "1.2.0-beta.4",
+    "versionCode": 108300
+  },
+  "baseline": {
+    "testedSource": "58104b7ad1026ea37bb380df3152045991c323f4",
+    "base": "b02e88770c3092782e4fb43b668552d6cad756ab",
+    "buildOnlyDifference": "One NuvioDialog import; current dev b142 differs only in import ordering.",
+    "installedApkSha256": "246a50f3366f05244eb673dd0f353145ba5e84a76b78e92bc293fb248105e932",
+    "repositoryRevisionBeforeDuringAfter": [
+      1,
+      1,
+      1
+    ],
+    "row09PrefixBeforeDuringAfter": [
+      35,
+      35,
+      30
+    ],
+    "actualReturn": "Movies tab focused, Card01 in Row09; the repeated settled frame is byte-identical to the previously published before image.",
+    "startImage": "screenshots/home-only-back-keeps-card35.png",
+    "fullDetailsImage": "screenshots/home-before-card35-full-details.png",
+    "returnImage": "screenshots/home-before-back-loses-focus.png"
+  },
+  "home": {
+    "publishedHead": "cea536e57fd63adab3fed796c1bcb0137ec42b6c",
+    "testedMerge": "c0307222c4332e3c0df56b9ad3464f5350a759d6",
+    "currentDev": "b14285b29f35e29835f45f2b2015b6ce6eccba65",
+    "installedApkSha256": "2abd9adf98d129b489b16d8581a24c7fa8f31f35c3e8b5e4c4be803fa72c065a",
+    "repositoryRevisionBeforeDuringAfter": [
+      1,
+      1,
+      1
+    ],
+    "rowSpecRevisionBeforeDuringAfter": [
+      1,
+      1,
+      1
+    ],
+    "focusEpochBeforeDuringAfter": [
+      1,
+      1,
+      1
+    ],
+    "row09PrefixBeforeDuringAfter": [
+      35,
+      35,
+      35
+    ],
+    "lastSavedClassicIndexBeforeDuringAfter": [
+      29,
+      34,
+      34
+    ],
+    "snapshotInterpretation": "Before navigation, the VM still held its previous saved snapshot. Disposal saved Card35's zero-based index34, which was restored after Back.",
+    "actualReturn": "Exact Row09/Card35 restored; the selected starting and settled return PNGs are byte-identical. The sidebar remained reachable afterward.",
+    "startAndReturnImage": "screenshots/home-only-back-keeps-card35.png",
+    "fullDetailsImage": "screenshots/home-only-card35-full-details.png"
+  },
+  "images": [
+    {
+      "file": "screenshots/home-before-back-loses-focus.png",
+      "sha256": "2545ccf31008823e96f72cebc3ab5d2c15da333edf5d21d4f8627bf9f9f44c9d"
+    },
+    {
+      "file": "screenshots/home-only-card35-full-details.png",
+      "sha256": "963e98ff7dcf23963bb084546dafa2944390f1edd4b8deb8eb37f8e0bce9cf5a",
+      "when": "Home-only published slice cea536e merged with current dev b142 (tested c030); accepted stable-query Classic comparison.",
+      "proves": "Full addon9035 details with Synthetic director9035 before Back; pixels match the accepted baseline full-details page.",
+      "limits": "Synthetic direct-row route with revision/spec/epoch stable. Field sampling briefly suspended execution; no timing, RAM/PSS, physical-device or provider-account result. Earlier query-changing observations are not accepted pass evidence."
+    },
+    {
+      "file": "screenshots/home-only-back-keeps-card35.png",
+      "sha256": "07b1ec35bd740339edd152f641aaf02f7d524fdf2def6c29a734ea3801e733d2",
+      "when": "Home-only published slice cea536e merged with current dev b142 (tested c030); accepted stable-query Classic comparison.",
+      "proves": "One Back restores the highlighted Row09/Card35. Pixels match the selected Card35 starting frame; field samples independently show its 35-card prefix and saved/restored index34 persisted.",
+      "limits": "Synthetic direct-row route with revision/spec/epoch stable. Field sampling briefly suspended execution; no timing, RAM/PSS, physical-device or provider-account result. Earlier query-changing observations are not accepted pass evidence."
+    }
+  ],
+  "diagnosticMethod": "Read-only debugger field inspection, with no target method invocation or data mutation. The process was briefly suspended for bounded reads; execution resumed and the debugger detached afterward.",
+  "earlierCandidateObservation": "An earlier full-details return went to Row01 and was held. A later inspection showed revision1 and focus epoch1, but the first transition itself was not sampled. Startup query invalidation is a source-supported explanation, not a proven trace of that episode. It is excluded from this stable-query comparison; no source patch was made between the observations.",
+  "acceptedProcessLogsFatalMarkers": 0,
+  "validation": "The unchanged Home-only APK separately passed 27 tests across 6 classes and full-debug APK/source/signature/ZIP/four-ABI verification; this UI record adds functional route evidence only.",
+  "inputReceiptSha256": "50e08542012c7938b20380eb0b50bbd5741c9165d3560a0944f69967d2c01bb4",
+  "limits": [
+    "Synthetic unchanged-query Classic direct-row comparison only; not a claim that a changing startup/catalogue query preserves far-card focus.",
+    "Metadata was warmed before the accepted full-details route; provider-only popups were excluded.",
+    "No CPU/FPS/RAM/PSS, audio, physical-device or authenticated-provider result.",
+    "Original application restoration is tracked separately and is not established by this receipt."
+  ]
+}

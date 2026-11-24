@@ -75,5 +75,19 @@
     "when": "Before Home slice: Beta4 b02 plus compile-only NuvioDialog import (58104); same import later landed upstream with different ordering.",
     "proves": "One Back loses the card outline, focuses the Movies tab and returns Row09 to its first-card view; the settled frame matches the immediate return.",
     "limits": "Synthetic Classic direct-row route only. Baseline source and installed APK are pinned separately; this is not pristine unbuildable b02, a memory/timing measurement, or candidate after evidence."
+  },
+  {
+    "file": "screenshots/home-only-card35-full-details.png",
+    "sha256": "963e98ff7dcf23963bb084546dafa2944390f1edd4b8deb8eb37f8e0bce9cf5a",
+    "when": "Home-only published slice cea536e merged with current dev b142 (tested c030); accepted stable-query Classic comparison.",
+    "proves": "Full addon9035 details with Synthetic director9035 before Back; pixels match the accepted baseline full-details page.",
+    "limits": "Synthetic direct-row route with revision/spec/epoch stable. Field sampling briefly suspended execution; no timing, RAM/PSS, physical-device or provider-account result. Earlier query-changing observations are not accepted pass evidence."
+  },
+  {
+    "file": "screenshots/home-only-back-keeps-card35.png",
+    "sha256": "07b1ec35bd740339edd152f641aaf02f7d524fdf2def6c29a734ea3801e733d2",
+    "when": "Home-only published slice cea536e merged with current dev b142 (tested c030); accepted stable-query Classic comparison.",
+    "proves": "One Back restores the highlighted Row09/Card35. Pixels match the selected Card35 starting frame; field samples independently show its 35-card prefix and saved/restored index34 persisted.",
+    "limits": "Synthetic direct-row route with revision/spec/epoch stable. Field sampling briefly suspended execution; no timing, RAM/PSS, physical-device or provider-account result. Earlier query-changing observations are not accepted pass evidence."
   }
 ]
