@@ -1,0 +1,68 @@
+{
+  "scope": "One completed extracted-source validation stage, identified by its immutable input receipt.",
+  "base": "b02e88770c3092782e4fb43b668552d6cad756ab",
+  "record": {
+    "stage": "complete-extracted-verification",
+    "source": {
+      "kind": "isolated-slice-merged-with-current-dev",
+      "ordinal": 12,
+      "slug": "sports-token-lookup",
+      "publishedHead": "36132e5d1f032e9f7362c353f58d072833eb29a8",
+      "testedCommit": "0c706dcdd16137a1a534650cce138130b66c57c8",
+      "prerequisiteHead": "b14285b29f35e29835f45f2b2015b6ce6eccba65",
+      "currentDev": "b14285b29f35e29835f45f2b2015b6ce6eccba65",
+      "exactMergeTree": "2dde21d5d81086a48e503ce025e6863f46b456b0",
+      "extraSourcePaths": [
+        "app/src/main/java/com/nuvio/tv/ui/screens/settings/BackupOrderSettings.kt"
+      ],
+      "extraDiff": "one upstream NuvioDialog import only",
+      "codePrDiffIncludesPrerequisite": false
+    },
+    "sourceTree": "2dde21d5d81086a48e503ce025e6863f46b456b0",
+    "receiptSha256": "c25149aca3b154b0f986f1a008ebc21855731ff3ef98e218f12ff9d23f468a0e",
+    "sourceStableDuringBuild": true,
+    "testClasses": 2,
+    "totals": {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "suites": [
+      {
+        "name": "com.nuvio.tv.livetv.sports.SportsGuideWordsTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "6cb16f28849e57caab03fcb62e7d9ce69993dd57db8e1ad47df239c2630af51b"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.sports.SportsMatcherPlaybackTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "70a8150dc2ba20b7b0190d08063ff78394159038be6a2c68c8c9aa387e594687"
+      }
+    ],
+    "unitGatePassed": true,
+    "unitKind": "JVM/native-SQLite",
+    "fullGradleInvocationComplete": true,
+    "apkGatePlanned": false,
+    "apkVerified": false,
+    "flags": {
+      "defaultStableVersioning": true,
+      "livetvTestBuildPropertyOmitted": true,
+      "generatorEnabled": true,
+      "nativeTasksEnabled": true,
+      "gradleTaskExclusions": [],
+      "heapMiB": 6144,
+      "workers": 1,
+      "kotlinCompiler": "in-process",
+      "deviceActions": false
+    },
+    "limits": "Unit gate complete. No fresh APK is required or claimed for this slice's validation plan."
+  },
+  "limits": "The unit and APK gates are stated separately. This is local validation, not hosted CI or physical-device/provider acceptance. Earlier combined586/96 results are separate."
+}
