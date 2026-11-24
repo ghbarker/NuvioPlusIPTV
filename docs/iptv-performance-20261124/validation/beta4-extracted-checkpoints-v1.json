@@ -1,0 +1,86 @@
+{
+  "capturedUtc": "2026-11-24T18:10:56.580034+00:00",
+  "scope": "Completed extracted-source checkpoints only; no raw logs, XML or private paths.",
+  "base": "b02e88770c3092782e4fb43b668552d6cad756ab",
+  "records": [
+    {
+      "stage": "completed-compilation-and-unit-tests-only",
+      "source": {
+        "kind": "baseline-build-prerequisite",
+        "publishedHead": "58104b7ad1026ea37bb380df3152045991c323f4",
+        "testedCommit": "58104b7ad1026ea37bb380df3152045991c323f4",
+        "prerequisitePr": "https://github.com/homelessbrian/NuvioPlusIPTV/pull/194",
+        "extraSourcePaths": [],
+        "codePrDiffIncludesPrerequisite": true
+      },
+      "sourceTree": "2f081da108de4f4fcbb96428f94460c81a30cbed",
+      "receiptSha256": "11ff9218017fb5db760c19295ca6ae2c89ac530fe9f545d4ccd21f4e9b50ddf8",
+      "sourceStableDuringBuild": true,
+      "testClasses": 2,
+      "totals": {
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "suites": [
+        {
+          "name": "com.nuvio.tv.livetv.ondemand.OnDemandHomeViewModelTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "sha256": "f40e7d67146d22402932231179551ee5dfb322b9e3591efa52f9275f8fb4fa26"
+        },
+        {
+          "name": "com.nuvio.tv.ui.screens.home.ModernHomeIdentityRelocationTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "sha256": "3caaac7f340127e53f40ae82fa222313d6558d8f6a5df197081cfb687242140c"
+        }
+      ],
+      "apkVerified": false,
+      "flags": {
+        "defaultStableVersioning": true,
+        "livetvTestBuildPropertyOmitted": true,
+        "generatorEnabled": true,
+        "nativeTasksEnabled": true,
+        "gradleTaskExclusions": [],
+        "heapMiB": 6144,
+        "workers": 1,
+        "kotlinCompiler": "in-process",
+        "deviceActions": false
+      },
+      "limits": "This checkpoint does not claim APK assembly, final Gradle completion or native packaging verification."
+    },
+    {
+      "stage": "native-go-host-protocol-only",
+      "source": {
+        "kind": "direct-extracted-slice",
+        "ordinal": 11,
+        "slug": "vpn-response-pool",
+        "publishedHead": "5bde5052e3301d58f4739c7a12d211460cdc28b4",
+        "testedCommit": "5bde5052e3301d58f4739c7a12d211460cdc28b4",
+        "extraSourcePaths": []
+      },
+      "sourceTree": "27370eb9b1014f0beb04566d965bfe09b53c61fe",
+      "receiptSha256": "50d6016e51d739f4e78d1366f7e521ca1821585987e831f2d50b12d072046541",
+      "topLevelTestsPassed": 39,
+      "packages": [
+        "nuvio-vpn-http/internal/netstack",
+        "nuvio-vpn-http"
+      ],
+      "flags": {
+        "testCount": 1,
+        "platform": "Windows",
+        "goVersion": "1.27.3"
+      },
+      "apkVerified": false,
+      "limits": "No Android ABI, encrypted-tunnel/provider throughput or account validation claim."
+    }
+  ],
+  "pendingAtCapture": [],
+  "limits": "A compilation/unit checkpoint is not a full APK result. Each record states tested versus published source and any separate one-import prerequisite. Earlier combined586/96 evidence remains historical."
+}
