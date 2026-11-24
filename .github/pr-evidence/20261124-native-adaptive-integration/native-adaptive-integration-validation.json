@@ -1,0 +1,396 @@
+{
+  "purpose": "Host compilation and integration regression evidence for focused PR187 and PR188 on their current upstream baseline",
+  "sourceBase": "4bb3d3cd5137cc16aabc10706f278f3f4b127443",
+  "testedHeads": {
+    "sports-native": "10dd23076362c67ee1893461262c5e372d5dc6d0",
+    "adaptive": "095c6729f63696067ecfdd4dde11940e23e1dff6"
+  },
+  "build": {
+    "exitCode": 0,
+    "task": ":app:testFullDebugUnitTest",
+    "heapMiB": 6144,
+    "foundationPr170InUpstreamBaseline": true,
+    "separateFoundationOverlayApplied": false,
+    "unrelatedVpnGoCrossCompileTasksExcluded": true,
+    "apkBuilt": false,
+    "signingPerformed": false,
+    "deviceActions": false,
+    "sourceFilesUnchangedDuringRun": true
+  },
+  "hostTests": {
+    "actualCases": 73,
+    "classes": 17,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": [
+      {
+        "name": "com.nuvio.tv.livetv.data.AdaptiveLiveBufferPreferencesTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "cbf148ae4ff2fd0fc9816d4bcd7830a1673f532cedc389f0df2f605e4458ead4"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.ondemand.OnDemandHomeViewModelTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "569b6278fa63b843225c24a206c33c66a98b1e5275e1bb4736dcbe567bca7800"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.ondemand.VodHomeWorkPolicyTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "b0ee7c34d52c582ad520bbf94cfdba6fd3236a4bced3b031e80e3e742e150282"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.player.AdaptiveLiveBufferMediaTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "45e997804b0668fcf99265391349ee30b4be8b23d5a0c5c1bbcddbbdeaf402ff"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.player.AdaptiveLiveBufferPolicyTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "f5f43864389814c0f7b120109f953bf22573f2609847684882d93b0bd9f43b5b"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.player.AdaptiveLiveBufferTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "df1bd044179ea6d1c66528768e2b6c1bf389f83508aabbb8fa6a22b168eb0fa2"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.player.AdaptiveLiveSourceEligibilityTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "9fc36adfde10bcd0aa12309d9f00c84707cc75ec5d74c0325a817d9e3530b84e"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.player.RecordingPlaybackBackgroundTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "ba2810a0671bcd5056d286a4f395259e7d45193c2f933f76efbbc40cf64dc185"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.sports.SportsChannelIndexCacheTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "08a6cb697211f7509d4fc63d4c5d1c0a92a9c721da65b5aa6ed541950b241bda"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.sports.SportsChannelIndexTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "a3f3ee338402afb0c27bfa07fd2c85ad592e3f9bd5736bf8e3c6784e61461ba5"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.sports.SportsGuideTextTest",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "6e462cf60daef9f0141e3dea7d3e584de5e44a4735e20feedd8ccdcbf2592aeb"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.sports.SportsIndexGroupedAliasTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "a9fc9f63149714001ee474755203e5a2e5c355650feee9e26df08f648139cee8"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.sports.SportsIndexWordPredicateTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "30cb6bb0eb3908fedb4eddf9637aa431d129b740b88fe9b7a6b0ed1c9f272d3e"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.sports.SportsMatcherPlaybackTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "c9197490600db8508abaa46ae25d4cb1afa7f046c3c7c5d4ad3aedd2692cec27"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.sports.SportsRowsTest",
+        "tests": 21,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "4a41fecf007588850d5fa6c576318c4fa105d51903debe1ec89805c8055bb3cc"
+      },
+      {
+        "name": "com.nuvio.tv.ui.screens.settings.MemoryBudgetTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "573e6155e185a1dcf433260de8adfc8deaaa595b17d6cde9dd1872f17159b7cc"
+      },
+      {
+        "name": "com.nuvio.tv.ui.screens.settings.MemoryBudgetTierTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "d25d912aac64e6eae0e560d56316af5b57bc8c13ffdc471902443efe420b6be4"
+      }
+    ]
+  },
+  "testCountReconciliation": {
+    "plannedEstimate": 74,
+    "actualCases": 73,
+    "recordingBackgroundSourceCases": 1,
+    "recordingBackgroundXmlCases": 1,
+    "recordingBackgroundSourceGitBlob": "bc2950fcc7068810b6127e3dc073a789b9e6f4b5",
+    "explanation": "The planning estimate counted two existing RecordingPlaybackBackgroundTest cases; the baseline source and actual XML each contain one. No case was removed, skipped, modified or rerun to satisfy the estimate.",
+    "breakdown": {
+      "adaptive": 15,
+      "nativeSportsManagedHostChecks": 10,
+      "homeAndSportsIndex": 38,
+      "memoryBudget": 9,
+      "recordingBackground": 1
+    }
+  },
+  "sourceFiles": [
+    {
+      "path": "app/src/main/cpp/CMakeLists.txt",
+      "feature": "sports-native",
+      "sourceHead": "10dd23076362c67ee1893461262c5e372d5dc6d0",
+      "rawSourceSha256": "989e24a3b2e1032ace34a7339576dc453058d8e9c2395604402d00b8c7e39a8e",
+      "gitBlob": "fe5a31ed37d27ec733951d61a5c69a57af322195",
+      "earlierTestedHead": "112688dfe7835b620a3d3d0996bf73563c1f8ac3",
+      "earlierTestedGitBlob": "fe5a31ed37d27ec733951d61a5c69a57af322195",
+      "normalizedBlobUnchanged": true
+    },
+    {
+      "path": "app/src/main/cpp/sports/sports_text.c",
+      "feature": "sports-native",
+      "sourceHead": "10dd23076362c67ee1893461262c5e372d5dc6d0",
+      "rawSourceSha256": "036b68d8d5f9291edcc7f5b6356192c30af656967300314c18594471c068f067",
+      "gitBlob": "cbdab5e01eaff399af0d9ebc661addb99317974e",
+      "earlierTestedHead": "112688dfe7835b620a3d3d0996bf73563c1f8ac3",
+      "earlierTestedGitBlob": "cbdab5e01eaff399af0d9ebc661addb99317974e",
+      "normalizedBlobUnchanged": true
+    },
+    {
+      "path": "app/src/main/java/com/nuvio/tv/livetv/sports/SportsGuideText.kt",
+      "feature": "sports-native",
+      "sourceHead": "10dd23076362c67ee1893461262c5e372d5dc6d0",
+      "rawSourceSha256": "b749c6585ac6e387b65db9832cde74bfa89548f276a854b31e538f37d84949ba",
+      "gitBlob": "7f15b90b7bd2b221aae273ef31f0baac243c9218",
+      "earlierTestedHead": "112688dfe7835b620a3d3d0996bf73563c1f8ac3",
+      "earlierTestedGitBlob": "7f15b90b7bd2b221aae273ef31f0baac243c9218",
+      "normalizedBlobUnchanged": true
+    },
+    {
+      "path": "app/src/main/java/com/nuvio/tv/livetv/sports/SportsMatcher.kt",
+      "feature": "sports-native",
+      "sourceHead": "10dd23076362c67ee1893461262c5e372d5dc6d0",
+      "rawSourceSha256": "52b9c4166a97a57f32d5e6669ea92f3ec1fac7e72bfb372ba6a80a791b155167",
+      "gitBlob": "336eed42f860e5cd5f1c322f52b1ea15735e3a71",
+      "earlierTestedHead": "112688dfe7835b620a3d3d0996bf73563c1f8ac3",
+      "earlierTestedGitBlob": "4d2f6a00b08f2ec29685e4004303ed97c344bb1c",
+      "normalizedBlobUnchanged": false
+    },
+    {
+      "path": "app/src/main/java/com/nuvio/tv/livetv/sports/SportsTextNative.java",
+      "feature": "sports-native",
+      "sourceHead": "10dd23076362c67ee1893461262c5e372d5dc6d0",
+      "rawSourceSha256": "e3032cce62f43e23ba4df75d86ed5ac31f6c3da996cc177d71ee2a4f690a406d",
+      "gitBlob": "b30add4cb6635ecb50bf44648448974a0f0983a3",
+      "earlierTestedHead": "112688dfe7835b620a3d3d0996bf73563c1f8ac3",
+      "earlierTestedGitBlob": "b30add4cb6635ecb50bf44648448974a0f0983a3",
+      "normalizedBlobUnchanged": true
+    },
+    {
+      "path": "app/src/test/java/com/nuvio/tv/livetv/sports/SportsGuideTextTest.kt",
+      "feature": "sports-native",
+      "sourceHead": "10dd23076362c67ee1893461262c5e372d5dc6d0",
+      "rawSourceSha256": "9b1587f012b3f0f48fb0f5765ae57d986c2d467801fca14f4262c459baaa8b5c",
+      "gitBlob": "be9ca2c2fd9994639d2591c6872bbf84b5e19287",
+      "earlierTestedHead": "112688dfe7835b620a3d3d0996bf73563c1f8ac3",
+      "earlierTestedGitBlob": "be9ca2c2fd9994639d2591c6872bbf84b5e19287",
+      "normalizedBlobUnchanged": true
+    },
+    {
+      "path": "app/src/main/java/com/nuvio/tv/livetv/data/LiveTvPreferences.kt",
+      "feature": "adaptive",
+      "sourceHead": "095c6729f63696067ecfdd4dde11940e23e1dff6",
+      "rawSourceSha256": "03a6cc5a08cb10dcd7e78d5adcd306c23670fac6957efceeb8999588f2f07765",
+      "gitBlob": "6f3ef09cba06a85ec54625854569b34e70d33bad",
+      "earlierTestedHead": "0c99a8b6d7d3cd4e2400b6caef820330846662bb",
+      "earlierTestedGitBlob": "ba8fcbd7f02a71b0da11667372412248c428495b",
+      "normalizedBlobUnchanged": false
+    },
+    {
+      "path": "app/src/main/java/com/nuvio/tv/livetv/model/LiveTvModels.kt",
+      "feature": "adaptive",
+      "sourceHead": "095c6729f63696067ecfdd4dde11940e23e1dff6",
+      "rawSourceSha256": "c3f76fda8a33e816944c6e87c7b384cedcb7064a1df2365d47d39f9a10db4bf0",
+      "gitBlob": "4fb4b9d62a9f9a8f4cd2126ccfc72fd2a06faf41",
+      "earlierTestedHead": "0c99a8b6d7d3cd4e2400b6caef820330846662bb",
+      "earlierTestedGitBlob": "4fb4b9d62a9f9a8f4cd2126ccfc72fd2a06faf41",
+      "normalizedBlobUnchanged": true
+    },
+    {
+      "path": "app/src/main/java/com/nuvio/tv/livetv/player/AdaptiveLiveBuffer.kt",
+      "feature": "adaptive",
+      "sourceHead": "095c6729f63696067ecfdd4dde11940e23e1dff6",
+      "rawSourceSha256": "4c9d8b419b95758340ea0a95817d80a469ad21d6fff0328a68552107c5fe6606",
+      "gitBlob": "7d9a673a76544cc606d0c63536dc8bc9c647e79b",
+      "earlierTestedHead": "0c99a8b6d7d3cd4e2400b6caef820330846662bb",
+      "earlierTestedGitBlob": "7d9a673a76544cc606d0c63536dc8bc9c647e79b",
+      "normalizedBlobUnchanged": true
+    },
+    {
+      "path": "app/src/main/java/com/nuvio/tv/livetv/player/AdaptiveLiveBufferPolicy.kt",
+      "feature": "adaptive",
+      "sourceHead": "095c6729f63696067ecfdd4dde11940e23e1dff6",
+      "rawSourceSha256": "6e580276596a4f420f04bf2c1e72936f5cca01037856e455a0bc7c152268e030",
+      "gitBlob": "25fa10bb210e0c5c3400998e6c9b7e0ba974366b",
+      "earlierTestedHead": "0c99a8b6d7d3cd4e2400b6caef820330846662bb",
+      "earlierTestedGitBlob": "25fa10bb210e0c5c3400998e6c9b7e0ba974366b",
+      "normalizedBlobUnchanged": true
+    },
+    {
+      "path": "app/src/main/java/com/nuvio/tv/livetv/player/LiveTvPlaybackController.kt",
+      "feature": "adaptive",
+      "sourceHead": "095c6729f63696067ecfdd4dde11940e23e1dff6",
+      "rawSourceSha256": "9ccc74f5489201d93918e71922c93616a64b156cd58ea219437f6313098cd1a9",
+      "gitBlob": "0d1801a003da70090a5ce38f47c7ec0f9bfbfb34",
+      "earlierTestedHead": "0c99a8b6d7d3cd4e2400b6caef820330846662bb",
+      "earlierTestedGitBlob": "b0c1ed25e3b17c9250fce7d9bc8aa5b2a28c0c90",
+      "normalizedBlobUnchanged": false
+    },
+    {
+      "path": "app/src/main/java/com/nuvio/tv/livetv/player/LiveTvPlayerHooks.kt",
+      "feature": "adaptive",
+      "sourceHead": "095c6729f63696067ecfdd4dde11940e23e1dff6",
+      "rawSourceSha256": "57c93e916f6e69a03c8e02c504d9bef9c9c1cae94c8eb71ce2de70ec3e8260ab",
+      "gitBlob": "c63480f9650632f8c9bcf9658ffed3f96cebf6a4",
+      "earlierTestedHead": "0c99a8b6d7d3cd4e2400b6caef820330846662bb",
+      "earlierTestedGitBlob": "c63480f9650632f8c9bcf9658ffed3f96cebf6a4",
+      "normalizedBlobUnchanged": true
+    },
+    {
+      "path": "app/src/main/java/com/nuvio/tv/ui/screens/settings/LiveTvSettingsContent.kt",
+      "feature": "adaptive",
+      "sourceHead": "095c6729f63696067ecfdd4dde11940e23e1dff6",
+      "rawSourceSha256": "0e7ddda97549cbfea701c83fec064439c9f45986c4312f3592ed6aacdb12cf65",
+      "gitBlob": "64bcc4149cb22ceb1b2c162669a008c80715cd5a",
+      "earlierTestedHead": "0c99a8b6d7d3cd4e2400b6caef820330846662bb",
+      "earlierTestedGitBlob": "64bcc4149cb22ceb1b2c162669a008c80715cd5a",
+      "normalizedBlobUnchanged": true
+    },
+    {
+      "path": "app/src/main/res/values/strings_iptv_settings.xml",
+      "feature": "adaptive",
+      "sourceHead": "095c6729f63696067ecfdd4dde11940e23e1dff6",
+      "rawSourceSha256": "6a001ee30af9e1611169606ecd8fa50abc40cd3ab840bee34acd490909ff5193",
+      "gitBlob": "ce7545e1217cc52a3804f87bdf0b3bba15f6484a",
+      "earlierTestedHead": "0c99a8b6d7d3cd4e2400b6caef820330846662bb",
+      "earlierTestedGitBlob": "ce7545e1217cc52a3804f87bdf0b3bba15f6484a",
+      "normalizedBlobUnchanged": true
+    },
+    {
+      "path": "app/src/test/java/com/nuvio/tv/livetv/data/AdaptiveLiveBufferPreferencesTest.kt",
+      "feature": "adaptive",
+      "sourceHead": "095c6729f63696067ecfdd4dde11940e23e1dff6",
+      "rawSourceSha256": "2d881498fa2d3ae021cec4d3e7ee7c85333a76202a8c9b6179c53c96e59e72b0",
+      "gitBlob": "57b4099933193ad70d5fff3bcf268a45d87762dc",
+      "earlierTestedHead": "0c99a8b6d7d3cd4e2400b6caef820330846662bb",
+      "earlierTestedGitBlob": "57b4099933193ad70d5fff3bcf268a45d87762dc",
+      "normalizedBlobUnchanged": true
+    },
+    {
+      "path": "app/src/test/java/com/nuvio/tv/livetv/player/AdaptiveLiveBufferMediaTest.kt",
+      "feature": "adaptive",
+      "sourceHead": "095c6729f63696067ecfdd4dde11940e23e1dff6",
+      "rawSourceSha256": "883253a04205c25c159fe9c8b3a4fd9c8c1aeca54970184c10ca9ae149eadc30",
+      "gitBlob": "28ca8ddc60c2353078ef4aa9d23edf5717bf6b35",
+      "earlierTestedHead": "0c99a8b6d7d3cd4e2400b6caef820330846662bb",
+      "earlierTestedGitBlob": "28ca8ddc60c2353078ef4aa9d23edf5717bf6b35",
+      "normalizedBlobUnchanged": true
+    },
+    {
+      "path": "app/src/test/java/com/nuvio/tv/livetv/player/AdaptiveLiveBufferPolicyTest.kt",
+      "feature": "adaptive",
+      "sourceHead": "095c6729f63696067ecfdd4dde11940e23e1dff6",
+      "rawSourceSha256": "e8b6060960afb541fe946797dcd4dac442ec52c400d4a4b0b6d27373419ce514",
+      "gitBlob": "37efab99234a12db2cd00cb2916528f9cf008a7b",
+      "earlierTestedHead": "0c99a8b6d7d3cd4e2400b6caef820330846662bb",
+      "earlierTestedGitBlob": "37efab99234a12db2cd00cb2916528f9cf008a7b",
+      "normalizedBlobUnchanged": true
+    },
+    {
+      "path": "app/src/test/java/com/nuvio/tv/livetv/player/AdaptiveLiveBufferTest.kt",
+      "feature": "adaptive",
+      "sourceHead": "095c6729f63696067ecfdd4dde11940e23e1dff6",
+      "rawSourceSha256": "73258ff9badb22a2df10a0fbc359708e574f19e407dd81af4a046306d3039c1a",
+      "gitBlob": "989b38e6d3250470fa8d6e36b5e8a528171c60f0",
+      "earlierTestedHead": "0c99a8b6d7d3cd4e2400b6caef820330846662bb",
+      "earlierTestedGitBlob": "989b38e6d3250470fa8d6e36b5e8a528171c60f0",
+      "normalizedBlobUnchanged": true
+    },
+    {
+      "path": "app/src/test/java/com/nuvio/tv/livetv/player/AdaptiveLiveSourceEligibilityTest.kt",
+      "feature": "adaptive",
+      "sourceHead": "095c6729f63696067ecfdd4dde11940e23e1dff6",
+      "rawSourceSha256": "c4d01db741823392d4dbd2b96c1ef040b19add07cd99223bbdd0b7d69f56468a",
+      "gitBlob": "a91183387a058b6196a777b68496640923bfd11d",
+      "earlierTestedHead": "0c99a8b6d7d3cd4e2400b6caef820330846662bb",
+      "earlierTestedGitBlob": "a91183387a058b6196a777b68496640923bfd11d",
+      "normalizedBlobUnchanged": true
+    }
+  ],
+  "earlierSourceIdentity": {
+    "sportsNativeUnchangedFiles": 5,
+    "adaptiveUnchangedFiles": 11,
+    "changedIntegrationFiles": [
+      "app/src/main/java/com/nuvio/tv/livetv/sports/SportsMatcher.kt",
+      "app/src/main/java/com/nuvio/tv/livetv/data/LiveTvPreferences.kt",
+      "app/src/main/java/com/nuvio/tv/livetv/player/LiveTvPlaybackController.kt"
+    ],
+    "meaning": "Normalized Git blob identity for retained helpers/build/test files; only the matcher and preferences/controller integration touchpoints changed."
+  },
+  "sourceReceiptIdentities": {
+    "verificationSha256": "0bb7100f08ad92410c9826540c3c990ff8b73fd8d63fe93134e61f5952c605f6",
+    "sourceManifestSha256": "b85f14981dbb6f355ec9ac079f61c85dee7e6f02270630efa8d89f4fa237d331",
+    "sourceIdentitySha256": "6cebe5d3c8d83871f227ef5606c1cc6ddc0705a21836c7a476f53c7d6ab351c5",
+    "buildResultSha256": "9b393368e3245dd11de10e8547bb0dbd92160b2fad2e8dccfade0437c960c7a0",
+    "buildLogSha256": "c2653fda6698c1fa52ce637a99e38a80103af3bcd4081c288ecff3c39b727362",
+    "restoreResultSha256": "a5681564ee90218ece03408e863fea0de4b1f5acde65420e4ec35b374ec94b01"
+  },
+  "validationWorktreeRestoredClean": true,
+  "limits": [
+    "Compilation and selected host tests only; this is not a fresh device, APK, native ABI, JNI execution or performance result.",
+    "The earlier five native Sports files and eleven Adaptive files retain their normalized Git blobs; their prior device/native evidence remains historical and is not represented as rerun here.",
+    "The two implementation PRs remain focused and independent. The combined source overlay was used only for integration validation."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "purpose": "Integration evidence only, separate from product PR branches",
+  "generatedUtc": "2026-11-24T13:21:48.817210+00:00",
+  "sourceBase": "4bb3d3cd5137cc16aabc10706f278f3f4b127443",
+  "testedHeads": {
+    "sports-native": "10dd23076362c67ee1893461262c5e372d5dc6d0",
+    "adaptive": "095c6729f63696067ecfdd4dde11940e23e1dff6"
+  },
+  "files": [
+    {
+      "file": "native-adaptive-integration-validation.json",
+      "publicPath": ".github/pr-evidence/20261124-native-adaptive-integration/native-adaptive-integration-validation.json",
+      "bytes": 17636,
+      "sha256": "6c2a2a1b2f37a43f44e5675eddaf2825f12764cf6f9ebbcd1e973ef4aeb7aa83"
+    }
+  ]
+}
