@@ -1,0 +1,232 @@
+{
+  "platform": "Android TV API36 x86_64 emulator; isolated synthetic component harness",
+  "trials": "One warmup excluded, three steady timed operations per case; fixture generation and full ordered-output checking excluded from clocks.",
+  "actualProductionCode": "Compiled production data/model/sports classes with a fixed shared dependency APK; same existing C kernel for both source variants. No matching/reload algorithm copied into this summary.",
+  "m3uReload": {
+    "fixture": {
+      "liveEntries": 25000,
+      "vodEntriesSkipped": 100000,
+      "playlists": 2
+    },
+    "parity": "Complete ordered channel fields, per-source tuple identities and production binary-cache decoding matched.",
+    "steadyTimingComparison": {
+      "changed_same_count": {
+        "processCpuMs": {
+          "baseline": 4407,
+          "candidate": 1804,
+          "candidateOverBaseline": 0.40934876333106424
+        },
+        "wallMs": {
+          "baseline": 3068.7918,
+          "candidate": 1298.041,
+          "candidateOverBaseline": 0.4229811224078479
+        }
+      },
+      "cold_channel_cache": {
+        "processCpuMs": {
+          "baseline": 4202,
+          "candidate": 1569,
+          "candidateOverBaseline": 0.37339362208472154
+        },
+        "wallMs": {
+          "baseline": 2914.5481,
+          "candidate": 1114.2458,
+          "candidateOverBaseline": 0.3823048245455273
+        }
+      },
+      "one_playlist_changed": {
+        "processCpuMs": {
+          "baseline": 3393,
+          "candidate": 1209,
+          "candidateOverBaseline": 0.3563218390804598
+        },
+        "wallMs": {
+          "baseline": 2385.6533,
+          "candidate": 900.1644,
+          "candidateOverBaseline": 0.37732406464929336
+        }
+      },
+      "unchanged_reuse": {
+        "processCpuMs": {
+          "baseline": 257,
+          "candidate": 256,
+          "candidateOverBaseline": 0.9961089494163424
+        },
+        "wallMs": {
+          "baseline": 196.4734,
+          "candidate": 191.7375,
+          "candidateOverBaseline": 0.9758954647295767
+        }
+      }
+    },
+    "scope": "Cached-file repository rebuild; no network transfer. Candidate includes M3U streaming plus no-EPG-index guard and other combined source changes; not an isolated per-PR speedup."
+  },
+  "guideQuery": {
+    "fixture": {
+      "guideIdentities": 1000,
+      "storedSlotsPerIdentity": 150
+    },
+    "steadyTimingComparison": {
+      "baseline21h_to_candidateNowNext": {
+        "baselineListings": 42000,
+        "baselineWallMs": 59.3382,
+        "candidateListings": 2000,
+        "candidateWallMs": 28.8781,
+        "scope": "Different intentionally requested query/model sets; exact compact pair semantics asserted by pinned probe. Not a measured heap reduction."
+      },
+      "future_all_65h": {
+        "threadCpuMs": {
+          "baseline": 214.322675,
+          "candidate": 215.373786,
+          "candidateOverBaseline": 1.0049043387499712
+        },
+        "wallMs": {
+          "baseline": 216.3665,
+          "candidate": 217.6935,
+          "candidateOverBaseline": 1.0061331121037684
+        }
+      },
+      "future_group128_65h": {
+        "threadCpuMs": {
+          "baseline": 28.242215,
+          "candidate": 23.293209,
+          "candidateOverBaseline": 0.8247656566597202
+        },
+        "wallMs": {
+          "baseline": 30.0122,
+          "candidate": 23.3586,
+          "candidateOverBaseline": 0.7783034899141016
+        }
+      },
+      "near_now_all_21h": {
+        "threadCpuMs": {
+          "baseline": 59.011059,
+          "candidate": 60.514748,
+          "candidateOverBaseline": 1.0254814779717814
+        },
+        "wallMs": {
+          "baseline": 59.3382,
+          "candidate": 60.5247,
+          "candidateOverBaseline": 1.0199955509267218
+        }
+      }
+    },
+    "parity": "Legacy query shapes retained all expected rows. Compact now/next produced exactly2000 models with every current/next start checked against the fixture.",
+    "scope": "Actual EpgDatabase/SQLite query and model construction. Intentionally different21h versus2-model request sets; model counts are not measured application heap."
+  },
+  "sportsTokenHelper": {
+    "fixture": {
+      "logicalGuideIdentities": 300,
+      "aliases": 900,
+      "physicalListings": 100800,
+      "slotsPerIdentity": 336
+    },
+    "versusInitialBaseline": {
+      "followed_full_guide/native_off": {
+        "processCpuMs": {
+          "baseline": 8760,
+          "candidate": 8046,
+          "candidateOverBaseline": 0.9184931506849315
+        },
+        "threadCpuMs": {
+          "baseline": 6610.740382,
+          "candidate": 6075.237449,
+          "candidateOverBaseline": 0.9189950138628814
+        },
+        "wallMs": {
+          "baseline": 6994.1568,
+          "candidate": 6397.9844,
+          "candidateOverBaseline": 0.9147613619414424
+        }
+      },
+      "followed_full_guide/native_on": {
+        "processCpuMs": {
+          "baseline": 5406,
+          "candidate": 5316,
+          "candidateOverBaseline": 0.9833518312985572
+        },
+        "threadCpuMs": {
+          "baseline": 4323.204904,
+          "candidate": 4254.853114,
+          "candidateOverBaseline": 0.9841895557768361
+        },
+        "wallMs": {
+          "baseline": 4534.8789,
+          "candidate": 4428.2658,
+          "candidateOverBaseline": 0.9764904196228923
+        }
+      },
+      "mixed_race_multiday/native_off": {
+        "processCpuMs": {
+          "baseline": 8634,
+          "candidate": 8206,
+          "candidateOverBaseline": 0.950428538336808
+        },
+        "threadCpuMs": {
+          "baseline": 6488.173215,
+          "candidate": 6230.723346,
+          "candidateOverBaseline": 0.9603201301092268
+        },
+        "wallMs": {
+          "baseline": 6854.4564,
+          "candidate": 6598.9596,
+          "candidateOverBaseline": 0.9627254467619052
+        }
+      },
+      "mixed_race_multiday/native_on": {
+        "processCpuMs": {
+          "baseline": 5445,
+          "candidate": 5370,
+          "candidateOverBaseline": 0.9862258953168044
+        },
+        "threadCpuMs": {
+          "baseline": 4342.059227,
+          "candidate": 4303.317037,
+          "candidateOverBaseline": 0.9910774616432932
+        },
+        "wallMs": {
+          "baseline": 4554.532,
+          "candidate": 4502.7475,
+          "candidateOverBaseline": 0.988630116112918
+        }
+      },
+      "titles_only/native_off": {
+        "processCpuMs": {
+          "baseline": 4494,
+          "candidate": 3907,
+          "candidateOverBaseline": 0.8693813974187806
+        },
+        "threadCpuMs": {
+          "baseline": 3391.584899,
+          "candidate": 2977.086729,
+          "candidateOverBaseline": 0.8777862909690942
+        },
+        "wallMs": {
+          "baseline": 3563.0771,
+          "candidate": 3129.3858,
+          "candidateOverBaseline": 0.8782818087208947
+        }
+      },
+      "titles_only/native_on": {
+        "processCpuMs": {
+          "baseline": 2887,
+          "candidate": 2859,
+          "candidateOverBaseline": 0.9903013508832699
+        },
+        "threadCpuMs": {
+          "baseline": 2285.130305,
+          "candidate": 2269.91019,
+          "candidateOverBaseline": 0.9933394979854332
+        },
+        "wallMs": {
+          "baseline": 2411.4455,
+          "candidate": 2367.7208,
+          "candidateOverBaseline": 0.9818678464846086
+        }
+      }
+    },
+    "parity": "Complete ordered typed model bytes/hashes, canonical fixture hash, native boundary checks and native-batch execution matched.",
+    "scope": "Token-only compiled source overlay. Baseline reused from earlier fresh process, not rerun as a new interleaved pair. Native-path differences around1–2% do not establish a material extra native speedup. C187 remains independent."
+  },
+  "limits": "Component timings are not whole-app startup/frame-time/PSS, cold disk, live-provider/network or physical-box acceptance."
+}

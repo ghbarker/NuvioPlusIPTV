@@ -1,0 +1,31 @@
+# IPTV performance review evidence — 2026-11-24
+
+This bundle supports the focused IPTV performance PRs. It contains eight reviewed screenshots, sanitized measurement summaries and source identities. It contains no application/user-data backup, account or provider configuration, raw HTTP/logcat, UI hierarchy XML, APK, or private workstation/device path.
+
+The recorded combined source was based on `1823b9c`, with the existing separate Sports C187 work included. The twelve extracted PRs are independently based on `b02e887` (Nuvio 1.2.0-beta.4). Their separate serialized validation is pending; the base needs an independent missing-import prerequisite repair. The earlier combined build's results must not be relabeled as isolated Beta4 branch results.
+
+## Recorded validation
+
+The final combined build passed **586 JVM/native-SQLite tests across 96 classes**, plus APK verification. A separate Windows Go 1.27.3 suite passed **39 top-level local protocol/ownership tests**. The synthetic TV emulator flows covered Guide coverage, Classic/Grid focus return, tabs/query changes, playback and metadata revisit. See [validation summary](validation-summary.json) and [61-file source identities](source-hashes.json).
+
+These checks do not establish physical-device performance, authenticated provider behavior, or whole-app heap/PSS/FPS improvements.
+
+## Component measurements
+
+The actual cached-file repository fixture used 25,000 live entries plus 100,000 skipped VOD entries. Changed-reload median wall times were 2914.5 → 1114.2 ms (missing cache),3068.8 → 1298.0 ms (same-count change) and2385.7 → 900.2 ms (one playlist changed). Unchanged reuse was 196.5 → 191.7 ms. Full ordered channel/source/binary-cache results matched. The candidate includes the separate M3U and no-EPG-index improvements; these are combined-component figures.
+
+For 1,000 guide identities, the legacy 21-hour read constructed 42,000 models in 59.34 ms. The compact query returned 2,000 checked now/next models in 28.88 ms. Full 65-hour reads still returned 130,000 models. This compares intentionally different requested working sets; **95.2% fewer constructed models is not a measured heap reduction**.
+
+The token-only Sports overlay preserved every complete ordered model and canonical fixture identity. Native-path medians changed around 1–2% versus the earlier baseline, so this bundle does not claim a material additional native speedup. The pre-existing C187 acceleration is separate. The retained helper removes per-token strings without retaining per-programme text.
+
+See [measurement summaries](measurements.json) for exact medians, CPU scope, fixture sizes and limitations. All figures are from a synthetic API36 x86_64 emulator component harness; one excluded warmup and three steady operations per case. Setup, parity serialization and reporting were outside measured operations.
+
+## Screenshot interpretation
+
+The [evidence index](evidence-index.json) contains only public filenames, SHA256 identities, capture context, visible findings and limits. The source PNGs were checked byte-for-byte, visually reviewed, and copied unchanged without textual/EXIF PNG metadata.
+
+The resolver pair shows the same synthetic title: [provider fallback before the correction](screenshots/resolver-before-provider1001.png), then [full addon details after a pressure/revisit flow](screenshots/resolver-after-full1001-revisit.png), followed by [Back to the selected card](screenshots/resolver-after-revisit-back.png). “Before” means before the resolver fix in a combined build that already had Home changes. It is not a before-Home baseline. Private circuit state was not logged; separate public-entry red/green regressions establish the resolver defect.
+
+Home evidence shows [Classic returning to row 09/card 35](screenshots/home-classic-after-card35-back.png) and [Grid returning to card 17](screenshots/home-grid-after-card17-back.png). These are **after-only** captures. A baseline-before Home capture remains pending. Direct row → details → Back and SeeAll → details → Back are different routes; the latter is not claimed here. Existing Grid label clipping is outside the fix.
+
+Guide evidence shows [the future Sentinel in global Search](screenshots/guide-search-five-hour-sentinel.png), [the populated near-now preview](screenshots/guide-near-now-preview.png), and [the same Sentinel in the full schedule](screenshots/guide-full-schedule-five-hour-sentinel.png). The limited preview's absence of the Sentinel is expected. Its14-row cap comes from source/operational evidence; the screenshot does not show every row fitting on screen. Search remains a next-six-hours search; no nine-hour Search claim is made. Public Cinemeta posters in the search screenshot are incidental.

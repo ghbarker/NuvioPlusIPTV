@@ -1,0 +1,58 @@
+[
+  {
+    "file": "screenshots/resolver-before-provider1001.png",
+    "sha256": "ce8ac44c2beffcd9f4e55f2ffafe6f7c7f65a9afe208851961f1e0d0c4324ec3",
+    "when": "Before the resolver correction, combined v2 with Home changes already present",
+    "proves": "After1001 had previously matched local addon metadata and later-row browsing, opening it showed Provider1001 fallback instead of the full-addon detail route.",
+    "limits": "This is not a baseline-before Home/focus screenshot. A filename saying hydrated does not establish correct full-addon hydration. Private backoff/counter state was not logged; source and public-entry regressions provide that attribution."
+  },
+  {
+    "file": "screenshots/resolver-after-full1001-revisit.png",
+    "sha256": "dfbddba22a0e4e46e098c6b288f8d2f3da80f26ab6c0bb85136456475e7533a1",
+    "when": "After narrow resolver correction, final combined v4",
+    "proves": "The same synthetic title opens Full1001 with Synthetic director1001 after explicit warm-up, actual cold9013–9018 metadata completions and rapid return.",
+    "limits": "Visible route/revisit success; does not prove runtime private pausedUntil state or measure heap/performance. V4 public-entry baseline/fixed regressions independently cover the resolver defect."
+  },
+  {
+    "file": "screenshots/resolver-after-revisit-back.png",
+    "sha256": "45dea3f0560dbc4ca110e3ed45beef91ce4d0d4d560f835f0f3d777804e5fb2c",
+    "when": "After narrow resolver correction, final combined v4",
+    "proves": "Back from Full1001 returns to selected Row01/Card01, still showing Full1001 summary.",
+    "limits": "After-only functional continuity evidence, not a baseline comparison."
+  },
+  {
+    "file": "screenshots/home-classic-after-card35-back.png",
+    "sha256": "07b1ec35bd740339edd152f641aaf02f7d524fdf2def6c29a734ea3801e733d2",
+    "when": "After Home changes, combined v2; Home blobs identical to extracted Home slice",
+    "proves": "Classic's direct rowCard35→details→Back flow returned to MovieRow09/Card35 with full9035 summary, preserving the expanded prefix.",
+    "limits": "After-only. SeeAll→detail→Back is a different route and was not claimed to preserve the separate SeeAll screen. Actual b02e baseline-before capture remains pending."
+  },
+  {
+    "file": "screenshots/home-grid-after-card17-back.png",
+    "sha256": "5c5eac19e9610b7fb9b2c45407dde7d933260f321c592519cad80f91822277e7",
+    "when": "After Home changes, combined v3; Home blobs identical to extracted Home slice",
+    "proves": "Grid's Series01/Card17→full101017 details→Back restored the exact Card17 outline.",
+    "limits": "After-only; actual b02e baseline-before capture remains pending. Existing host label clipping is visible and not part of this fix."
+  },
+  {
+    "file": "screenshots/guide-search-five-hour-sentinel.png",
+    "sha256": "e050e6faef0b53fdf316c79a97ed477c770c03c815491df8c3dbdd7c19f27eeb",
+    "when": "After bounded Guide changes, combined v2; Guide blobs carried into v4",
+    "proves": "Global Search found the unique+5h Sentinel as UPCOMING on previously unvisited high-index channel0900 before Guide/group09 browsing.",
+    "limits": "The capture shows the result; ordering is backed by operational capture/HTTP timeline. Public Cinemeta search posters are incidental, not private/provider content. No+9h Search expectation: Search is intentionally next6h."
+  },
+  {
+    "file": "screenshots/guide-near-now-preview.png",
+    "sha256": "14036751a9c3fc616a622bdcf807ab26a431d6c88ae72c6d49b67a069ea22c94",
+    "when": "After bounded Guide changes, combined v2",
+    "proves": "Channel0900 preview is populated around now while synthetic TS plays; the+5h Sentinel is outside the limited near-now preview.",
+    "limits": "The preview's14-row cap is established by source/XML, not a claim all14 rows fit visibly in this screenshot. Preview absence of Sentinel is expected, not a missing-programme bug."
+  },
+  {
+    "file": "screenshots/guide-full-schedule-five-hour-sentinel.png",
+    "sha256": "8f0a5b3b296fb7e70b53d5737b521ef5e17cdfb7cb0fffa42ca2180df0e7ccc2",
+    "when": "After bounded Guide changes, combined v2",
+    "proves": "The full Schedule for channel0900 reaches the same Sentinel at3:30–4:00PM, beyond the near-now preview, with its synthetic programme details.",
+    "limits": "After-only guide-coverage evidence, not a timing/performance measurement or baseline-before screenshot."
+  }
+]

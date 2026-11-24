@@ -1,0 +1,21 @@
+{
+  "scope": "Recorded combined-source validation before extraction onto Beta4; not an isolated Beta4 branch result.",
+  "jvmAndNativeSqlite": {
+    "tests": 586,
+    "classes": 96,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "nativeGo": {
+    "topLevelTestsPassed": 39,
+    "exitCode": 0,
+    "platform": "Windows",
+    "goVersion": "1.27.3",
+    "scope": "Local protocol/ownership regressions; no live-provider account validation"
+  },
+  "apkVerification": "Combined v4 APK verification passed; no APK or user data is included here.",
+  "ui": "Synthetic Android TV emulator flows: Classic/Grid return focus, tabs, changed-query focus reset, five-hour guide search/full schedule, playback and metadata revisit.",
+  "extractedBeta4Branches": "Separate serialized validation pending. The b02e base needs an independent import prerequisite repair; that repair is outside these twelve slices.",
+  "limits": "No whole-app heap/PSS/FPS, physical-device speedup, provider account or private resolver-circuit-state claim."
+}
