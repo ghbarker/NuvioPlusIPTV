@@ -1,0 +1,60 @@
+{
+  "scope": "One completed extracted-source validation stage, identified by its immutable input receipt.",
+  "base": "b02e88770c3092782e4fb43b668552d6cad756ab",
+  "record": {
+    "stage": "complete-extracted-verification",
+    "source": {
+      "kind": "isolated-slice-merged-with-current-dev",
+      "ordinal": 1,
+      "slug": "metadata-backoff",
+      "publishedHead": "59a7847113fea5144ecdbb31ffd9b5e1079b5429",
+      "testedCommit": "5f7682f3bb0a4397bcf907e445895519b110bfc7",
+      "prerequisiteHead": "b14285b29f35e29835f45f2b2015b6ce6eccba65",
+      "currentDev": "b14285b29f35e29835f45f2b2015b6ce6eccba65",
+      "exactMergeTree": "9d8f7d9003772a6caff7ad37e6938cf30faca586",
+      "extraSourcePaths": [
+        "app/src/main/java/com/nuvio/tv/ui/screens/settings/BackupOrderSettings.kt"
+      ],
+      "extraDiff": "one upstream NuvioDialog import only",
+      "codePrDiffIncludesPrerequisite": false
+    },
+    "sourceTree": "9d8f7d9003772a6caff7ad37e6938cf30faca586",
+    "receiptSha256": "524e04e15e249d38bc5c79fb722bf0f1c5538a697cbe5fbea1d98eea85ba40c4",
+    "sourceStableDuringBuild": true,
+    "testClasses": 1,
+    "totals": {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "suites": [
+      {
+        "name": "com.nuvio.tv.livetv.data.LiveTvPosterResolverBackoffTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "cb030e8bb151f67adb9e6a95ab3f89ea37cdc07ab45316a3f2f0d3374e493157"
+      }
+    ],
+    "unitGatePassed": true,
+    "unitKind": "JVM/native-SQLite",
+    "fullGradleInvocationComplete": true,
+    "apkGatePlanned": false,
+    "apkVerified": false,
+    "flags": {
+      "defaultStableVersioning": true,
+      "livetvTestBuildPropertyOmitted": true,
+      "generatorEnabled": true,
+      "nativeTasksEnabled": true,
+      "gradleTaskExclusions": [],
+      "heapMiB": 6144,
+      "workers": 1,
+      "kotlinCompiler": "in-process",
+      "deviceActions": false
+    },
+    "limits": "Unit gate complete. No fresh APK is required or claimed for this slice's validation plan."
+  },
+  "limits": "The unit and APK gates are stated separately. This is local validation, not hosted CI or physical-device/provider acceptance. Earlier combined586/96 results are separate."
+}
