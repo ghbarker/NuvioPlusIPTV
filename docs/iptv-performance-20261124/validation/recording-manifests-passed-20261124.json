@@ -1,0 +1,1587 @@
+{
+  "capturedUtc": "2026-11-24T18:56:55.271777+00:00",
+  "scope": "Completed extracted-source checkpoints only; no raw logs, XML or private paths.",
+  "base": "b02e88770c3092782e4fb43b668552d6cad756ab",
+  "records": [
+    {
+      "stage": "complete-extracted-verification",
+      "source": {
+        "kind": "isolated-slice-merged-with-current-dev",
+        "ordinal": 1,
+        "slug": "metadata-backoff",
+        "publishedHead": "59a7847113fea5144ecdbb31ffd9b5e1079b5429",
+        "testedCommit": "5f7682f3bb0a4397bcf907e445895519b110bfc7",
+        "prerequisiteHead": "b14285b29f35e29835f45f2b2015b6ce6eccba65",
+        "currentDev": "b14285b29f35e29835f45f2b2015b6ce6eccba65",
+        "exactMergeTree": "9d8f7d9003772a6caff7ad37e6938cf30faca586",
+        "extraSourcePaths": [
+          "app/src/main/java/com/nuvio/tv/ui/screens/settings/BackupOrderSettings.kt"
+        ],
+        "extraDiff": "one upstream NuvioDialog import only",
+        "codePrDiffIncludesPrerequisite": false
+      },
+      "sourceTree": "9d8f7d9003772a6caff7ad37e6938cf30faca586",
+      "receiptSha256": "524e04e15e249d38bc5c79fb722bf0f1c5538a697cbe5fbea1d98eea85ba40c4",
+      "sourceStableDuringBuild": true,
+      "testClasses": 1,
+      "totals": {
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "suites": [
+        {
+          "name": "com.nuvio.tv.livetv.data.LiveTvPosterResolverBackoffTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "sha256": "cb030e8bb151f67adb9e6a95ab3f89ea37cdc07ab45316a3f2f0d3374e493157"
+        }
+      ],
+      "unitGatePassed": true,
+      "unitKind": "JVM/native-SQLite",
+      "fullGradleInvocationComplete": true,
+      "apkGatePlanned": false,
+      "apkVerified": false,
+      "flags": {
+        "defaultStableVersioning": true,
+        "livetvTestBuildPropertyOmitted": true,
+        "generatorEnabled": true,
+        "nativeTasksEnabled": true,
+        "gradleTaskExclusions": [],
+        "heapMiB": 6144,
+        "workers": 1,
+        "kotlinCompiler": "in-process",
+        "deviceActions": false
+      },
+      "limits": "Unit gate complete. No fresh APK is required or claimed for this slice's validation plan."
+    },
+    {
+      "stage": "complete-extracted-verification",
+      "source": {
+        "kind": "isolated-slice-merged-with-current-dev",
+        "ordinal": 6,
+        "slug": "home-working-set",
+        "publishedHead": "cea536e57fd63adab3fed796c1bcb0137ec42b6c",
+        "testedCommit": "c0307222c4332e3c0df56b9ad3464f5350a759d6",
+        "prerequisiteHead": "b14285b29f35e29835f45f2b2015b6ce6eccba65",
+        "currentDev": "b14285b29f35e29835f45f2b2015b6ce6eccba65",
+        "exactMergeTree": "c1c3ef7479a6b7818e3bb1ac750fec82491b937c",
+        "extraSourcePaths": [
+          "app/src/main/java/com/nuvio/tv/ui/screens/settings/BackupOrderSettings.kt"
+        ],
+        "extraDiff": "one upstream NuvioDialog import only",
+        "codePrDiffIncludesPrerequisite": false
+      },
+      "sourceTree": "c1c3ef7479a6b7818e3bb1ac750fec82491b937c",
+      "receiptSha256": "b482f84d63d29a0a6458b061e2550fdf01ee275c309e1981506f7fbb95feb16a",
+      "sourceStableDuringBuild": true,
+      "testClasses": 6,
+      "totals": {
+        "tests": 27,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "suites": [
+        {
+          "name": "com.nuvio.tv.livetv.ondemand.OnDemandHomeViewModelTest",
+          "tests": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "sha256": "76d83912d5ca0a3bb97ef293f0453f8e1549f32e5834213ead42a3c5ccbf4d4d"
+        },
+        {
+          "name": "com.nuvio.tv.livetv.ondemand.VodHomeCacheTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "sha256": "8c2a8fcf319ac98c6255b95f0cf5ed909c1eab73ab99b4014b4e69b72616c90a"
+        },
+        {
+          "name": "com.nuvio.tv.livetv.ondemand.VodHomeWorkPolicyTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "sha256": "37708b43f3171c1894693af4a85d12628cf976d1487944e4af672853edc77272"
+        },
+        {
+          "name": "com.nuvio.tv.livetv.ondemand.VodPicturePolicyTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "sha256": "184b072405308a4a4ceaf4b2541a95df92f6bf3ed2944f8505a5dbfcf564cb78"
+        },
+        {
+          "name": "com.nuvio.tv.livetv.ondemand.VodPicturesTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "sha256": "c8a57f4b8f903c0f301d6ca3c8dbb51ce1f1476d8bb35c8ba372a16974760313"
+        },
+        {
+          "name": "com.nuvio.tv.ui.screens.home.ModernHomeIdentityRelocationTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "sha256": "50fdb504b7c72b56311ab5501e629def7b886b9350e58d3e9ad5456a6a6c3a4e"
+        }
+      ],
+      "unitGatePassed": true,
+      "unitKind": "JVM/native-SQLite",
+      "fullGradleInvocationComplete": true,
+      "apkGatePlanned": true,
+      "apkVerified": true,
+      "flags": {
+        "defaultStableVersioning": true,
+        "livetvTestBuildPropertyOmitted": true,
+        "generatorEnabled": true,
+        "nativeTasksEnabled": true,
+        "gradleTaskExclusions": [],
+        "heapMiB": 6144,
+        "workers": 1,
+        "kotlinCompiler": "in-process",
+        "deviceActions": false
+      },
+      "apk": {
+        "bytes": 323679024,
+        "sha256": "2abd9adf98d129b489b16d8581a24c7fa8f31f35c3e8b5e4c4be803fa72c065a"
+      },
+      "abis": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86",
+        "x86_64"
+      ],
+      "nativeLibraries": {
+        "lib/arm64-v8a/libandroidx.graphics.path.so": {
+          "bytes": 10096,
+          "sha256": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6"
+        },
+        "lib/arm64-v8a/libasskt.so": {
+          "bytes": 3023336,
+          "sha256": "30351e2a8d0cb02a62c8caaac4399833ea47a82bbe3f7a01ea60380857c9ad69"
+        },
+        "lib/arm64-v8a/libavcodec.so": {
+          "bytes": 12522008,
+          "sha256": "4015d0a7b77da400c63ec511d08ac32747bb5cb151def4520d6eb3a1d135a98e"
+        },
+        "lib/arm64-v8a/libavdevice.so": {
+          "bytes": 9264,
+          "sha256": "ed81ad27e27909c8d1bc540c8cdda234f16fbd95c2e48840ab70f7c1e8face63"
+        },
+        "lib/arm64-v8a/libavfilter.so": {
+          "bytes": 4345968,
+          "sha256": "3478443995e9bdbcb37a6861751be2e57a4895b26d8e7505168475f4fa00afc2"
+        },
+        "lib/arm64-v8a/libavformat.so": {
+          "bytes": 3405792,
+          "sha256": "608ad8edd76da25269be31bd0114d3237ae6114ff086478c92e596f8ff747729"
+        },
+        "lib/arm64-v8a/libavutil.so": {
+          "bytes": 751624,
+          "sha256": "a51d06bd5a949c43c1111d85352f45777188dbc17fd013f0ba77e900e0d39c99"
+        },
+        "lib/arm64-v8a/libc++_shared.so": {
+          "bytes": 1423696,
+          "sha256": "b5d97c38a728afe28d341cda3369f512d35eaf9c680c1b0563cd6a63e395230f"
+        },
+        "lib/arm64-v8a/libconscrypt_jni.so": {
+          "bytes": 2099504,
+          "sha256": "e56cef08ace020564ec2de3899cdc0c7bb3ae3123dc547df544055f23636acb6"
+        },
+        "lib/arm64-v8a/libdatastore_shared_counter.so": {
+          "bytes": 7112,
+          "sha256": "d3e48717c9aa147e0ab21063ba0e8e0211cabf8bf40b222640829519edbf58e1"
+        },
+        "lib/arm64-v8a/libffmpegJNI.so": {
+          "bytes": 1814080,
+          "sha256": "d3fad41f723a7c965a38215b1b8a32e3592269bf55cc64e04ba90ff1b459508f"
+        },
+        "lib/arm64-v8a/libgav1JNI.so": {
+          "bytes": 1632320,
+          "sha256": "9acc16714913c0498001ba52c315cefdc4773bcb70a88b92a6cf5b87e00ac7f3"
+        },
+        "lib/arm64-v8a/libiamf.so": {
+          "bytes": 222720,
+          "sha256": "294b53514f4da0985c1a89bdd15ff9fd140efbd58016c55167e50367087da4a0"
+        },
+        "lib/arm64-v8a/libiamfJNI.so": {
+          "bytes": 6728,
+          "sha256": "5c1cdfa6f47eeaa28173c1f8c55bd52d37fef91f800c6edc4694d99ac8499447"
+        },
+        "lib/arm64-v8a/libmedia3_exoplayer_jni.so": {
+          "bytes": 7816,
+          "sha256": "6f6fd23f66cda131ace30c0cef2ae0815c0e1072b89abe4087bb5f18eb598e0a"
+        },
+        "lib/arm64-v8a/libmediainfo.so": {
+          "bytes": 8136288,
+          "sha256": "8117b11b21676d27622df124bc65844842d0bff6cadcf7f5410c2a3597e621e5"
+        },
+        "lib/arm64-v8a/libmpeghJNI.so": {
+          "bytes": 796296,
+          "sha256": "abb121b6e5a4d692fb0f1ff50e1309ffb1d44e287d5a8161b39435868b0ed19a"
+        },
+        "lib/arm64-v8a/libmpv.so": {
+          "bytes": 15552952,
+          "sha256": "dd72e1d2de8cca79268121958cfa8c2f0118b7420684c50edbe0f7cec3167455"
+        },
+        "lib/arm64-v8a/libnuvio-http-vpn.so": {
+          "bytes": 10912040,
+          "sha256": "4ced0ee632fac2dd8d2e05aff1fa946bbdbffad341db3ec84fde5039ab70d1ca"
+        },
+        "lib/arm64-v8a/libnuvio-openvpn.so": {
+          "bytes": 4216744,
+          "sha256": "b5cde60ad49b04b51d0d9af41b42c155df96a59fcedf05fae36700545ae557e2"
+        },
+        "lib/arm64-v8a/libnuvio-openvpn2-engine.so": {
+          "bytes": 7856216,
+          "sha256": "75c8bc7af6fd2e22577b10e89f8f5c324aeb870023dea182f9ab3b79b4c4e63e"
+        },
+        "lib/arm64-v8a/libnuvio-openvpn2.so": {
+          "bytes": 6880,
+          "sha256": "78494bf4a09fcf2ed21ff0835d53c790f221413cd554ee8b2057ff970e069a3b"
+        },
+        "lib/arm64-v8a/libnuvio_engine.so": {
+          "bytes": 11024400,
+          "sha256": "7dc92ada210a0380f0b5724b4232e126ffb9aa92593e5e7bb8bcb3b2b54dea95"
+        },
+        "lib/arm64-v8a/libnuvio_usenet.so": {
+          "bytes": 11448320,
+          "sha256": "ca41d6bfcd6dff19d16ec9e3e8e0742881439d1b6a1625218484e8e31253def4"
+        },
+        "lib/arm64-v8a/libnuvioseekthumb.so": {
+          "bytes": 289264,
+          "sha256": "b1bcd548f56b9098c7ea352c74af3b24ad958a0275305008ed56d1ee13645e62"
+        },
+        "lib/arm64-v8a/libonnxruntime.so": {
+          "bytes": 22249552,
+          "sha256": "7a2fb92eb67037837c3f0e428bd732fd0d05ced0546d9e740090c07573d8249a"
+        },
+        "lib/arm64-v8a/libplayer.so": {
+          "bytes": 34560,
+          "sha256": "960a6d5e9cb6b52ddc95dcc39a15df1695306650f0b49362cfe41564af354814"
+        },
+        "lib/arm64-v8a/libquickjs.so": {
+          "bytes": 815480,
+          "sha256": "7b53fb297b2930e3e583e83952f494555538cdd5ed528b93f769c2074958ef99"
+        },
+        "lib/arm64-v8a/libsentry-android.so": {
+          "bytes": 18280,
+          "sha256": "8bffcf0d92b840f418f8f8d9356662475e1eac518143e5d4cf65ee5762a01df7"
+        },
+        "lib/arm64-v8a/libsentry.so": {
+          "bytes": 773984,
+          "sha256": "4cc7fe8257686a2708624ea7edc1194ca4a0b06b6ae050076e5d8c6651834980"
+        },
+        "lib/arm64-v8a/libsherpa-onnx-jni.so": {
+          "bytes": 4771760,
+          "sha256": "3c6492ea91ea68fd3b72b9495efdde6dd913f6b58c387e3b07389cf335f4d26f"
+        },
+        "lib/arm64-v8a/libswresample.so": {
+          "bytes": 101344,
+          "sha256": "9d316361eeab3af3afacd0c00aee45b5d28231461b049b07b610de3fd259a00d"
+        },
+        "lib/arm64-v8a/libswscale.so": {
+          "bytes": 1331664,
+          "sha256": "a00e3f200fcc453d45772d955ee1f33708c59dff65bd1841bef1ced3ee440e0d"
+        },
+        "lib/arm64-v8a/libwg-go.so": {
+          "bytes": 3365264,
+          "sha256": "68730e8c81b613113249574e22838fd6ce9b1c4da2be2f5fe7c71d651e32b005"
+        },
+        "lib/arm64-v8a/libwg-quick.so": {
+          "bytes": 29952,
+          "sha256": "a032456fbd3b8e577f6b4026ae049c4e7c9056cb7511f77c059e059394cb9092"
+        },
+        "lib/arm64-v8a/libwg.so": {
+          "bytes": 81704,
+          "sha256": "f68dfc2c95e0326e04bf427b055f729f3a51e840f78c8ad177259d42ab2722bc"
+        },
+        "lib/armeabi-v7a/libandroidx.graphics.path.so": {
+          "bytes": 7252,
+          "sha256": "41399eba6fc2a60f6f14642375c1824f3cf25eb8fec7397d753730a3ceda3e2b"
+        },
+        "lib/armeabi-v7a/libasskt.so": {
+          "bytes": 2824840,
+          "sha256": "b95ff544e5c7cc8002bbc691b01981dc14728346484dc73678fb345692afbba1"
+        },
+        "lib/armeabi-v7a/libavcodec.so": {
+          "bytes": 11952356,
+          "sha256": "360f1573ed2fb2c6aefdccb79e74d307759a6422d686b049f60a3aee7bd39d6b"
+        },
+        "lib/armeabi-v7a/libavdevice.so": {
+          "bytes": 7116,
+          "sha256": "c8f2f31e846d9985911a95ad0c61f6092347ef3bb89623e19c116c08a8c1c381"
+        },
+        "lib/armeabi-v7a/libavfilter.so": {
+          "bytes": 3523872,
+          "sha256": "bdc273ab4723013e74e5d526c72df5d4362d5819283aee44a010e365e09daa6c"
+        },
+        "lib/armeabi-v7a/libavformat.so": {
+          "bytes": 3158152,
+          "sha256": "c2f7656261b1522221c49ce3d2924000356c48fd845650d99e51d624c2aa0017"
+        },
+        "lib/armeabi-v7a/libavutil.so": {
+          "bytes": 658672,
+          "sha256": "1dfaeba6d691d8a07b0201a0c7b6892d6a6469a4a2efa642bce978ad0e3e413b"
+        },
+        "lib/armeabi-v7a/libc++_shared.so": {
+          "bytes": 994772,
+          "sha256": "38331a1efcb446eb1a0db440a8db8f41fa4fb698d15c061ab8c491426531c2c0"
+        },
+        "lib/armeabi-v7a/libconscrypt_jni.so": {
+          "bytes": 1279936,
+          "sha256": "afc1b6b0773522a808b204d93a464194b41f790eb98e4dc0b344e0f6310d04ee"
+        },
+        "lib/armeabi-v7a/libdatastore_shared_counter.so": {
+          "bytes": 4416,
+          "sha256": "716c5d8d2cac8ca0edf65da8f139c7886b726ac79d542a14edeb94994ba6d3dc"
+        },
+        "lib/armeabi-v7a/libffmpegJNI.so": {
+          "bytes": 1683720,
+          "sha256": "f2f7481e7313fe6c4b60aac3b8357472b2ea6230b490d4a9cd3a47ba0c7711a3"
+        },
+        "lib/armeabi-v7a/libgav1JNI.so": {
+          "bytes": 1615904,
+          "sha256": "d2e92b9b68ef1a21555f9b54b5e314f4ad8fa41d630dc94145bf95ece4e3533e"
+        },
+        "lib/armeabi-v7a/libiamf.so": {
+          "bytes": 183516,
+          "sha256": "aba3886b9e0d8f38bd16c8dacf74e12d3e14a36d6bc361155d9f331d3e820f37"
+        },
+        "lib/armeabi-v7a/libiamfJNI.so": {
+          "bytes": 4868,
+          "sha256": "0dc76fe3a511764c01d0f3d0154480862a34e5288aadf665345082ac1d9c5217"
+        },
+        "lib/armeabi-v7a/libmedia3_exoplayer_jni.so": {
+          "bytes": 5344,
+          "sha256": "07e724f8e8f6216b4e6d64a4a68c89fda54cb3615d9d8cf5cdc7af921ea0f71d"
+        },
+        "lib/armeabi-v7a/libmediainfo.so": {
+          "bytes": 7511480,
+          "sha256": "9037fcf556d7cf746408570f059100ecd66dd64c7a136842f7cb459e7f7e3043"
+        },
+        "lib/armeabi-v7a/libmpeghJNI.so": {
+          "bytes": 760736,
+          "sha256": "f1ebe197d7263f6094f0f6176a6c30cb8254df4f021e2a860f613bb887188b6c"
+        },
+        "lib/armeabi-v7a/libmpv.so": {
+          "bytes": 12517116,
+          "sha256": "f1a96b2c7aa02c88519a727d99f0df7f4867d08e85c940f06e16ba2f74145ee7"
+        },
+        "lib/armeabi-v7a/libnuvio-http-vpn.so": {
+          "bytes": 10598560,
+          "sha256": "53a1ca5c9d3cc4364d41442b4e3f81725b54eb04c6f02618862f074d8f7d6bb5"
+        },
+        "lib/armeabi-v7a/libnuvio-openvpn.so": {
+          "bytes": 2260280,
+          "sha256": "6ef3fb7637d195b14a37ead17320bd095676bdf3d90e7948e0f2bebcfcf5fb0c"
+        },
+        "lib/armeabi-v7a/libnuvio-openvpn2-engine.so": {
+          "bytes": 4481156,
+          "sha256": "2d76c30157d8870967d5706edbd2556ae37312f4dd83edb67442c5e81d995209"
+        },
+        "lib/armeabi-v7a/libnuvio-openvpn2.so": {
+          "bytes": 4808,
+          "sha256": "6725e0d76b1430663fc950a33ec7cd00f41eb575ad1f69fb948a9c67485a9076"
+        },
+        "lib/armeabi-v7a/libnuvio_engine.so": {
+          "bytes": 7535892,
+          "sha256": "9236223345ae53e47700433148f1fdaea178528a45e9563d0f50345d749fae10"
+        },
+        "lib/armeabi-v7a/libnuvio_usenet.so": {
+          "bytes": 11408220,
+          "sha256": "e431406e4cebe3351cbeacbe42a90578ee0db5c768f1577314c5db52a0efd05e"
+        },
+        "lib/armeabi-v7a/libnuvioseekthumb.so": {
+          "bytes": 174340,
+          "sha256": "45faefb1aa4fce21372c82fc1eeb34c9da4adc8e45900f0230886d1d6fe73738"
+        },
+        "lib/armeabi-v7a/libonnxruntime.so": {
+          "bytes": 15359576,
+          "sha256": "a89d118bd479b94180badbac6d1554d6cec7565c3dd61d7c97dc6fb7dac4780f"
+        },
+        "lib/armeabi-v7a/libplayer.so": {
+          "bytes": 24044,
+          "sha256": "ed45c2c06a549a79aafdcc9e037cb091d6b89ab37e06106b59847c791ad7198d"
+        },
+        "lib/armeabi-v7a/libquickjs.so": {
+          "bytes": 562676,
+          "sha256": "c9eb1d9af73f331d96dac4dfb9af924e123984705340e88e74bf7205ee801eb9"
+        },
+        "lib/armeabi-v7a/libsentry-android.so": {
+          "bytes": 13060,
+          "sha256": "eb76d4e3567838ff9a5eab475fbed67b0471759fde176d23c895faf815765e79"
+        },
+        "lib/armeabi-v7a/libsentry.so": {
+          "bytes": 505236,
+          "sha256": "d2e9d7fff8ad32c470aadb9cbadf0048520cd6586800ac3cc8fff560fef52c32"
+        },
+        "lib/armeabi-v7a/libsherpa-onnx-jni.so": {
+          "bytes": 3428780,
+          "sha256": "3d6b6daf6d23162dceb1df91ac075a42a09b60fafb5f9400cba22562f10a1dc0"
+        },
+        "lib/armeabi-v7a/libswresample.so": {
+          "bytes": 95240,
+          "sha256": "bbe5f477d83bf6204cd688f129de87bdf2a5e744ba604c15919c1e0382dae9b3"
+        },
+        "lib/armeabi-v7a/libswscale.so": {
+          "bytes": 901044,
+          "sha256": "503a3b5c8f13ae3975742243b3348d95497f67794993d127973eef0252059943"
+        },
+        "lib/armeabi-v7a/libwg-go.so": {
+          "bytes": 3174788,
+          "sha256": "2a6570004148c338337d945342326d4c42e71684d36bb2ee999a5d7863408680"
+        },
+        "lib/armeabi-v7a/libwg-quick.so": {
+          "bytes": 22736,
+          "sha256": "59277d78315487b5b53d2569131427d1ce9178a5e01f9655d6664cf224242a7a"
+        },
+        "lib/armeabi-v7a/libwg.so": {
+          "bytes": 47076,
+          "sha256": "8450177309a4884247736579d22fc84242990d3359bd15cc71a66971258b5ad2"
+        },
+        "lib/x86/libandroidx.graphics.path.so": {
+          "bytes": 9284,
+          "sha256": "eb0570b41fd3bff25d8204a967c03bd7550719e768b791f680cc40cbe35f29af"
+        },
+        "lib/x86/libasskt.so": {
+          "bytes": 3215360,
+          "sha256": "bb1e3f091b3fdfc84aca84977eea5f3d8cea92bcf5cda02814eb144bdd72d0aa"
+        },
+        "lib/x86/libavcodec.so": {
+          "bytes": 15030180,
+          "sha256": "6fd974903ff8fa8153b940f860ac783a4c5214cf6d715484cd9cd299881a22ed"
+        },
+        "lib/x86/libavdevice.so": {
+          "bytes": 8428,
+          "sha256": "ba54631ce303fd2bc9b347667b0d4e88e27619ba4a7fb0f0a55b4a62fa8a7991"
+        },
+        "lib/x86/libavfilter.so": {
+          "bytes": 5094640,
+          "sha256": "e2a6bc3f9537c665f11376aa61647798c28bb39e1297b85fab833df2c22eb463"
+        },
+        "lib/x86/libavformat.so": {
+          "bytes": 3852568,
+          "sha256": "452d0b476ad3555bd00d7e74c011cd190a0e95dc51c9b39507a1da81ef1fee59"
+        },
+        "lib/x86/libavutil.so": {
+          "bytes": 783128,
+          "sha256": "09c31346d58c16ff1e6dbd1118edd3376e8a0fd6421220b858deadb1ab3e0b31"
+        },
+        "lib/x86/libc++_shared.so": {
+          "bytes": 1321224,
+          "sha256": "610038ed52a64e9f050ad7dce363c123cca2237542353afd8930c8d5629b47e7"
+        },
+        "lib/x86/libconscrypt_jni.so": {
+          "bytes": 2254740,
+          "sha256": "eb2e93c664eccff7cb8cb8086d6c04665ef03862c5389cb170a6cd3901c29a6f"
+        },
+        "lib/x86/libdatastore_shared_counter.so": {
+          "bytes": 5148,
+          "sha256": "cd4a1649e2c8350703146f94a6ee2bf4c3c8c9f172159f805b61a4a2abdf0659"
+        },
+        "lib/x86/libffmpegJNI.so": {
+          "bytes": 1851424,
+          "sha256": "f5b04064d46219f58b3d533cad7b8f0dba3725dff9885d04c94ee16c42821cb9"
+        },
+        "lib/x86/libgav1JNI.so": {
+          "bytes": 1687936,
+          "sha256": "8177befef640690bbc032423b678cb3e6209aec5e31b3405cec57d6a34c9f600"
+        },
+        "lib/x86/libiamf.so": {
+          "bytes": 236004,
+          "sha256": "777c6da19166cdf6f0f11e85472b23c8146845558a6980b480d340b7a937db51"
+        },
+        "lib/x86/libiamfJNI.so": {
+          "bytes": 5472,
+          "sha256": "ff0774ed6efbe76ee06585ccd6f3b29adcb8d61c835c88533a15e03e28dd2d88"
+        },
+        "lib/x86/libmedia3_exoplayer_jni.so": {
+          "bytes": 6124,
+          "sha256": "0dd4bb2e7b49fc2805bd504cd1a95a795561b11f5e1cfd71a63327360054a0c3"
+        },
+        "lib/x86/libmediainfo.so": {
+          "bytes": 9403588,
+          "sha256": "9752f5041a88350034c44ca2c5975b62e33d88980ee5c0cdf91fb53aecede79e"
+        },
+        "lib/x86/libmpeghJNI.so": {
+          "bytes": 843800,
+          "sha256": "6127aba9cd9a645762a5f2188c004315c3b64ec173a5f5bc1ea4fb0dd97a046c"
+        },
+        "lib/x86/libmpv.so": {
+          "bytes": 15638200,
+          "sha256": "5e45a24dbb16fcc9d41b9ca2dec8a9b77b85523ba9ff10acf5239cb365ec4ed3"
+        },
+        "lib/x86/libnuvio-http-vpn.so": {
+          "bytes": 10657992,
+          "sha256": "cf0c5a8da9a506755a512bbd52fb4ed10b5b0c800ee20fd9d826aacf87b9c493"
+        },
+        "lib/x86/libnuvio-openvpn.so": {
+          "bytes": 4234212,
+          "sha256": "3c365fe0a8537c4ed210d3565f46e1d4e94b4bf299f881a0e72298c716dd4a7d"
+        },
+        "lib/x86/libnuvio-openvpn2-engine.so": {
+          "bytes": 7391832,
+          "sha256": "78bcec270287cff83c03dd1da5468072aee330060bfc597d72c073685d358821"
+        },
+        "lib/x86/libnuvio-openvpn2.so": {
+          "bytes": 5336,
+          "sha256": "31849fc7d40b4f39a38a5efc1686c0f6badbd5ca1f65d6ac121a2c0fa347a411"
+        },
+        "lib/x86/libnuvio_engine.so": {
+          "bytes": 10803036,
+          "sha256": "aa4fcff10b22247bc8a56bc722236417533e032cf61bcc839bab9931f208eca0"
+        },
+        "lib/x86/libnuvio_usenet.so": {
+          "bytes": 11473544,
+          "sha256": "21687c2d0d5ee960ccaf009ba8e252d396f4494ebc9b61577c8c1555e77e656e"
+        },
+        "lib/x86/libonnxruntime.so": {
+          "bytes": 26491144,
+          "sha256": "4c7ef5286642e51f66d5c6c42ffc2e0afc61c66b620b88182edaec60bde6149d"
+        },
+        "lib/x86/libplayer.so": {
+          "bytes": 28792,
+          "sha256": "b49615869d5fead81a39bf92f5c70b25f5560585e1cf3ed1fb8275b3691de4c7"
+        },
+        "lib/x86/libquickjs.so": {
+          "bytes": 865260,
+          "sha256": "ebfdcb61ce5f08cb319ebe45225f960ae3d91222285677e2640ab8d88aeb45b9"
+        },
+        "lib/x86/libsentry-android.so": {
+          "bytes": 16028,
+          "sha256": "471c6650a61a1de779a605268af0c952553b16aba116d7f558478b32b132be60"
+        },
+        "lib/x86/libsentry.so": {
+          "bytes": 795816,
+          "sha256": "f27b14e7641e4ef838258607390d2d5a6d116bd04ee4b7ba5cb4146c19fb19f0"
+        },
+        "lib/x86/libsherpa-onnx-jni.so": {
+          "bytes": 5358928,
+          "sha256": "04831b079ebd68557b6e9605f90be1dc76118973ee1aef5a75cc0d0889dc3778"
+        },
+        "lib/x86/libswresample.so": {
+          "bytes": 123792,
+          "sha256": "93b44f871887ce5f133ec306d567b00c71e696edc9e96eaa45d7fc0d819e4eef"
+        },
+        "lib/x86/libswscale.so": {
+          "bytes": 1619684,
+          "sha256": "0e80d33aa681fcf3f747dc8b9747767864c1ba675524e633853d5e962616d0c9"
+        },
+        "lib/x86/libwg-go.so": {
+          "bytes": 3197504,
+          "sha256": "3d9a36280ba19c5f710935c06f563afe377d4e7e19d0d5c931d47d861d2d48df"
+        },
+        "lib/x86/libwg-quick.so": {
+          "bytes": 31820,
+          "sha256": "360c91cc6e0483598865ba8414f99fddd712f2917a49599b326a20a4e6600700"
+        },
+        "lib/x86/libwg.so": {
+          "bytes": 70896,
+          "sha256": "400a7dbcf28832a87a04571bcda49d638874852e2e975b81887504bc40bef6d9"
+        },
+        "lib/x86_64/libandroidx.graphics.path.so": {
+          "bytes": 10760,
+          "sha256": "4e56c996f13670e70082658de7880c4020eabf4f25e43387f88ed78a713fc9f0"
+        },
+        "lib/x86_64/libasskt.so": {
+          "bytes": 3117496,
+          "sha256": "b615a5bb315590d1f0fc9de57b4c983c809af8ef6b09435fe6e1aef7a5dd538d"
+        },
+        "lib/x86_64/libavcodec.so": {
+          "bytes": 16671896,
+          "sha256": "43ef4b1e031d7b8c34e8135e16706d2385cd5a50b510a3fe2906478a6f9e06c3"
+        },
+        "lib/x86_64/libavdevice.so": {
+          "bytes": 9280,
+          "sha256": "c8b968867c3326e947897487b3e44a4ce7acceb345b9025e8bd6b6f463f44e7b"
+        },
+        "lib/x86_64/libavfilter.so": {
+          "bytes": 5444904,
+          "sha256": "8fdb046b486da14bed089f51176dd043f52194b1d59507c9d17267a58ca26d26"
+        },
+        "lib/x86_64/libavformat.so": {
+          "bytes": 3492400,
+          "sha256": "f8c690464268c6c3adc21b2fa04b94f35a2c4262ac196d57c03640c4112edc7d"
+        },
+        "lib/x86_64/libavutil.so": {
+          "bytes": 895072,
+          "sha256": "bd5bf4a64e3a5fe7b0eaeb06ef4a974359f178a63b7e2db36b1b25958d342e02"
+        },
+        "lib/x86_64/libc++_shared.so": {
+          "bytes": 1390752,
+          "sha256": "39faf2d59346e65a18980f207794fab2f1faff8a8de3f087b8319a181fa16fbd"
+        },
+        "lib/x86_64/libconscrypt_jni.so": {
+          "bytes": 2501448,
+          "sha256": "1a43a7c8000eaf863d9e36c951b4f77edfb2031cf84230f85482f531b5e9315a"
+        },
+        "lib/x86_64/libdatastore_shared_counter.so": {
+          "bytes": 6224,
+          "sha256": "fb6c9208988c49ae94943bc3236fa763ba584722e044fa4ea9a12d2941027105"
+        },
+        "lib/x86_64/libffmpegJNI.so": {
+          "bytes": 1956184,
+          "sha256": "dc3b37900522305df715a6b3b964b8304bcc70681dbe92c22d98247b20b27583"
+        },
+        "lib/x86_64/libgav1JNI.so": {
+          "bytes": 2162784,
+          "sha256": "16de899c7b1445fcca571150ef8b96cc8757eda60a48502930c4c8cb6ae81cca"
+        },
+        "lib/x86_64/libiamf.so": {
+          "bytes": 240352,
+          "sha256": "c2f4990bbbb6e3372a12d1e009db57694ff07ee2dd5bcb9381e54bab7c68691e"
+        },
+        "lib/x86_64/libiamfJNI.so": {
+          "bytes": 6648,
+          "sha256": "ac378fc5da9429977d000965fa09fb7b802eae8c3cf14f3f9b606431502c4484"
+        },
+        "lib/x86_64/libmedia3_exoplayer_jni.so": {
+          "bytes": 7664,
+          "sha256": "17fe33ff0d8afb284b078b11a5caf89faa81817c8795e73acb31587264289bc7"
+        },
+        "lib/x86_64/libmediainfo.so": {
+          "bytes": 9365960,
+          "sha256": "fd7eabfa4bd98618a8bb41db31d999651ce892400d93b55122fdee5bd069d69c"
+        },
+        "lib/x86_64/libmpeghJNI.so": {
+          "bytes": 854408,
+          "sha256": "63856c29fe12773e2598b2dbe16a3c626f21124cbf20367f7903ed1a65fc1d5e"
+        },
+        "lib/x86_64/libmpv.so": {
+          "bytes": 16287032,
+          "sha256": "ca2ee844b75143f6a68022403e65dca7790dfc2ae87945c8a32499b43868b19f"
+        },
+        "lib/x86_64/libnuvio-http-vpn.so": {
+          "bytes": 11722760,
+          "sha256": "a6131766018ab9d4612e52ed739d0227476bbd23ef18004bd1d8d93f95561c27"
+        },
+        "lib/x86_64/libnuvio-openvpn.so": {
+          "bytes": 4127560,
+          "sha256": "578a59a9cc4418e59477519df54f15323e77ae367f338fbc9570b60d1d93797e"
+        },
+        "lib/x86_64/libnuvio-openvpn2-engine.so": {
+          "bytes": 8464280,
+          "sha256": "415ee7917b0d00061a6718a1df8a863440b16e6f3d02371d42dc19bff14c17cd"
+        },
+        "lib/x86_64/libnuvio-openvpn2.so": {
+          "bytes": 6816,
+          "sha256": "4c73f907d5340b519baa5c28ddc2dfdaeb043f19e13ff351a7a7942e68f28bff"
+        },
+        "lib/x86_64/libnuvio_engine.so": {
+          "bytes": 11521552,
+          "sha256": "5ac8db91a84ee8338dccfaa4e02f8d2e3bda951ebb1d694caf36612b0c5f1de4"
+        },
+        "lib/x86_64/libnuvio_usenet.so": {
+          "bytes": 12345856,
+          "sha256": "7023028c9aba7796d052c9eaa6aee41ed00a25f1d8361f9d148930098846f417"
+        },
+        "lib/x86_64/libonnxruntime.so": {
+          "bytes": 25581112,
+          "sha256": "b626c070616d88bd643a6e63dc996d8d478d061176b056d52ce44c961bd355aa"
+        },
+        "lib/x86_64/libplayer.so": {
+          "bytes": 33104,
+          "sha256": "d2994bfa7f47d5b2df51336f0ded8e4d84199054a5b209ba5c6270a4d11d1257"
+        },
+        "lib/x86_64/libquickjs.so": {
+          "bytes": 886472,
+          "sha256": "60f3c9e14c31950be6d8a005003f3c49eea551c4639806cf9512c67487d4c3d1"
+        },
+        "lib/x86_64/libsentry-android.so": {
+          "bytes": 17800,
+          "sha256": "d61162f6fae652fcc11546cb8d35d887d17d2f42d1241ace451625a8455aac98"
+        },
+        "lib/x86_64/libsentry.so": {
+          "bytes": 758272,
+          "sha256": "0cd1585c63978ae024e716b1352609280cb7f339efd6c19e783bfd81a400c048"
+        },
+        "lib/x86_64/libsherpa-onnx-jni.so": {
+          "bytes": 5201192,
+          "sha256": "1dc24c88fb364f1022a5217b70ab3bc3c9cae3120ae2e1ed358e1f68ed120b04"
+        },
+        "lib/x86_64/libswresample.so": {
+          "bytes": 143608,
+          "sha256": "1e7e4d9b6240f3c16414aca34b703b4ceb45829779ac4fe03e23ebac3af71189"
+        },
+        "lib/x86_64/libswscale.so": {
+          "bytes": 1855240,
+          "sha256": "612fcfad83b5193245c368fd497fd56a5b8f5d867e7527bce55b6b612a7b09c2"
+        },
+        "lib/x86_64/libwg-go.so": {
+          "bytes": 3606928,
+          "sha256": "2793e254ac34ec4df86450866fd924a26b9b9e96cc7ba5f6379badd432da1e76"
+        },
+        "lib/x86_64/libwg-quick.so": {
+          "bytes": 31504,
+          "sha256": "980dcb7125ba08787643a466daaf862113f7338e679bf336da2515fefea85ccd"
+        },
+        "lib/x86_64/libwg.so": {
+          "bytes": 93248,
+          "sha256": "3852466c726ffe7e0da0d575d3c5f38309ec49c4877b40600e406c5c644b0c9d"
+        }
+      },
+      "nativeGoTasks": {
+        ":vpn-android:compileHttpTunnelArm64": "UP-TO-DATE",
+        ":vpn-android:compileHttpTunnelArm": "UP-TO-DATE",
+        ":vpn-android:compileHttpTunnelAmd64": "UP-TO-DATE",
+        ":vpn-android:compileHttpTunnel386": "UP-TO-DATE"
+      },
+      "nativeGoOutputs": [
+        {
+          "abi": "arm64-v8a",
+          "compiledSha256": "4a98e7bff2e90a8ba1191889c613520dcb39f56697b2da02d17f4d9e52d77708",
+          "packagedSha256": "4ced0ee632fac2dd8d2e05aff1fa946bbdbffad341db3ec84fde5039ab70d1ca"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "compiledSha256": "5e335af7093feb7f9a66ab4b309206ac9c2044f554142cf5383a1a2c0a77584c",
+          "packagedSha256": "53a1ca5c9d3cc4364d41442b4e3f81725b54eb04c6f02618862f074d8f7d6bb5"
+        },
+        {
+          "abi": "x86_64",
+          "compiledSha256": "5bdb31272edc17d864b3b9f0a4e1777a38e3f2d44ae465e5c3af384da4fe9bfc",
+          "packagedSha256": "a6131766018ab9d4612e52ed739d0227476bbd23ef18004bd1d8d93f95561c27"
+        },
+        {
+          "abi": "x86",
+          "compiledSha256": "aa4a991c56cfeb2d59e38b65e6281dfddf722e2b6e42723927a4556960bb148a",
+          "packagedSha256": "cf0c5a8da9a506755a512bbd52fb4ed10b5b0c800ee20fd9d826aacf87b9c493"
+        }
+      ],
+      "nativeReuseAnchoredToReference": true,
+      "checks": {
+        "badging": {
+          "exitCode": 0,
+          "sha256": "fde7fd735abe71f7c2bcd4e884754548eaaae837fcca924d6fb5a27430f60b76"
+        },
+        "signature": {
+          "exitCode": 0,
+          "sha256": "163f1edff92c40a0ff6417337f39234eeba29ead21ed5557ae634e08b6a7fa44"
+        },
+        "zipalign": {
+          "exitCode": 0,
+          "sha256": "c4fd51ea116a1d27fe1a675314e5b1d10bfe52208381c0fc0541ccf3c53a6d61"
+        }
+      },
+      "testAndApkOneInvocation": true
+    },
+    {
+      "stage": "complete-extracted-verification",
+      "source": {
+        "kind": "isolated-slice-merged-with-current-dev",
+        "ordinal": 8,
+        "slug": "recording-manifests",
+        "publishedHead": "44d3ccce3f377730916589b196419e24abe906f6",
+        "testedCommit": "a552325f560bab7e147511ae8cf869467c43af47",
+        "prerequisiteHead": "b14285b29f35e29835f45f2b2015b6ce6eccba65",
+        "currentDev": "b14285b29f35e29835f45f2b2015b6ce6eccba65",
+        "exactMergeTree": "42ff67c0b2211d1d1656912d5359e61262ead054",
+        "extraSourcePaths": [
+          "app/src/main/java/com/nuvio/tv/ui/screens/settings/BackupOrderSettings.kt"
+        ],
+        "extraDiff": "one upstream NuvioDialog import only",
+        "codePrDiffIncludesPrerequisite": false
+      },
+      "sourceTree": "42ff67c0b2211d1d1656912d5359e61262ead054",
+      "receiptSha256": "564f5125f2ce087672bf9b6f8900c024242d93130a602eb25f6783520a7c4477",
+      "sourceStableDuringBuild": true,
+      "testClasses": 1,
+      "totals": {
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "suites": [
+        {
+          "name": "com.nuvio.tv.livetv.player.HlsPlaylistPublishingTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "sha256": "7299abd563b97df1f45c7bf956e62f78659a3cb48dd6e0982a180cf0fdd5c7a2"
+        }
+      ],
+      "unitGatePassed": true,
+      "unitKind": "JVM/native-SQLite",
+      "fullGradleInvocationComplete": true,
+      "apkGatePlanned": false,
+      "apkVerified": false,
+      "flags": {
+        "defaultStableVersioning": true,
+        "livetvTestBuildPropertyOmitted": true,
+        "generatorEnabled": true,
+        "nativeTasksEnabled": true,
+        "gradleTaskExclusions": [],
+        "heapMiB": 6144,
+        "workers": 1,
+        "kotlinCompiler": "in-process",
+        "deviceActions": false
+      },
+      "limits": "Unit gate complete. No fresh APK is required or claimed for this slice's validation plan."
+    },
+    {
+      "stage": "complete-extracted-verification",
+      "source": {
+        "kind": "baseline-build-import-equivalent-to-current-dev",
+        "publishedHead": "58104b7ad1026ea37bb380df3152045991c323f4",
+        "testedCommit": "58104b7ad1026ea37bb380df3152045991c323f4",
+        "currentDev": "b14285b29f35e29835f45f2b2015b6ce6eccba65",
+        "extraSourcePaths": [],
+        "currentDevDifference": "NuvioDialog import ordering only; exact tested tree remains separately identified",
+        "codePrDiffIncludesPrerequisite": true
+      },
+      "sourceTree": "2f081da108de4f4fcbb96428f94460c81a30cbed",
+      "receiptSha256": "859d4e72e6b4bd3f52355bd0dbfe0193fb234f0ec3203fd8b37a12055f4b6b3d",
+      "sourceStableDuringBuild": true,
+      "testClasses": 2,
+      "totals": {
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "suites": [
+        {
+          "name": "com.nuvio.tv.livetv.ondemand.OnDemandHomeViewModelTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "sha256": "f40e7d67146d22402932231179551ee5dfb322b9e3591efa52f9275f8fb4fa26"
+        },
+        {
+          "name": "com.nuvio.tv.ui.screens.home.ModernHomeIdentityRelocationTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "sha256": "3caaac7f340127e53f40ae82fa222313d6558d8f6a5df197081cfb687242140c"
+        }
+      ],
+      "unitGatePassed": true,
+      "unitKind": "JVM/native-SQLite",
+      "fullGradleInvocationComplete": true,
+      "apkGatePlanned": true,
+      "apkVerified": true,
+      "flags": {
+        "defaultStableVersioning": true,
+        "livetvTestBuildPropertyOmitted": true,
+        "generatorEnabled": true,
+        "nativeTasksEnabled": true,
+        "gradleTaskExclusions": [],
+        "heapMiB": 6144,
+        "workers": 1,
+        "kotlinCompiler": "in-process",
+        "deviceActions": false
+      },
+      "apk": {
+        "bytes": 319657903,
+        "sha256": "246a50f3366f05244eb673dd0f353145ba5e84a76b78e92bc293fb248105e932"
+      },
+      "abis": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86",
+        "x86_64"
+      ],
+      "nativeLibraries": {
+        "lib/arm64-v8a/libandroidx.graphics.path.so": {
+          "bytes": 10096,
+          "sha256": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6"
+        },
+        "lib/arm64-v8a/libasskt.so": {
+          "bytes": 3023336,
+          "sha256": "30351e2a8d0cb02a62c8caaac4399833ea47a82bbe3f7a01ea60380857c9ad69"
+        },
+        "lib/arm64-v8a/libavcodec.so": {
+          "bytes": 12522008,
+          "sha256": "4015d0a7b77da400c63ec511d08ac32747bb5cb151def4520d6eb3a1d135a98e"
+        },
+        "lib/arm64-v8a/libavdevice.so": {
+          "bytes": 9264,
+          "sha256": "ed81ad27e27909c8d1bc540c8cdda234f16fbd95c2e48840ab70f7c1e8face63"
+        },
+        "lib/arm64-v8a/libavfilter.so": {
+          "bytes": 4345968,
+          "sha256": "3478443995e9bdbcb37a6861751be2e57a4895b26d8e7505168475f4fa00afc2"
+        },
+        "lib/arm64-v8a/libavformat.so": {
+          "bytes": 3405792,
+          "sha256": "608ad8edd76da25269be31bd0114d3237ae6114ff086478c92e596f8ff747729"
+        },
+        "lib/arm64-v8a/libavutil.so": {
+          "bytes": 751624,
+          "sha256": "a51d06bd5a949c43c1111d85352f45777188dbc17fd013f0ba77e900e0d39c99"
+        },
+        "lib/arm64-v8a/libc++_shared.so": {
+          "bytes": 1423696,
+          "sha256": "b5d97c38a728afe28d341cda3369f512d35eaf9c680c1b0563cd6a63e395230f"
+        },
+        "lib/arm64-v8a/libconscrypt_jni.so": {
+          "bytes": 2099504,
+          "sha256": "e56cef08ace020564ec2de3899cdc0c7bb3ae3123dc547df544055f23636acb6"
+        },
+        "lib/arm64-v8a/libdatastore_shared_counter.so": {
+          "bytes": 7112,
+          "sha256": "d3e48717c9aa147e0ab21063ba0e8e0211cabf8bf40b222640829519edbf58e1"
+        },
+        "lib/arm64-v8a/libffmpegJNI.so": {
+          "bytes": 1814080,
+          "sha256": "d3fad41f723a7c965a38215b1b8a32e3592269bf55cc64e04ba90ff1b459508f"
+        },
+        "lib/arm64-v8a/libgav1JNI.so": {
+          "bytes": 1632320,
+          "sha256": "9acc16714913c0498001ba52c315cefdc4773bcb70a88b92a6cf5b87e00ac7f3"
+        },
+        "lib/arm64-v8a/libiamf.so": {
+          "bytes": 222720,
+          "sha256": "294b53514f4da0985c1a89bdd15ff9fd140efbd58016c55167e50367087da4a0"
+        },
+        "lib/arm64-v8a/libiamfJNI.so": {
+          "bytes": 6728,
+          "sha256": "5c1cdfa6f47eeaa28173c1f8c55bd52d37fef91f800c6edc4694d99ac8499447"
+        },
+        "lib/arm64-v8a/libmedia3_exoplayer_jni.so": {
+          "bytes": 7816,
+          "sha256": "6f6fd23f66cda131ace30c0cef2ae0815c0e1072b89abe4087bb5f18eb598e0a"
+        },
+        "lib/arm64-v8a/libmediainfo.so": {
+          "bytes": 8136288,
+          "sha256": "8117b11b21676d27622df124bc65844842d0bff6cadcf7f5410c2a3597e621e5"
+        },
+        "lib/arm64-v8a/libmpeghJNI.so": {
+          "bytes": 796296,
+          "sha256": "abb121b6e5a4d692fb0f1ff50e1309ffb1d44e287d5a8161b39435868b0ed19a"
+        },
+        "lib/arm64-v8a/libmpv.so": {
+          "bytes": 15552952,
+          "sha256": "dd72e1d2de8cca79268121958cfa8c2f0118b7420684c50edbe0f7cec3167455"
+        },
+        "lib/arm64-v8a/libnuvio-http-vpn.so": {
+          "bytes": 10912040,
+          "sha256": "4ced0ee632fac2dd8d2e05aff1fa946bbdbffad341db3ec84fde5039ab70d1ca"
+        },
+        "lib/arm64-v8a/libnuvio-openvpn.so": {
+          "bytes": 4216744,
+          "sha256": "b5cde60ad49b04b51d0d9af41b42c155df96a59fcedf05fae36700545ae557e2"
+        },
+        "lib/arm64-v8a/libnuvio-openvpn2-engine.so": {
+          "bytes": 7856216,
+          "sha256": "75c8bc7af6fd2e22577b10e89f8f5c324aeb870023dea182f9ab3b79b4c4e63e"
+        },
+        "lib/arm64-v8a/libnuvio-openvpn2.so": {
+          "bytes": 6880,
+          "sha256": "78494bf4a09fcf2ed21ff0835d53c790f221413cd554ee8b2057ff970e069a3b"
+        },
+        "lib/arm64-v8a/libnuvio_engine.so": {
+          "bytes": 11024400,
+          "sha256": "7dc92ada210a0380f0b5724b4232e126ffb9aa92593e5e7bb8bcb3b2b54dea95"
+        },
+        "lib/arm64-v8a/libnuvio_usenet.so": {
+          "bytes": 11448320,
+          "sha256": "ca41d6bfcd6dff19d16ec9e3e8e0742881439d1b6a1625218484e8e31253def4"
+        },
+        "lib/arm64-v8a/libnuvioseekthumb.so": {
+          "bytes": 289264,
+          "sha256": "b1bcd548f56b9098c7ea352c74af3b24ad958a0275305008ed56d1ee13645e62"
+        },
+        "lib/arm64-v8a/libonnxruntime.so": {
+          "bytes": 22249552,
+          "sha256": "7a2fb92eb67037837c3f0e428bd732fd0d05ced0546d9e740090c07573d8249a"
+        },
+        "lib/arm64-v8a/libplayer.so": {
+          "bytes": 34560,
+          "sha256": "960a6d5e9cb6b52ddc95dcc39a15df1695306650f0b49362cfe41564af354814"
+        },
+        "lib/arm64-v8a/libquickjs.so": {
+          "bytes": 815480,
+          "sha256": "7b53fb297b2930e3e583e83952f494555538cdd5ed528b93f769c2074958ef99"
+        },
+        "lib/arm64-v8a/libsentry-android.so": {
+          "bytes": 18280,
+          "sha256": "8bffcf0d92b840f418f8f8d9356662475e1eac518143e5d4cf65ee5762a01df7"
+        },
+        "lib/arm64-v8a/libsentry.so": {
+          "bytes": 773984,
+          "sha256": "4cc7fe8257686a2708624ea7edc1194ca4a0b06b6ae050076e5d8c6651834980"
+        },
+        "lib/arm64-v8a/libsherpa-onnx-jni.so": {
+          "bytes": 4771760,
+          "sha256": "3c6492ea91ea68fd3b72b9495efdde6dd913f6b58c387e3b07389cf335f4d26f"
+        },
+        "lib/arm64-v8a/libswresample.so": {
+          "bytes": 101344,
+          "sha256": "9d316361eeab3af3afacd0c00aee45b5d28231461b049b07b610de3fd259a00d"
+        },
+        "lib/arm64-v8a/libswscale.so": {
+          "bytes": 1331664,
+          "sha256": "a00e3f200fcc453d45772d955ee1f33708c59dff65bd1841bef1ced3ee440e0d"
+        },
+        "lib/arm64-v8a/libwg-go.so": {
+          "bytes": 3365264,
+          "sha256": "68730e8c81b613113249574e22838fd6ce9b1c4da2be2f5fe7c71d651e32b005"
+        },
+        "lib/arm64-v8a/libwg-quick.so": {
+          "bytes": 29952,
+          "sha256": "a032456fbd3b8e577f6b4026ae049c4e7c9056cb7511f77c059e059394cb9092"
+        },
+        "lib/arm64-v8a/libwg.so": {
+          "bytes": 81704,
+          "sha256": "f68dfc2c95e0326e04bf427b055f729f3a51e840f78c8ad177259d42ab2722bc"
+        },
+        "lib/armeabi-v7a/libandroidx.graphics.path.so": {
+          "bytes": 7252,
+          "sha256": "41399eba6fc2a60f6f14642375c1824f3cf25eb8fec7397d753730a3ceda3e2b"
+        },
+        "lib/armeabi-v7a/libasskt.so": {
+          "bytes": 2824840,
+          "sha256": "b95ff544e5c7cc8002bbc691b01981dc14728346484dc73678fb345692afbba1"
+        },
+        "lib/armeabi-v7a/libavcodec.so": {
+          "bytes": 11952356,
+          "sha256": "360f1573ed2fb2c6aefdccb79e74d307759a6422d686b049f60a3aee7bd39d6b"
+        },
+        "lib/armeabi-v7a/libavdevice.so": {
+          "bytes": 7116,
+          "sha256": "c8f2f31e846d9985911a95ad0c61f6092347ef3bb89623e19c116c08a8c1c381"
+        },
+        "lib/armeabi-v7a/libavfilter.so": {
+          "bytes": 3523872,
+          "sha256": "bdc273ab4723013e74e5d526c72df5d4362d5819283aee44a010e365e09daa6c"
+        },
+        "lib/armeabi-v7a/libavformat.so": {
+          "bytes": 3158152,
+          "sha256": "c2f7656261b1522221c49ce3d2924000356c48fd845650d99e51d624c2aa0017"
+        },
+        "lib/armeabi-v7a/libavutil.so": {
+          "bytes": 658672,
+          "sha256": "1dfaeba6d691d8a07b0201a0c7b6892d6a6469a4a2efa642bce978ad0e3e413b"
+        },
+        "lib/armeabi-v7a/libc++_shared.so": {
+          "bytes": 994772,
+          "sha256": "38331a1efcb446eb1a0db440a8db8f41fa4fb698d15c061ab8c491426531c2c0"
+        },
+        "lib/armeabi-v7a/libconscrypt_jni.so": {
+          "bytes": 1279936,
+          "sha256": "afc1b6b0773522a808b204d93a464194b41f790eb98e4dc0b344e0f6310d04ee"
+        },
+        "lib/armeabi-v7a/libdatastore_shared_counter.so": {
+          "bytes": 4416,
+          "sha256": "716c5d8d2cac8ca0edf65da8f139c7886b726ac79d542a14edeb94994ba6d3dc"
+        },
+        "lib/armeabi-v7a/libffmpegJNI.so": {
+          "bytes": 1683720,
+          "sha256": "f2f7481e7313fe6c4b60aac3b8357472b2ea6230b490d4a9cd3a47ba0c7711a3"
+        },
+        "lib/armeabi-v7a/libgav1JNI.so": {
+          "bytes": 1615904,
+          "sha256": "d2e92b9b68ef1a21555f9b54b5e314f4ad8fa41d630dc94145bf95ece4e3533e"
+        },
+        "lib/armeabi-v7a/libiamf.so": {
+          "bytes": 183516,
+          "sha256": "aba3886b9e0d8f38bd16c8dacf74e12d3e14a36d6bc361155d9f331d3e820f37"
+        },
+        "lib/armeabi-v7a/libiamfJNI.so": {
+          "bytes": 4868,
+          "sha256": "0dc76fe3a511764c01d0f3d0154480862a34e5288aadf665345082ac1d9c5217"
+        },
+        "lib/armeabi-v7a/libmedia3_exoplayer_jni.so": {
+          "bytes": 5344,
+          "sha256": "07e724f8e8f6216b4e6d64a4a68c89fda54cb3615d9d8cf5cdc7af921ea0f71d"
+        },
+        "lib/armeabi-v7a/libmediainfo.so": {
+          "bytes": 7511480,
+          "sha256": "9037fcf556d7cf746408570f059100ecd66dd64c7a136842f7cb459e7f7e3043"
+        },
+        "lib/armeabi-v7a/libmpeghJNI.so": {
+          "bytes": 760736,
+          "sha256": "f1ebe197d7263f6094f0f6176a6c30cb8254df4f021e2a860f613bb887188b6c"
+        },
+        "lib/armeabi-v7a/libmpv.so": {
+          "bytes": 12517116,
+          "sha256": "f1a96b2c7aa02c88519a727d99f0df7f4867d08e85c940f06e16ba2f74145ee7"
+        },
+        "lib/armeabi-v7a/libnuvio-http-vpn.so": {
+          "bytes": 10598560,
+          "sha256": "53a1ca5c9d3cc4364d41442b4e3f81725b54eb04c6f02618862f074d8f7d6bb5"
+        },
+        "lib/armeabi-v7a/libnuvio-openvpn.so": {
+          "bytes": 2260280,
+          "sha256": "6ef3fb7637d195b14a37ead17320bd095676bdf3d90e7948e0f2bebcfcf5fb0c"
+        },
+        "lib/armeabi-v7a/libnuvio-openvpn2-engine.so": {
+          "bytes": 4481156,
+          "sha256": "2d76c30157d8870967d5706edbd2556ae37312f4dd83edb67442c5e81d995209"
+        },
+        "lib/armeabi-v7a/libnuvio-openvpn2.so": {
+          "bytes": 4808,
+          "sha256": "6725e0d76b1430663fc950a33ec7cd00f41eb575ad1f69fb948a9c67485a9076"
+        },
+        "lib/armeabi-v7a/libnuvio_engine.so": {
+          "bytes": 7535892,
+          "sha256": "9236223345ae53e47700433148f1fdaea178528a45e9563d0f50345d749fae10"
+        },
+        "lib/armeabi-v7a/libnuvio_usenet.so": {
+          "bytes": 11408220,
+          "sha256": "e431406e4cebe3351cbeacbe42a90578ee0db5c768f1577314c5db52a0efd05e"
+        },
+        "lib/armeabi-v7a/libnuvioseekthumb.so": {
+          "bytes": 174340,
+          "sha256": "45faefb1aa4fce21372c82fc1eeb34c9da4adc8e45900f0230886d1d6fe73738"
+        },
+        "lib/armeabi-v7a/libonnxruntime.so": {
+          "bytes": 15359576,
+          "sha256": "a89d118bd479b94180badbac6d1554d6cec7565c3dd61d7c97dc6fb7dac4780f"
+        },
+        "lib/armeabi-v7a/libplayer.so": {
+          "bytes": 24044,
+          "sha256": "ed45c2c06a549a79aafdcc9e037cb091d6b89ab37e06106b59847c791ad7198d"
+        },
+        "lib/armeabi-v7a/libquickjs.so": {
+          "bytes": 562676,
+          "sha256": "c9eb1d9af73f331d96dac4dfb9af924e123984705340e88e74bf7205ee801eb9"
+        },
+        "lib/armeabi-v7a/libsentry-android.so": {
+          "bytes": 13060,
+          "sha256": "eb76d4e3567838ff9a5eab475fbed67b0471759fde176d23c895faf815765e79"
+        },
+        "lib/armeabi-v7a/libsentry.so": {
+          "bytes": 505236,
+          "sha256": "d2e9d7fff8ad32c470aadb9cbadf0048520cd6586800ac3cc8fff560fef52c32"
+        },
+        "lib/armeabi-v7a/libsherpa-onnx-jni.so": {
+          "bytes": 3428780,
+          "sha256": "3d6b6daf6d23162dceb1df91ac075a42a09b60fafb5f9400cba22562f10a1dc0"
+        },
+        "lib/armeabi-v7a/libswresample.so": {
+          "bytes": 95240,
+          "sha256": "bbe5f477d83bf6204cd688f129de87bdf2a5e744ba604c15919c1e0382dae9b3"
+        },
+        "lib/armeabi-v7a/libswscale.so": {
+          "bytes": 901044,
+          "sha256": "503a3b5c8f13ae3975742243b3348d95497f67794993d127973eef0252059943"
+        },
+        "lib/armeabi-v7a/libwg-go.so": {
+          "bytes": 3174788,
+          "sha256": "2a6570004148c338337d945342326d4c42e71684d36bb2ee999a5d7863408680"
+        },
+        "lib/armeabi-v7a/libwg-quick.so": {
+          "bytes": 22736,
+          "sha256": "59277d78315487b5b53d2569131427d1ce9178a5e01f9655d6664cf224242a7a"
+        },
+        "lib/armeabi-v7a/libwg.so": {
+          "bytes": 47076,
+          "sha256": "8450177309a4884247736579d22fc84242990d3359bd15cc71a66971258b5ad2"
+        },
+        "lib/x86/libandroidx.graphics.path.so": {
+          "bytes": 9284,
+          "sha256": "eb0570b41fd3bff25d8204a967c03bd7550719e768b791f680cc40cbe35f29af"
+        },
+        "lib/x86/libasskt.so": {
+          "bytes": 3215360,
+          "sha256": "bb1e3f091b3fdfc84aca84977eea5f3d8cea92bcf5cda02814eb144bdd72d0aa"
+        },
+        "lib/x86/libavcodec.so": {
+          "bytes": 15030180,
+          "sha256": "6fd974903ff8fa8153b940f860ac783a4c5214cf6d715484cd9cd299881a22ed"
+        },
+        "lib/x86/libavdevice.so": {
+          "bytes": 8428,
+          "sha256": "ba54631ce303fd2bc9b347667b0d4e88e27619ba4a7fb0f0a55b4a62fa8a7991"
+        },
+        "lib/x86/libavfilter.so": {
+          "bytes": 5094640,
+          "sha256": "e2a6bc3f9537c665f11376aa61647798c28bb39e1297b85fab833df2c22eb463"
+        },
+        "lib/x86/libavformat.so": {
+          "bytes": 3852568,
+          "sha256": "452d0b476ad3555bd00d7e74c011cd190a0e95dc51c9b39507a1da81ef1fee59"
+        },
+        "lib/x86/libavutil.so": {
+          "bytes": 783128,
+          "sha256": "09c31346d58c16ff1e6dbd1118edd3376e8a0fd6421220b858deadb1ab3e0b31"
+        },
+        "lib/x86/libc++_shared.so": {
+          "bytes": 1321224,
+          "sha256": "610038ed52a64e9f050ad7dce363c123cca2237542353afd8930c8d5629b47e7"
+        },
+        "lib/x86/libconscrypt_jni.so": {
+          "bytes": 2254740,
+          "sha256": "eb2e93c664eccff7cb8cb8086d6c04665ef03862c5389cb170a6cd3901c29a6f"
+        },
+        "lib/x86/libdatastore_shared_counter.so": {
+          "bytes": 5148,
+          "sha256": "cd4a1649e2c8350703146f94a6ee2bf4c3c8c9f172159f805b61a4a2abdf0659"
+        },
+        "lib/x86/libffmpegJNI.so": {
+          "bytes": 1851424,
+          "sha256": "f5b04064d46219f58b3d533cad7b8f0dba3725dff9885d04c94ee16c42821cb9"
+        },
+        "lib/x86/libgav1JNI.so": {
+          "bytes": 1687936,
+          "sha256": "8177befef640690bbc032423b678cb3e6209aec5e31b3405cec57d6a34c9f600"
+        },
+        "lib/x86/libiamf.so": {
+          "bytes": 236004,
+          "sha256": "777c6da19166cdf6f0f11e85472b23c8146845558a6980b480d340b7a937db51"
+        },
+        "lib/x86/libiamfJNI.so": {
+          "bytes": 5472,
+          "sha256": "ff0774ed6efbe76ee06585ccd6f3b29adcb8d61c835c88533a15e03e28dd2d88"
+        },
+        "lib/x86/libmedia3_exoplayer_jni.so": {
+          "bytes": 6124,
+          "sha256": "0dd4bb2e7b49fc2805bd504cd1a95a795561b11f5e1cfd71a63327360054a0c3"
+        },
+        "lib/x86/libmediainfo.so": {
+          "bytes": 9403588,
+          "sha256": "9752f5041a88350034c44ca2c5975b62e33d88980ee5c0cdf91fb53aecede79e"
+        },
+        "lib/x86/libmpeghJNI.so": {
+          "bytes": 843800,
+          "sha256": "6127aba9cd9a645762a5f2188c004315c3b64ec173a5f5bc1ea4fb0dd97a046c"
+        },
+        "lib/x86/libmpv.so": {
+          "bytes": 15638200,
+          "sha256": "5e45a24dbb16fcc9d41b9ca2dec8a9b77b85523ba9ff10acf5239cb365ec4ed3"
+        },
+        "lib/x86/libnuvio-http-vpn.so": {
+          "bytes": 10657992,
+          "sha256": "cf0c5a8da9a506755a512bbd52fb4ed10b5b0c800ee20fd9d826aacf87b9c493"
+        },
+        "lib/x86/libnuvio-openvpn.so": {
+          "bytes": 4234212,
+          "sha256": "3c365fe0a8537c4ed210d3565f46e1d4e94b4bf299f881a0e72298c716dd4a7d"
+        },
+        "lib/x86/libnuvio-openvpn2-engine.so": {
+          "bytes": 7391832,
+          "sha256": "78bcec270287cff83c03dd1da5468072aee330060bfc597d72c073685d358821"
+        },
+        "lib/x86/libnuvio-openvpn2.so": {
+          "bytes": 5336,
+          "sha256": "31849fc7d40b4f39a38a5efc1686c0f6badbd5ca1f65d6ac121a2c0fa347a411"
+        },
+        "lib/x86/libnuvio_engine.so": {
+          "bytes": 10803036,
+          "sha256": "aa4fcff10b22247bc8a56bc722236417533e032cf61bcc839bab9931f208eca0"
+        },
+        "lib/x86/libnuvio_usenet.so": {
+          "bytes": 11473544,
+          "sha256": "21687c2d0d5ee960ccaf009ba8e252d396f4494ebc9b61577c8c1555e77e656e"
+        },
+        "lib/x86/libonnxruntime.so": {
+          "bytes": 26491144,
+          "sha256": "4c7ef5286642e51f66d5c6c42ffc2e0afc61c66b620b88182edaec60bde6149d"
+        },
+        "lib/x86/libplayer.so": {
+          "bytes": 28792,
+          "sha256": "b49615869d5fead81a39bf92f5c70b25f5560585e1cf3ed1fb8275b3691de4c7"
+        },
+        "lib/x86/libquickjs.so": {
+          "bytes": 865260,
+          "sha256": "ebfdcb61ce5f08cb319ebe45225f960ae3d91222285677e2640ab8d88aeb45b9"
+        },
+        "lib/x86/libsentry-android.so": {
+          "bytes": 16028,
+          "sha256": "471c6650a61a1de779a605268af0c952553b16aba116d7f558478b32b132be60"
+        },
+        "lib/x86/libsentry.so": {
+          "bytes": 795816,
+          "sha256": "f27b14e7641e4ef838258607390d2d5a6d116bd04ee4b7ba5cb4146c19fb19f0"
+        },
+        "lib/x86/libsherpa-onnx-jni.so": {
+          "bytes": 5358928,
+          "sha256": "04831b079ebd68557b6e9605f90be1dc76118973ee1aef5a75cc0d0889dc3778"
+        },
+        "lib/x86/libswresample.so": {
+          "bytes": 123792,
+          "sha256": "93b44f871887ce5f133ec306d567b00c71e696edc9e96eaa45d7fc0d819e4eef"
+        },
+        "lib/x86/libswscale.so": {
+          "bytes": 1619684,
+          "sha256": "0e80d33aa681fcf3f747dc8b9747767864c1ba675524e633853d5e962616d0c9"
+        },
+        "lib/x86/libwg-go.so": {
+          "bytes": 3197504,
+          "sha256": "3d9a36280ba19c5f710935c06f563afe377d4e7e19d0d5c931d47d861d2d48df"
+        },
+        "lib/x86/libwg-quick.so": {
+          "bytes": 31820,
+          "sha256": "360c91cc6e0483598865ba8414f99fddd712f2917a49599b326a20a4e6600700"
+        },
+        "lib/x86/libwg.so": {
+          "bytes": 70896,
+          "sha256": "400a7dbcf28832a87a04571bcda49d638874852e2e975b81887504bc40bef6d9"
+        },
+        "lib/x86_64/libandroidx.graphics.path.so": {
+          "bytes": 10760,
+          "sha256": "4e56c996f13670e70082658de7880c4020eabf4f25e43387f88ed78a713fc9f0"
+        },
+        "lib/x86_64/libasskt.so": {
+          "bytes": 3117496,
+          "sha256": "b615a5bb315590d1f0fc9de57b4c983c809af8ef6b09435fe6e1aef7a5dd538d"
+        },
+        "lib/x86_64/libavcodec.so": {
+          "bytes": 16671896,
+          "sha256": "43ef4b1e031d7b8c34e8135e16706d2385cd5a50b510a3fe2906478a6f9e06c3"
+        },
+        "lib/x86_64/libavdevice.so": {
+          "bytes": 9280,
+          "sha256": "c8b968867c3326e947897487b3e44a4ce7acceb345b9025e8bd6b6f463f44e7b"
+        },
+        "lib/x86_64/libavfilter.so": {
+          "bytes": 5444904,
+          "sha256": "8fdb046b486da14bed089f51176dd043f52194b1d59507c9d17267a58ca26d26"
+        },
+        "lib/x86_64/libavformat.so": {
+          "bytes": 3492400,
+          "sha256": "f8c690464268c6c3adc21b2fa04b94f35a2c4262ac196d57c03640c4112edc7d"
+        },
+        "lib/x86_64/libavutil.so": {
+          "bytes": 895072,
+          "sha256": "bd5bf4a64e3a5fe7b0eaeb06ef4a974359f178a63b7e2db36b1b25958d342e02"
+        },
+        "lib/x86_64/libc++_shared.so": {
+          "bytes": 1390752,
+          "sha256": "39faf2d59346e65a18980f207794fab2f1faff8a8de3f087b8319a181fa16fbd"
+        },
+        "lib/x86_64/libconscrypt_jni.so": {
+          "bytes": 2501448,
+          "sha256": "1a43a7c8000eaf863d9e36c951b4f77edfb2031cf84230f85482f531b5e9315a"
+        },
+        "lib/x86_64/libdatastore_shared_counter.so": {
+          "bytes": 6224,
+          "sha256": "fb6c9208988c49ae94943bc3236fa763ba584722e044fa4ea9a12d2941027105"
+        },
+        "lib/x86_64/libffmpegJNI.so": {
+          "bytes": 1956184,
+          "sha256": "dc3b37900522305df715a6b3b964b8304bcc70681dbe92c22d98247b20b27583"
+        },
+        "lib/x86_64/libgav1JNI.so": {
+          "bytes": 2162784,
+          "sha256": "16de899c7b1445fcca571150ef8b96cc8757eda60a48502930c4c8cb6ae81cca"
+        },
+        "lib/x86_64/libiamf.so": {
+          "bytes": 240352,
+          "sha256": "c2f4990bbbb6e3372a12d1e009db57694ff07ee2dd5bcb9381e54bab7c68691e"
+        },
+        "lib/x86_64/libiamfJNI.so": {
+          "bytes": 6648,
+          "sha256": "ac378fc5da9429977d000965fa09fb7b802eae8c3cf14f3f9b606431502c4484"
+        },
+        "lib/x86_64/libmedia3_exoplayer_jni.so": {
+          "bytes": 7664,
+          "sha256": "17fe33ff0d8afb284b078b11a5caf89faa81817c8795e73acb31587264289bc7"
+        },
+        "lib/x86_64/libmediainfo.so": {
+          "bytes": 9365960,
+          "sha256": "fd7eabfa4bd98618a8bb41db31d999651ce892400d93b55122fdee5bd069d69c"
+        },
+        "lib/x86_64/libmpeghJNI.so": {
+          "bytes": 854408,
+          "sha256": "63856c29fe12773e2598b2dbe16a3c626f21124cbf20367f7903ed1a65fc1d5e"
+        },
+        "lib/x86_64/libmpv.so": {
+          "bytes": 16287032,
+          "sha256": "ca2ee844b75143f6a68022403e65dca7790dfc2ae87945c8a32499b43868b19f"
+        },
+        "lib/x86_64/libnuvio-http-vpn.so": {
+          "bytes": 11722760,
+          "sha256": "a6131766018ab9d4612e52ed739d0227476bbd23ef18004bd1d8d93f95561c27"
+        },
+        "lib/x86_64/libnuvio-openvpn.so": {
+          "bytes": 4127560,
+          "sha256": "578a59a9cc4418e59477519df54f15323e77ae367f338fbc9570b60d1d93797e"
+        },
+        "lib/x86_64/libnuvio-openvpn2-engine.so": {
+          "bytes": 8464280,
+          "sha256": "415ee7917b0d00061a6718a1df8a863440b16e6f3d02371d42dc19bff14c17cd"
+        },
+        "lib/x86_64/libnuvio-openvpn2.so": {
+          "bytes": 6816,
+          "sha256": "4c73f907d5340b519baa5c28ddc2dfdaeb043f19e13ff351a7a7942e68f28bff"
+        },
+        "lib/x86_64/libnuvio_engine.so": {
+          "bytes": 11521552,
+          "sha256": "5ac8db91a84ee8338dccfaa4e02f8d2e3bda951ebb1d694caf36612b0c5f1de4"
+        },
+        "lib/x86_64/libnuvio_usenet.so": {
+          "bytes": 12345856,
+          "sha256": "7023028c9aba7796d052c9eaa6aee41ed00a25f1d8361f9d148930098846f417"
+        },
+        "lib/x86_64/libonnxruntime.so": {
+          "bytes": 25581112,
+          "sha256": "b626c070616d88bd643a6e63dc996d8d478d061176b056d52ce44c961bd355aa"
+        },
+        "lib/x86_64/libplayer.so": {
+          "bytes": 33104,
+          "sha256": "d2994bfa7f47d5b2df51336f0ded8e4d84199054a5b209ba5c6270a4d11d1257"
+        },
+        "lib/x86_64/libquickjs.so": {
+          "bytes": 886472,
+          "sha256": "60f3c9e14c31950be6d8a005003f3c49eea551c4639806cf9512c67487d4c3d1"
+        },
+        "lib/x86_64/libsentry-android.so": {
+          "bytes": 17800,
+          "sha256": "d61162f6fae652fcc11546cb8d35d887d17d2f42d1241ace451625a8455aac98"
+        },
+        "lib/x86_64/libsentry.so": {
+          "bytes": 758272,
+          "sha256": "0cd1585c63978ae024e716b1352609280cb7f339efd6c19e783bfd81a400c048"
+        },
+        "lib/x86_64/libsherpa-onnx-jni.so": {
+          "bytes": 5201192,
+          "sha256": "1dc24c88fb364f1022a5217b70ab3bc3c9cae3120ae2e1ed358e1f68ed120b04"
+        },
+        "lib/x86_64/libswresample.so": {
+          "bytes": 143608,
+          "sha256": "1e7e4d9b6240f3c16414aca34b703b4ceb45829779ac4fe03e23ebac3af71189"
+        },
+        "lib/x86_64/libswscale.so": {
+          "bytes": 1855240,
+          "sha256": "612fcfad83b5193245c368fd497fd56a5b8f5d867e7527bce55b6b612a7b09c2"
+        },
+        "lib/x86_64/libwg-go.so": {
+          "bytes": 3606928,
+          "sha256": "2793e254ac34ec4df86450866fd924a26b9b9e96cc7ba5f6379badd432da1e76"
+        },
+        "lib/x86_64/libwg-quick.so": {
+          "bytes": 31504,
+          "sha256": "980dcb7125ba08787643a466daaf862113f7338e679bf336da2515fefea85ccd"
+        },
+        "lib/x86_64/libwg.so": {
+          "bytes": 93248,
+          "sha256": "3852466c726ffe7e0da0d575d3c5f38309ec49c4877b40600e406c5c644b0c9d"
+        }
+      },
+      "nativeGoTasks": {
+        ":vpn-android:compileHttpTunnelArm64": "UP-TO-DATE",
+        ":vpn-android:compileHttpTunnelArm": "UP-TO-DATE",
+        ":vpn-android:compileHttpTunnelAmd64": "UP-TO-DATE",
+        ":vpn-android:compileHttpTunnel386": "UP-TO-DATE"
+      },
+      "nativeGoOutputs": [
+        {
+          "abi": "arm64-v8a",
+          "compiledSha256": "4a98e7bff2e90a8ba1191889c613520dcb39f56697b2da02d17f4d9e52d77708",
+          "packagedSha256": "4ced0ee632fac2dd8d2e05aff1fa946bbdbffad341db3ec84fde5039ab70d1ca"
+        },
+        {
+          "abi": "armeabi-v7a",
+          "compiledSha256": "5e335af7093feb7f9a66ab4b309206ac9c2044f554142cf5383a1a2c0a77584c",
+          "packagedSha256": "53a1ca5c9d3cc4364d41442b4e3f81725b54eb04c6f02618862f074d8f7d6bb5"
+        },
+        {
+          "abi": "x86_64",
+          "compiledSha256": "5bdb31272edc17d864b3b9f0a4e1777a38e3f2d44ae465e5c3af384da4fe9bfc",
+          "packagedSha256": "a6131766018ab9d4612e52ed739d0227476bbd23ef18004bd1d8d93f95561c27"
+        },
+        {
+          "abi": "x86",
+          "compiledSha256": "aa4a991c56cfeb2d59e38b65e6281dfddf722e2b6e42723927a4556960bb148a",
+          "packagedSha256": "cf0c5a8da9a506755a512bbd52fb4ed10b5b0c800ee20fd9d826aacf87b9c493"
+        }
+      ],
+      "nativeReuseAnchoredToReference": true,
+      "checks": {
+        "badging": {
+          "exitCode": 0,
+          "sha256": "fde7fd735abe71f7c2bcd4e884754548eaaae837fcca924d6fb5a27430f60b76"
+        },
+        "signature": {
+          "exitCode": 0,
+          "sha256": "163f1edff92c40a0ff6417337f39234eeba29ead21ed5557ae634e08b6a7fa44"
+        },
+        "zipalign": {
+          "exitCode": 0,
+          "sha256": "a882e592e57b1cbda31cb7282118084e90e18b5a3915dc68dc6bada1ee058492"
+        }
+      },
+      "testAndApkOneInvocation": true
+    },
+    {
+      "stage": "native-go-host-protocol-only",
+      "source": {
+        "kind": "direct-extracted-slice",
+        "ordinal": 11,
+        "slug": "vpn-response-pool",
+        "publishedHead": "5bde5052e3301d58f4739c7a12d211460cdc28b4",
+        "testedCommit": "5bde5052e3301d58f4739c7a12d211460cdc28b4",
+        "extraSourcePaths": []
+      },
+      "sourceTree": "27370eb9b1014f0beb04566d965bfe09b53c61fe",
+      "receiptSha256": "50d6016e51d739f4e78d1366f7e521ca1821585987e831f2d50b12d072046541",
+      "topLevelTestsPassed": 39,
+      "packages": [
+        "nuvio-vpn-http/internal/netstack",
+        "nuvio-vpn-http"
+      ],
+      "flags": {
+        "testCount": 1,
+        "platform": "Windows",
+        "goVersion": "1.27.3"
+      },
+      "unitGatePassed": true,
+      "unitKind": "native-Go protocol/ownership",
+      "apkGatePlanned": true,
+      "apkVerified": false,
+      "limits": "Native unit gate passed. Planned Android ABI/APK gate remains separate; no encrypted-tunnel/provider throughput or account claim."
+    }
+  ],
+  "pendingAtCapture": [],
+  "limits": "A compilation/unit checkpoint is not a full APK result. Each record states tested versus published source and any separate one-import prerequisite. Earlier combined586/96 evidence remains historical.",
+  "plannedGates": {
+    "unitOrdinals": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "apkOrdinals": [
+      6,
+      11
+    ],
+    "baselineApkSeparate": true
+  },
+  "pendingUnitGateOrdinals": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    9,
+    10,
+    12
+  ],
+  "pendingPlannedApkOrdinals": [
+    11
+  ],
+  "baselineApkVerified": true,
+  "recordFiles": [
+    "validation/01-metadata-backoff-complete-extracted-verification-524e04e15e249d38.json",
+    "validation/06-home-working-set-complete-extracted-verification-b482f84d63d29a0a.json",
+    "validation/08-recording-manifests-complete-extracted-verification-564f5125f2ce0876.json",
+    "validation/baseline-complete-extracted-verification-859d4e72e6b4bd3f.json",
+    "validation/11-vpn-response-pool-native-go-host-protocol-only-50d6016e51d739f4.json"
+  ]
+}
