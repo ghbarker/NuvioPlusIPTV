@@ -54,5 +54,26 @@
     "when": "After bounded Guide changes, combined v2",
     "proves": "The full Schedule for channel0900 reaches the same Sentinel at3:30–4:00PM, beyond the near-now preview, with its synthetic programme details.",
     "limits": "After-only guide-coverage evidence, not a timing/performance measurement or baseline-before screenshot."
+  },
+  {
+    "file": "screenshots/home-before-card35-selected.png",
+    "sha256": "ef7ee5e1522ab535123a54ee74f223dd3bcc2c26365e3f412fab086b675da355",
+    "when": "Before Home slice: Beta4 b02 plus compile-only NuvioDialog import (58104); same import later landed upstream with different ordering.",
+    "proves": "Classic Row09/Card35 is selected in the expanded row before opening details.",
+    "limits": "Synthetic Classic direct-row route only. Baseline source and installed APK are pinned separately; this is not pristine unbuildable b02, a memory/timing measurement, or candidate after evidence."
+  },
+  {
+    "file": "screenshots/home-before-card35-full-details.png",
+    "sha256": "963e98ff7dcf23963bb084546dafa2944390f1edd4b8deb8eb37f8e0bce9cf5a",
+    "when": "Before Home slice: Beta4 b02 plus compile-only NuvioDialog import (58104); same import later landed upstream with different ordering.",
+    "proves": "Card35 opens full addon title9035, including Synthetic director9035, through the actual full-details route.",
+    "limits": "Synthetic Classic direct-row route only. Baseline source and installed APK are pinned separately; this is not pristine unbuildable b02, a memory/timing measurement, or candidate after evidence."
+  },
+  {
+    "file": "screenshots/home-before-back-loses-focus.png",
+    "sha256": "2545ccf31008823e96f72cebc3ab5d2c15da333edf5d21d4f8627bf9f9f44c9d",
+    "when": "Before Home slice: Beta4 b02 plus compile-only NuvioDialog import (58104); same import later landed upstream with different ordering.",
+    "proves": "One Back loses the card outline, focuses the Movies tab and returns Row09 to its first-card view; the settled frame matches the immediate return.",
+    "limits": "Synthetic Classic direct-row route only. Baseline source and installed APK are pinned separately; this is not pristine unbuildable b02, a memory/timing measurement, or candidate after evidence."
   }
 ]
