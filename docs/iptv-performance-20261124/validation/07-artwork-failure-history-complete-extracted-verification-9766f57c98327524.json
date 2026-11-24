@@ -1,0 +1,76 @@
+{
+  "scope": "One completed extracted-source validation stage, identified by its immutable input receipt.",
+  "base": "b02e88770c3092782e4fb43b668552d6cad756ab",
+  "record": {
+    "stage": "complete-extracted-verification",
+    "source": {
+      "kind": "isolated-slice-merged-with-current-dev",
+      "ordinal": 7,
+      "slug": "artwork-failure-history",
+      "publishedHead": "c97f76b971eb733d64a5d26297d06dfd2c8dd59e",
+      "testedCommit": "439c3a1029c071d9f2c9b4526fcaebef017d08a9",
+      "prerequisiteHead": "b14285b29f35e29835f45f2b2015b6ce6eccba65",
+      "currentDev": "b14285b29f35e29835f45f2b2015b6ce6eccba65",
+      "exactMergeTree": "ab8395b5671c27beb6c1dd01ce4a76728519211b",
+      "extraSourcePaths": [
+        "app/src/main/java/com/nuvio/tv/ui/screens/settings/BackupOrderSettings.kt"
+      ],
+      "extraDiff": "one upstream NuvioDialog import only",
+      "codePrDiffIncludesPrerequisite": false
+    },
+    "sourceTree": "ab8395b5671c27beb6c1dd01ce4a76728519211b",
+    "receiptSha256": "9766f57c98327524ec6fd29b9e1765b39a589e222b7fb248a48b6fce85aede08",
+    "sourceStableDuringBuild": true,
+    "testClasses": 3,
+    "totals": {
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "suites": [
+      {
+        "name": "com.nuvio.tv.livetv.ondemand.VodPictureFailuresTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "2c093df6c7be02c6aa330c4cc9e099e14e1495eec5154bc432bf85208ec25814"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.ondemand.VodPicturePolicyTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "a8bc9c691caa0b48069198e650a5c8ded7e03743c3a88f8ee501de05aac77802"
+      },
+      {
+        "name": "com.nuvio.tv.livetv.ondemand.VodPicturesTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "sha256": "df4cf57892f550af670e7f2382df07622a4db0826cf4142ed1763105f5eda1d1"
+      }
+    ],
+    "unitGatePassed": true,
+    "unitKind": "JVM/native-SQLite",
+    "fullGradleInvocationComplete": true,
+    "apkGatePlanned": false,
+    "apkVerified": false,
+    "flags": {
+      "defaultStableVersioning": true,
+      "livetvTestBuildPropertyOmitted": true,
+      "generatorEnabled": true,
+      "nativeTasksEnabled": true,
+      "gradleTaskExclusions": [],
+      "heapMiB": 6144,
+      "workers": 1,
+      "kotlinCompiler": "in-process",
+      "deviceActions": false
+    },
+    "limits": "Unit gate complete. No fresh APK is required or claimed for this slice's validation plan."
+  },
+  "limits": "The unit and APK gates are stated separately. This is local validation, not hosted CI or physical-device/provider acceptance. Earlier combined586/96 results are separate."
+}
