@@ -1,0 +1,66 @@
+{
+  "purpose": "Review evidence only; kept outside implementation PR branches",
+  "sourceBase": "6c8ce7e7a2d098a856c98a56c105a9043ba537b1",
+  "files": [
+    {
+      "file": "adaptive-setting-off.png",
+      "bytes": 194968,
+      "sha256": "e19dfc1a39fa9c41c3ca4a889e4993df0f06568bd5b8d638253f7a5df6b5c20a"
+    },
+    {
+      "file": "adaptive-setting-on.png",
+      "bytes": 194947,
+      "sha256": "e8df799dc46bbfce0b01fc1d205abc516af45fb86983e03db6be8d32f1ccf99f"
+    },
+    {
+      "file": "back-before.png",
+      "bytes": 630360,
+      "sha256": "bdf2582e67b6b4db9398c0648b81646fb60308ab409d40a8fc530d5d31608c65"
+    },
+    {
+      "file": "back-after.png",
+      "bytes": 472813,
+      "sha256": "2c3d93715e5e26d5321bb34a426b4d1df9c88b4cdb240b5542a2bfd76d7e007f"
+    },
+    {
+      "file": "back-before.mp4",
+      "bytes": 6859367,
+      "sha256": "2b3df372814fffe043670ba28bd008e16e2695166319819ddfc7aae44e1b10b6"
+    },
+    {
+      "file": "back-after.mp4",
+      "bytes": 3218451,
+      "sha256": "8f8d4b446621375515e3a59126dc2ee70955f0bfbdc1ea99802ca30eba498cb8"
+    },
+    {
+      "file": "adaptive-ts-gap.mp4",
+      "bytes": 3286231,
+      "sha256": "3ad1db000882bdc85c81c93e633d17ae216a030275a058903e7938fe9cf3ddb9"
+    },
+    {
+      "file": "adaptive-hls-gap.mp4",
+      "bytes": 3393853,
+      "sha256": "5679d18f2d34e3e3f169254331d47c951f5a17c0b4a7435a10798d64ba722291"
+    },
+    {
+      "file": "NativeSportsPipelineProbe.java",
+      "bytes": 38578,
+      "sha256": "215a405d1541e30f9f0be1548c2b0d64ecca42f5a7f9d2f07fae0d9ed9a9e0f9"
+    },
+    {
+      "file": "sports-c-validation.json",
+      "bytes": 48249,
+      "sha256": "5a5e275f2e5ec293eb9b5dd032233df9df9965ace945e30426f5adf7668aedb2"
+    },
+    {
+      "file": "adaptive-validation.json",
+      "bytes": 2289,
+      "sha256": "bc35a25ba61569e9cdac0fc85027418dc86a0a2ab80c037d5d6e60f4765673b5"
+    },
+    {
+      "file": "back-validation.json",
+      "bytes": 921,
+      "sha256": "92fbbd50ca89d54928c42aa5da8740e60a1719acdb75c1807b573aef377d5202"
+    }
+  ]
+}

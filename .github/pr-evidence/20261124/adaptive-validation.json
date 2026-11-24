@@ -1,0 +1,73 @@
+{
+  "sourceBase": "6c8ce7e7a2d098a856c98a56c105a9043ba537b1",
+  "environment": "Synthetic four-lane API36 x86_64 TV emulator, exact production adaptive helpers and Media3 1.8.0 PCM output",
+  "componentScope": "Four simultaneous synthetic TS/HLS on/off lanes using exact production adaptive helper source, built-in Media3 PCM audio; no account/provider/full-app stall or physical lip-sync claim",
+  "completedElapsedMs": 1320856,
+  "idleHost": {
+    "initialBuilderPids": [],
+    "progressChecks": 29,
+    "allChecksBuilderPidsEmpty": true
+  },
+  "pairedRebufferComparison": {
+    "ts": {
+      "offCount": 1,
+      "onCount": 0,
+      "offMs": 7550,
+      "onMs": 0,
+      "note": "Component fixture only; counts are player buffering events, not frame callback gaps or physical lip sync"
+    },
+    "hls": {
+      "offCount": 1,
+      "onCount": 0,
+      "offMs": 1698,
+      "onMs": 0,
+      "note": "Component fixture only; counts are player buffering events, not frame callback gaps or physical lip sync"
+    }
+  },
+  "stableAudioRate": {
+    "ts": 0.97999977,
+    "hls": 0.98000025
+  },
+  "pitch": 1,
+  "returnedToNormalMs": {
+    "ts": 602270,
+    "hls": 688750
+  },
+  "firstFrameMsFromActivityAnchor": {
+    "tsOn": 2140,
+    "tsOff": 2361,
+    "hlsOn": 2206,
+    "hlsOff": 2200
+  },
+  "actualAppTests": {
+    "cases": 15,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "functionalChecks": [
+    "off by default",
+    "per-TV setting persists across restart",
+    "disable restores owned rate",
+    "channel change resets adaptive ownership",
+    "manual1.25 speed respected",
+    "live-addon replay eligibility",
+    "unsupported output normal speed"
+  ],
+  "media": "Continuous600kbps MPEG-TS without Content-Length or live edge; moving2s HLS playlist",
+  "gaps": {
+    "startSeconds": [
+      800,
+      1000,
+      1200
+    ],
+    "tsPauseSeconds": 4,
+    "hlsPauseSeconds": 8
+  },
+  "videos": {
+    "ts": "adaptive-ts-gap.mp4",
+    "hls": "adaptive-hls-gap.mp4"
+  },
+  "visibleReview": "Control pictures held while adaptive pictures advanced; exact player buffering durations are distinct from recorded frame-hold boundaries.",
+  "limits": "Shared recording load. Synthetic component results, not live-provider, whole-app cold-start or physical lip-sync proof."
+}

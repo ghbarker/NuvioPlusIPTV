@@ -1,0 +1,888 @@
+{
+  "sourceBase": "6c8ce7e7a2d098a856c98a56c105a9043ba537b1",
+  "environment": "Android API36 x86_64 TV emulator; synthetic isolated data; warm SQLite caches",
+  "scope": "Fresh actual matcher construction, SQLite traversal, dictionary/packing/JNI, managed scoring and allocation. One excluded warmup plus three steady trials per case/mode. Not whole-app or physical-TV timing.",
+  "fixture": {
+    "logicalChannels": 300,
+    "eligibleChannels": 900,
+    "listingsPerChannel": 336,
+    "physicalListings": 100800,
+    "aliasesPerGuideChannel": 3,
+    "aliasShiftsMs": [
+      0,
+      0,
+      1800000
+    ],
+    "nowMs": 1800014400000,
+    "firstListingMs": 1799812800000,
+    "guideDaysFromMs": 1799884800000,
+    "guideDaysToMs": 1800144000000,
+    "orderedDatabaseSha256": "5d5e44261eb0f5c80baede46a7690c087a30494a256ec83339425e79bc44e463"
+  },
+  "cases": {
+    "followed_full_guide": {
+      "orderedTupleSha256": "9dd7111ffc426ee8ab4981adc346baf1f6cf57ccd5a1a589f91070ae770335a7",
+      "encodedBytes": 5848909,
+      "guideEvents": 245,
+      "channelMatches": 1050
+    },
+    "mixed_race_multiday": {
+      "orderedTupleSha256": "c689ce167ed53c18c8bf59d46c927854b7135e18d6a3cce7574e1c954bf44ad8",
+      "encodedBytes": 6004480,
+      "guideEvents": 245,
+      "channelMatches": 1107
+    },
+    "titles_only": {
+      "orderedTupleSha256": "6d5f6548eab441cf227f3b3fab3506d6ddafdd6fe2fac2d5ea496599b2970d22",
+      "encodedBytes": 5051842,
+      "guideEvents": 176,
+      "channelMatches": 1050
+    }
+  },
+  "comparisons": {
+    "followed_full_guide": {
+      "upstream6c8Ms": 7179.7935,
+      "candidateManagedMs": 7163.7071,
+      "candidateNativeMs": 4682.2923,
+      "nativeTimeReductionVsManagedPercent": 34.6386970511399,
+      "nativeTimeReductionVsUpstreamPercent": 34.78513971188726
+    },
+    "mixed_race_multiday": {
+      "upstream6c8Ms": 7218.6867,
+      "candidateManagedMs": 7118.1438,
+      "candidateNativeMs": 4720.0205,
+      "nativeTimeReductionVsManagedPercent": 33.69029015682431,
+      "nativeTimeReductionVsUpstreamPercent": 34.61386127202335
+    },
+    "titles_only": {
+      "upstream6c8Ms": 3785.5052,
+      "candidateManagedMs": 3672.8354,
+      "candidateNativeMs": 2491.2036,
+      "nativeTimeReductionVsManagedPercent": 32.172195900747425,
+      "nativeTimeReductionVsUpstreamPercent": 34.19098724260107
+    }
+  },
+  "exactParity": true,
+  "hostTests": {
+    "candidate": 10,
+    "controlRepeatedExecutions": 2,
+    "uniqueCases": 10
+  },
+  "nativePreflight": {
+    "applicable": true,
+    "allPassed": true,
+    "exactKeptRowsAndNormalization": true,
+    "invalidCallsRejected": 7,
+    "suffixTerms": 721,
+    "suffixTermCharacters": 261723,
+    "suffixRows": 8,
+    "suffixRawCharacters": 65536,
+    "timed": false
+  },
+  "abiChecks": {
+    "abis": [
+      "armeabi-v7a",
+      "arm64-v8a",
+      "x86",
+      "x86_64"
+    ],
+    "actualAgpPackaging": true,
+    "elfLoadAlignmentBytes": 16384,
+    "requiredJniSymbolsPerAbi": 3
+  },
+  "fixtureSource": "NativeSportsPipelineProbe.java",
+  "control": {
+    "candidate": false,
+    "fixture": {
+      "logicalChannels": 300,
+      "eligibleChannels": 900,
+      "listingsPerChannel": 336,
+      "physicalListings": 100800,
+      "aliasesPerGuideChannel": 3,
+      "aliasShiftsMs": [
+        0,
+        0,
+        1800000
+      ],
+      "nowMs": 1800014400000,
+      "firstListingMs": 1799812800000,
+      "guideDaysFromMs": 1799884800000,
+      "guideDaysToMs": 1800144000000,
+      "orderedDatabaseSha256": "5d5e44261eb0f5c80baede46a7690c087a30494a256ec83339425e79bc44e463",
+      "revision": -6029263476487342318
+    },
+    "cases": {
+      "followed_full_guide": {
+        "orderedTupleSha256": "9dd7111ffc426ee8ab4981adc346baf1f6cf57ccd5a1a589f91070ae770335a7",
+        "encodedBytes": 5848909,
+        "guideEvents": 245,
+        "channelMatches": 1050
+      },
+      "mixed_race_multiday": {
+        "orderedTupleSha256": "c689ce167ed53c18c8bf59d46c927854b7135e18d6a3cce7574e1c954bf44ad8",
+        "encodedBytes": 6004480,
+        "guideEvents": 245,
+        "channelMatches": 1107
+      },
+      "titles_only": {
+        "orderedTupleSha256": "6d5f6548eab441cf227f3b3fab3506d6ddafdd6fe2fac2d5ea496599b2970d22",
+        "encodedBytes": 5051842,
+        "guideEvents": 176,
+        "channelMatches": 1050
+      }
+    },
+    "samples": [
+      {
+        "case": "followed_full_guide/control_full_guide",
+        "phase": "warmup",
+        "trial": 0,
+        "wallMs": 7643.3872,
+        "threadCpuMs": 7199.172092,
+        "processCpuMs": 9606,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "9dd7111ffc426ee8ab4981adc346baf1f6cf57ccd5a1a589f91070ae770335a7",
+          "encodedBytes": 5848909,
+          "guideEvents": 245,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0)"
+      },
+      {
+        "case": "followed_full_guide/control_full_guide",
+        "phase": "steady",
+        "trial": 1,
+        "wallMs": 7179.7935,
+        "threadCpuMs": 6771.33208,
+        "processCpuMs": 8972,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "9dd7111ffc426ee8ab4981adc346baf1f6cf57ccd5a1a589f91070ae770335a7",
+          "encodedBytes": 5848909,
+          "guideEvents": 245,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0)"
+      },
+      {
+        "case": "followed_full_guide/control_full_guide",
+        "phase": "steady",
+        "trial": 2,
+        "wallMs": 7323.5636,
+        "threadCpuMs": 6918.885358,
+        "processCpuMs": 9172,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "9dd7111ffc426ee8ab4981adc346baf1f6cf57ccd5a1a589f91070ae770335a7",
+          "encodedBytes": 5848909,
+          "guideEvents": 245,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0)"
+      },
+      {
+        "case": "followed_full_guide/control_full_guide",
+        "phase": "steady",
+        "trial": 3,
+        "wallMs": 7108.0767,
+        "threadCpuMs": 6707.098925,
+        "processCpuMs": 8862,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "9dd7111ffc426ee8ab4981adc346baf1f6cf57ccd5a1a589f91070ae770335a7",
+          "encodedBytes": 5848909,
+          "guideEvents": 245,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0)"
+      },
+      {
+        "case": "mixed_race_multiday/control_full_guide",
+        "phase": "warmup",
+        "trial": 0,
+        "wallMs": 7153.85,
+        "threadCpuMs": 6747.746925,
+        "processCpuMs": 8920,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "c689ce167ed53c18c8bf59d46c927854b7135e18d6a3cce7574e1c954bf44ad8",
+          "encodedBytes": 6004480,
+          "guideEvents": 245,
+          "channelMatches": 1107
+        },
+        "diagnosticSummary": "Sports: 103 games and events in the next day or so \u00b7 channels found for 81 (guide 81, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0) \u00b7 multi-day: Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 21 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 6 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 12 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 18"
+      },
+      {
+        "case": "mixed_race_multiday/control_full_guide",
+        "phase": "steady",
+        "trial": 1,
+        "wallMs": 7274.6624,
+        "threadCpuMs": 6857.047484,
+        "processCpuMs": 9027,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "c689ce167ed53c18c8bf59d46c927854b7135e18d6a3cce7574e1c954bf44ad8",
+          "encodedBytes": 6004480,
+          "guideEvents": 245,
+          "channelMatches": 1107
+        },
+        "diagnosticSummary": "Sports: 103 games and events in the next day or so \u00b7 channels found for 81 (guide 81, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0) \u00b7 multi-day: Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 21 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 6 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 12 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 18"
+      },
+      {
+        "case": "mixed_race_multiday/control_full_guide",
+        "phase": "steady",
+        "trial": 2,
+        "wallMs": 7071.3086,
+        "threadCpuMs": 6669.01896,
+        "processCpuMs": 8843,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "c689ce167ed53c18c8bf59d46c927854b7135e18d6a3cce7574e1c954bf44ad8",
+          "encodedBytes": 6004480,
+          "guideEvents": 245,
+          "channelMatches": 1107
+        },
+        "diagnosticSummary": "Sports: 103 games and events in the next day or so \u00b7 channels found for 81 (guide 81, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0) \u00b7 multi-day: Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 21 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 6 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 12 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 18"
+      },
+      {
+        "case": "mixed_race_multiday/control_full_guide",
+        "phase": "steady",
+        "trial": 3,
+        "wallMs": 7218.6867,
+        "threadCpuMs": 6811.397179,
+        "processCpuMs": 8991,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "c689ce167ed53c18c8bf59d46c927854b7135e18d6a3cce7574e1c954bf44ad8",
+          "encodedBytes": 6004480,
+          "guideEvents": 245,
+          "channelMatches": 1107
+        },
+        "diagnosticSummary": "Sports: 103 games and events in the next day or so \u00b7 channels found for 81 (guide 81, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0) \u00b7 multi-day: Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 21 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 6 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 12 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 18"
+      },
+      {
+        "case": "titles_only/control_full_guide",
+        "phase": "warmup",
+        "trial": 0,
+        "wallMs": 3657.7586,
+        "threadCpuMs": 3481.295367,
+        "processCpuMs": 4619,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "6d5f6548eab441cf227f3b3fab3506d6ddafdd6fe2fac2d5ea496599b2970d22",
+          "encodedBytes": 5051842,
+          "guideEvents": 176,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0)"
+      },
+      {
+        "case": "titles_only/control_full_guide",
+        "phase": "steady",
+        "trial": 1,
+        "wallMs": 3854.4067,
+        "threadCpuMs": 3661.181462,
+        "processCpuMs": 4857,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "6d5f6548eab441cf227f3b3fab3506d6ddafdd6fe2fac2d5ea496599b2970d22",
+          "encodedBytes": 5051842,
+          "guideEvents": 176,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0)"
+      },
+      {
+        "case": "titles_only/control_full_guide",
+        "phase": "steady",
+        "trial": 2,
+        "wallMs": 3712.883,
+        "threadCpuMs": 3518.160523,
+        "processCpuMs": 4669,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "6d5f6548eab441cf227f3b3fab3506d6ddafdd6fe2fac2d5ea496599b2970d22",
+          "encodedBytes": 5051842,
+          "guideEvents": 176,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0)"
+      },
+      {
+        "case": "titles_only/control_full_guide",
+        "phase": "steady",
+        "trial": 3,
+        "wallMs": 3785.5052,
+        "threadCpuMs": 3584.949899,
+        "processCpuMs": 4754,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "6d5f6548eab441cf227f3b3fab3506d6ddafdd6fe2fac2d5ea496599b2970d22",
+          "encodedBytes": 5051842,
+          "guideEvents": 176,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0)"
+      }
+    ],
+    "steadyMedians": {
+      "followed_full_guide/control_full_guide": {
+        "wallMs": 7179.7935,
+        "threadCpuMs": 6771.33208,
+        "processCpuMs": 8972,
+        "trials": 3
+      },
+      "mixed_race_multiday/control_full_guide": {
+        "wallMs": 7218.6867,
+        "threadCpuMs": 6811.397179,
+        "processCpuMs": 8991,
+        "trials": 3
+      },
+      "titles_only/control_full_guide": {
+        "wallMs": 3785.5052,
+        "threadCpuMs": 3584.949899,
+        "processCpuMs": 4754,
+        "trials": 3
+      }
+    },
+    "nativePreflight": {
+      "applicable": false
+    },
+    "semanticChecks": {
+      "unicodeAccents": true,
+      "unicodeSmallMarks": true,
+      "wholeWordNegative": true,
+      "punctuation": true,
+      "oversizedMetadataFallback": true,
+      "descriptionOnlyFollowed": true,
+      "aliasAndAllModelMetadataIncluded": true,
+      "databaseUnchanged": true
+    },
+    "nativeLibrarySha256": "89473bd2bdd880aa7944beaec81a5b3aae849170d0ff54f13a09c8a60c886151",
+    "projectDexSha256": "b7b906527b5c5b150a57c922cddd5b19932abbcd74622d244c56743c07e4784c"
+  },
+  "candidate": {
+    "candidate": true,
+    "fixture": {
+      "logicalChannels": 300,
+      "eligibleChannels": 900,
+      "listingsPerChannel": 336,
+      "physicalListings": 100800,
+      "aliasesPerGuideChannel": 3,
+      "aliasShiftsMs": [
+        0,
+        0,
+        1800000
+      ],
+      "nowMs": 1800014400000,
+      "firstListingMs": 1799812800000,
+      "guideDaysFromMs": 1799884800000,
+      "guideDaysToMs": 1800144000000,
+      "orderedDatabaseSha256": "5d5e44261eb0f5c80baede46a7690c087a30494a256ec83339425e79bc44e463",
+      "revision": 7608905815645794454
+    },
+    "cases": {
+      "followed_full_guide": {
+        "orderedTupleSha256": "9dd7111ffc426ee8ab4981adc346baf1f6cf57ccd5a1a589f91070ae770335a7",
+        "encodedBytes": 5848909,
+        "guideEvents": 245,
+        "channelMatches": 1050
+      },
+      "mixed_race_multiday": {
+        "orderedTupleSha256": "c689ce167ed53c18c8bf59d46c927854b7135e18d6a3cce7574e1c954bf44ad8",
+        "encodedBytes": 6004480,
+        "guideEvents": 245,
+        "channelMatches": 1107
+      },
+      "titles_only": {
+        "orderedTupleSha256": "6d5f6548eab441cf227f3b3fab3506d6ddafdd6fe2fac2d5ea496599b2970d22",
+        "encodedBytes": 5051842,
+        "guideEvents": 176,
+        "channelMatches": 1050
+      }
+    },
+    "samples": [
+      {
+        "case": "followed_full_guide/native_on",
+        "phase": "warmup",
+        "trial": 0,
+        "wallMs": 5117.68,
+        "threadCpuMs": 4865.287508,
+        "processCpuMs": 6195,
+        "completedNativeBatches": 7553,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "9dd7111ffc426ee8ab4981adc346baf1f6cf57ccd5a1a589f91070ae770335a7",
+          "encodedBytes": 5848909,
+          "guideEvents": 245,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 1 s (guide 1, names 0, networks 0)"
+      },
+      {
+        "case": "followed_full_guide/native_off",
+        "phase": "warmup",
+        "trial": 0,
+        "wallMs": 7413.9467,
+        "threadCpuMs": 6952.297975,
+        "processCpuMs": 9203,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "9dd7111ffc426ee8ab4981adc346baf1f6cf57ccd5a1a589f91070ae770335a7",
+          "encodedBytes": 5848909,
+          "guideEvents": 245,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0)"
+      },
+      {
+        "case": "followed_full_guide/native_off",
+        "phase": "steady",
+        "trial": 1,
+        "wallMs": 7340.493,
+        "threadCpuMs": 6927.975028,
+        "processCpuMs": 9137,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "9dd7111ffc426ee8ab4981adc346baf1f6cf57ccd5a1a589f91070ae770335a7",
+          "encodedBytes": 5848909,
+          "guideEvents": 245,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0)"
+      },
+      {
+        "case": "followed_full_guide/native_on",
+        "phase": "steady",
+        "trial": 1,
+        "wallMs": 4695.1703,
+        "threadCpuMs": 4502.649902,
+        "processCpuMs": 5618,
+        "completedNativeBatches": 7553,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "9dd7111ffc426ee8ab4981adc346baf1f6cf57ccd5a1a589f91070ae770335a7",
+          "encodedBytes": 5848909,
+          "guideEvents": 245,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 1 s (guide 1, names 0, networks 0)"
+      },
+      {
+        "case": "followed_full_guide/native_on",
+        "phase": "steady",
+        "trial": 2,
+        "wallMs": 4672.817,
+        "threadCpuMs": 4455.473165,
+        "processCpuMs": 5557,
+        "completedNativeBatches": 7553,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "9dd7111ffc426ee8ab4981adc346baf1f6cf57ccd5a1a589f91070ae770335a7",
+          "encodedBytes": 5848909,
+          "guideEvents": 245,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 1 s (guide 1, names 0, networks 0)"
+      },
+      {
+        "case": "followed_full_guide/native_off",
+        "phase": "steady",
+        "trial": 2,
+        "wallMs": 7163.7071,
+        "threadCpuMs": 6776.760052,
+        "processCpuMs": 8946,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "9dd7111ffc426ee8ab4981adc346baf1f6cf57ccd5a1a589f91070ae770335a7",
+          "encodedBytes": 5848909,
+          "guideEvents": 245,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0)"
+      },
+      {
+        "case": "followed_full_guide/native_off",
+        "phase": "steady",
+        "trial": 3,
+        "wallMs": 7074.2436,
+        "threadCpuMs": 6675.323776,
+        "processCpuMs": 8889,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "9dd7111ffc426ee8ab4981adc346baf1f6cf57ccd5a1a589f91070ae770335a7",
+          "encodedBytes": 5848909,
+          "guideEvents": 245,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0)"
+      },
+      {
+        "case": "followed_full_guide/native_on",
+        "phase": "steady",
+        "trial": 3,
+        "wallMs": 4682.2923,
+        "threadCpuMs": 4463.993269,
+        "processCpuMs": 5578,
+        "completedNativeBatches": 7553,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "9dd7111ffc426ee8ab4981adc346baf1f6cf57ccd5a1a589f91070ae770335a7",
+          "encodedBytes": 5848909,
+          "guideEvents": 245,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 1 s (guide 1, names 0, networks 0)"
+      },
+      {
+        "case": "mixed_race_multiday/native_on",
+        "phase": "warmup",
+        "trial": 0,
+        "wallMs": 4834.4899,
+        "threadCpuMs": 4590.549575,
+        "processCpuMs": 5738,
+        "completedNativeBatches": 7553,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "c689ce167ed53c18c8bf59d46c927854b7135e18d6a3cce7574e1c954bf44ad8",
+          "encodedBytes": 6004480,
+          "guideEvents": 245,
+          "channelMatches": 1107
+        },
+        "diagnosticSummary": "Sports: 103 games and events in the next day or so \u00b7 channels found for 81 (guide 81, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 1 s (guide 1, names 0, networks 0) \u00b7 multi-day: Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 21 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 6 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 12 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 18"
+      },
+      {
+        "case": "mixed_race_multiday/native_off",
+        "phase": "warmup",
+        "trial": 0,
+        "wallMs": 7129.2949,
+        "threadCpuMs": 6745.576224,
+        "processCpuMs": 8933,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "c689ce167ed53c18c8bf59d46c927854b7135e18d6a3cce7574e1c954bf44ad8",
+          "encodedBytes": 6004480,
+          "guideEvents": 245,
+          "channelMatches": 1107
+        },
+        "diagnosticSummary": "Sports: 103 games and events in the next day or so \u00b7 channels found for 81 (guide 81, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0) \u00b7 multi-day: Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 21 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 6 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 12 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 18"
+      },
+      {
+        "case": "mixed_race_multiday/native_off",
+        "phase": "steady",
+        "trial": 1,
+        "wallMs": 7118.1438,
+        "threadCpuMs": 6716.057104,
+        "processCpuMs": 8912,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "c689ce167ed53c18c8bf59d46c927854b7135e18d6a3cce7574e1c954bf44ad8",
+          "encodedBytes": 6004480,
+          "guideEvents": 245,
+          "channelMatches": 1107
+        },
+        "diagnosticSummary": "Sports: 103 games and events in the next day or so \u00b7 channels found for 81 (guide 81, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0) \u00b7 multi-day: Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 21 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 6 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 12 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 18"
+      },
+      {
+        "case": "mixed_race_multiday/native_on",
+        "phase": "steady",
+        "trial": 1,
+        "wallMs": 4720.0205,
+        "threadCpuMs": 4514.69597,
+        "processCpuMs": 5664,
+        "completedNativeBatches": 7553,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "c689ce167ed53c18c8bf59d46c927854b7135e18d6a3cce7574e1c954bf44ad8",
+          "encodedBytes": 6004480,
+          "guideEvents": 245,
+          "channelMatches": 1107
+        },
+        "diagnosticSummary": "Sports: 103 games and events in the next day or so \u00b7 channels found for 81 (guide 81, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 1 s (guide 1, names 0, networks 0) \u00b7 multi-day: Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 21 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 6 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 12 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 18"
+      },
+      {
+        "case": "mixed_race_multiday/native_on",
+        "phase": "steady",
+        "trial": 2,
+        "wallMs": 4619.7844,
+        "threadCpuMs": 4413.523513,
+        "processCpuMs": 5491,
+        "completedNativeBatches": 7553,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "c689ce167ed53c18c8bf59d46c927854b7135e18d6a3cce7574e1c954bf44ad8",
+          "encodedBytes": 6004480,
+          "guideEvents": 245,
+          "channelMatches": 1107
+        },
+        "diagnosticSummary": "Sports: 103 games and events in the next day or so \u00b7 channels found for 81 (guide 81, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 1 s (guide 1, names 0, networks 0) \u00b7 multi-day: Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 21 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 6 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 12 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 18"
+      },
+      {
+        "case": "mixed_race_multiday/native_off",
+        "phase": "steady",
+        "trial": 2,
+        "wallMs": 7286.6038,
+        "threadCpuMs": 6897.63519,
+        "processCpuMs": 9127,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "c689ce167ed53c18c8bf59d46c927854b7135e18d6a3cce7574e1c954bf44ad8",
+          "encodedBytes": 6004480,
+          "guideEvents": 245,
+          "channelMatches": 1107
+        },
+        "diagnosticSummary": "Sports: 103 games and events in the next day or so \u00b7 channels found for 81 (guide 81, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0) \u00b7 multi-day: Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 21 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 6 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 12 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 18"
+      },
+      {
+        "case": "mixed_race_multiday/native_off",
+        "phase": "steady",
+        "trial": 3,
+        "wallMs": 7075.6904,
+        "threadCpuMs": 6669.55309,
+        "processCpuMs": 8853,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "c689ce167ed53c18c8bf59d46c927854b7135e18d6a3cce7574e1c954bf44ad8",
+          "encodedBytes": 6004480,
+          "guideEvents": 245,
+          "channelMatches": 1107
+        },
+        "diagnosticSummary": "Sports: 103 games and events in the next day or so \u00b7 channels found for 81 (guide 81, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0) \u00b7 multi-day: Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 21 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 6 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 12 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 18"
+      },
+      {
+        "case": "mixed_race_multiday/native_on",
+        "phase": "steady",
+        "trial": 3,
+        "wallMs": 4812.6466,
+        "threadCpuMs": 4578.765027,
+        "processCpuMs": 5700,
+        "completedNativeBatches": 7553,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "c689ce167ed53c18c8bf59d46c927854b7135e18d6a3cce7574e1c954bf44ad8",
+          "encodedBytes": 6004480,
+          "guideEvents": 245,
+          "channelMatches": 1107
+        },
+        "diagnosticSummary": "Sports: 103 games and events in the next day or so \u00b7 channels found for 81 (guide 81, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 1 s (guide 1, names 0, networks 0) \u00b7 multi-day: Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 21 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 6 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 0 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 12 | Formula 1 Monaco Grand Prix Week: looked for formula 1/f1/grand prix, channels named like that 0, channels found (names + guide) 18"
+      },
+      {
+        "case": "titles_only/native_on",
+        "phase": "warmup",
+        "trial": 0,
+        "wallMs": 2566.1693,
+        "threadCpuMs": 2447.653788,
+        "processCpuMs": 3093,
+        "completedNativeBatches": 3623,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "6d5f6548eab441cf227f3b3fab3506d6ddafdd6fe2fac2d5ea496599b2970d22",
+          "encodedBytes": 5051842,
+          "guideEvents": 176,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 1 s (guide 1, names 0, networks 0)"
+      },
+      {
+        "case": "titles_only/native_off",
+        "phase": "warmup",
+        "trial": 0,
+        "wallMs": 3707.4515,
+        "threadCpuMs": 3521.961573,
+        "processCpuMs": 4636,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "6d5f6548eab441cf227f3b3fab3506d6ddafdd6fe2fac2d5ea496599b2970d22",
+          "encodedBytes": 5051842,
+          "guideEvents": 176,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0)"
+      },
+      {
+        "case": "titles_only/native_off",
+        "phase": "steady",
+        "trial": 1,
+        "wallMs": 3672.8354,
+        "threadCpuMs": 3462.821968,
+        "processCpuMs": 4588,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "6d5f6548eab441cf227f3b3fab3506d6ddafdd6fe2fac2d5ea496599b2970d22",
+          "encodedBytes": 5051842,
+          "guideEvents": 176,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0)"
+      },
+      {
+        "case": "titles_only/native_on",
+        "phase": "steady",
+        "trial": 1,
+        "wallMs": 2552.7674,
+        "threadCpuMs": 2443.259111,
+        "processCpuMs": 3086,
+        "completedNativeBatches": 3623,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "6d5f6548eab441cf227f3b3fab3506d6ddafdd6fe2fac2d5ea496599b2970d22",
+          "encodedBytes": 5051842,
+          "guideEvents": 176,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 1 s (guide 1, names 0, networks 0)"
+      },
+      {
+        "case": "titles_only/native_on",
+        "phase": "steady",
+        "trial": 2,
+        "wallMs": 2481.3142,
+        "threadCpuMs": 2359.216105,
+        "processCpuMs": 2958,
+        "completedNativeBatches": 3623,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "6d5f6548eab441cf227f3b3fab3506d6ddafdd6fe2fac2d5ea496599b2970d22",
+          "encodedBytes": 5051842,
+          "guideEvents": 176,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 1 s (guide 1, names 0, networks 0)"
+      },
+      {
+        "case": "titles_only/native_off",
+        "phase": "steady",
+        "trial": 2,
+        "wallMs": 3646.2695,
+        "threadCpuMs": 3455.165437,
+        "processCpuMs": 4571,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "6d5f6548eab441cf227f3b3fab3506d6ddafdd6fe2fac2d5ea496599b2970d22",
+          "encodedBytes": 5051842,
+          "guideEvents": 176,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0)"
+      },
+      {
+        "case": "titles_only/native_off",
+        "phase": "steady",
+        "trial": 3,
+        "wallMs": 3803.9117,
+        "threadCpuMs": 3604.523141,
+        "processCpuMs": 4777,
+        "completedNativeBatches": 0,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "6d5f6548eab441cf227f3b3fab3506d6ddafdd6fe2fac2d5ea496599b2970d22",
+          "encodedBytes": 5051842,
+          "guideEvents": 176,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 2 s (guide 2, names 0, networks 0)"
+      },
+      {
+        "case": "titles_only/native_on",
+        "phase": "steady",
+        "trial": 3,
+        "wallMs": 2491.2036,
+        "threadCpuMs": 2361.372558,
+        "processCpuMs": 2971,
+        "completedNativeBatches": 3623,
+        "exactParity": true,
+        "golden": {
+          "orderedTupleSha256": "6d5f6548eab441cf227f3b3fab3506d6ddafdd6fe2fac2d5ea496599b2970d22",
+          "encodedBytes": 5051842,
+          "guideEvents": 176,
+          "channelMatches": 1050
+        },
+        "diagnosticSummary": "Sports: 96 games and events in the next day or so \u00b7 channels found for 77 (guide 77, channel names 0, networks 0, 0 linked games skipped the guide, 0 of 96 half-hours unchanged) \u00b7 900 channels searched in 1 s (guide 1, names 0, networks 0)"
+      }
+    ],
+    "steadyMedians": {
+      "followed_full_guide/native_off": {
+        "wallMs": 7163.7071,
+        "threadCpuMs": 6776.760052,
+        "processCpuMs": 8946,
+        "trials": 3
+      },
+      "followed_full_guide/native_on": {
+        "wallMs": 4682.2923,
+        "threadCpuMs": 4463.993269,
+        "processCpuMs": 5578,
+        "trials": 3
+      },
+      "mixed_race_multiday/native_off": {
+        "wallMs": 7118.1438,
+        "threadCpuMs": 6716.057104,
+        "processCpuMs": 8912,
+        "trials": 3
+      },
+      "mixed_race_multiday/native_on": {
+        "wallMs": 4720.0205,
+        "threadCpuMs": 4514.69597,
+        "processCpuMs": 5664,
+        "trials": 3
+      },
+      "titles_only/native_off": {
+        "wallMs": 3672.8354,
+        "threadCpuMs": 3462.821968,
+        "processCpuMs": 4588,
+        "trials": 3
+      },
+      "titles_only/native_on": {
+        "wallMs": 2491.2036,
+        "threadCpuMs": 2361.372558,
+        "processCpuMs": 2971,
+        "trials": 3
+      }
+    },
+    "nativePreflight": {
+      "applicable": true,
+      "allPassed": true,
+      "exactKeptRowsAndNormalization": true,
+      "invalidCallsRejected": 7,
+      "suffixTerms": 721,
+      "suffixTermCharacters": 261723,
+      "suffixRows": 8,
+      "suffixRawCharacters": 65536,
+      "timed": false
+    },
+    "semanticChecks": {
+      "unicodeAccents": true,
+      "unicodeSmallMarks": true,
+      "wholeWordNegative": true,
+      "punctuation": true,
+      "oversizedMetadataFallback": true,
+      "descriptionOnlyFollowed": true,
+      "aliasAndAllModelMetadataIncluded": true,
+      "databaseUnchanged": true
+    },
+    "nativeLibrarySha256": "89473bd2bdd880aa7944beaec81a5b3aae849170d0ff54f13a09c8a60c886151",
+    "projectDexSha256": "d568dfd60f917a773cae54f6ac6848086847dd61bfd14da40e438e45fb80ce44"
+  }
+}

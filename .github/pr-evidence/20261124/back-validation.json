@@ -1,0 +1,24 @@
+{
+  "sourceBase": "6c8ce7e7a2d098a856c98a56c105a9043ba537b1",
+  "platform": "API36 x86_64 TV emulator, guest account, local synthetic TS/HLS",
+  "change": "Remove only early legacy-route reset of the Activity held-Back guard; existing UP reset remains",
+  "repeatedKeyPatterns": [
+    {
+      "repeats": 5,
+      "intervalMs": 350
+    },
+    {
+      "repeats": 8,
+      "intervalMs": 500
+    }
+  ],
+  "baseline": "Both patterns returned from fullscreen to Sports during the same held press",
+  "candidate": "Both patterns stayed fullscreen through release; fresh Back returned to Sports, next Back opened sidebar, D-pad selected Home",
+  "videoBefore": "back-before.mp4",
+  "videoAfter": "back-after.mp4",
+  "screenshots": [
+    "back-before.png",
+    "back-after.png"
+  ],
+  "limits": "Broader reported Home freeze not established; Modern moving-preview prerequisite unavailable; no physical remote acceptance claim."
+}
