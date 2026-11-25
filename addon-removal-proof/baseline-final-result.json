@@ -1,0 +1,11 @@
+{
+  "exitCode": 0,
+  "finished": "2026-11-25T03:20:19.0905147Z",
+  "qrTestsExecuted": false,
+  "identicalFixtureSha256": "EA0990FAE93FA963C35AB85D7F611512D7B4F4D21713E2C8E9DB49AC204D3063",
+  "fixtureSource": "31d6a78b4cc7a3530943cd42d5f7a302d91e00fe",
+  "productionApkSource": "1b331ff293c0b08c8793316735e564f6f54b23fe",
+  "selectedClass": "com.nuvio.tv.ui.components.TvReorderListAddonRemovalTest",
+  "started": "2026-11-25T03:18:19.3651226Z",
+  "allFourReproduced": true
+}

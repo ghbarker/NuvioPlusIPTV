@@ -1,0 +1,12 @@
+{
+  "testApkSource": "31d6a78b4cc7a3530943cd42d5f7a302d91e00fe",
+  "exitCode": 0,
+  "finished": "2026-11-25T03:17:34.4823179Z",
+  "fixtureSha256": "EA0990FAE93FA963C35AB85D7F611512D7B4F4D21713E2C8E9DB49AC204D3063",
+  "started": "2026-11-25T03:17:04.0906565Z",
+  "passed": true,
+  "productionApkSource": "51a247557c4331c3a442ed008e9ac2d7b37cb63f",
+  "selectedClass": "com.nuvio.tv.ui.components.TvReorderListAddonRemovalTest",
+  "shippingHead": "2e5a126123368768ff7a333cf7cb4727637c8222",
+  "qrTestsExecuted": false
+}
